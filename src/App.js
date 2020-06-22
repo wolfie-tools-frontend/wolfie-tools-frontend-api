@@ -53,7 +53,7 @@ export default function App() {
         <tr>
           <td>Transparent button</td>
           <td>
-            <WButton className="medium transparent pill">Test Button</WButton>
+            <WButton className="medium transparent pill">Button</WButton>
           </td>
         </tr>
       </table>
