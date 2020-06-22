@@ -80,11 +80,15 @@
 */
 
 .unfill {
-  background-color: var(--white);
+  background-color: transparent;
   color: var(--primary);
   border-style: solid;
   border-width: 1.5px;
   border-color: var(--primary);
+}
+
+.transparent {
+  background-color: transparent;
 }
 
 .shadow {
