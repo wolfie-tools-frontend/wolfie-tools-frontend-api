@@ -1,7 +1,8 @@
 import React from "react";
-import "./wbutton.css";
+// import "./wbutton.css";
+import "./wbutton.scss";
 
-const wButton = ({ children, className, onClick }) => {
+const WButton = ({ children, className, onClick }) => {
   return (
     <button onClick={onClick} className={`wbtn ${className}`}>
       {children}
@@ -9,4 +10,4 @@ const wButton = ({ children, className, onClick }) => {
   );
 };
 
-export default wButton;
+export default WButton;

@@ -15,49 +15,48 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Primary Colored button</td>
+          <td>Primary Small button</td>
           <td>
             <WButton className="primary small">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Medium Accent Colored button</td>
+          <td>Medium Pill Colored button</td>
           <td>
-            <WButton className="accent medium pill">Button</WButton>
+            <WButton className="medium pill colored">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Large Accent Colored button</td>
+          <td>Large Ghost Colored button</td>
           <td>
-            <WButton className="accent large">Button</WButton>
+            <WButton className="accent large ghost colored">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Small Round button</td>
+          <td>Small Rounded Ghost button</td>
           <td>
             <WButton className="rounded small ghost">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Large button with Shadow</td>
+          <td>Large Accent Shadowed button</td>
           <td>
-            <WButton className="shadow large">Button</WButton>
+            <WButton className="shadowed large accent">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Disabled Button</td>
+          <td>Disabled button</td>
           <td>
-            <WButton className="colored medium">Button</WButton>
+            <WButton className="medium">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Test Button</td>
+          <td>Transparent button</td>
           <td>
-            <WButton className="medium ghost pill">Test Button</WButton>
+            <WButton className="medium transparent pill">Test Button</WButton>
           </td>
         </tr>
       </table>
-
       <WButton className="large span">Span Button</WButton>
     </div>
   );
