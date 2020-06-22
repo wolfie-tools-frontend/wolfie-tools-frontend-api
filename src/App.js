@@ -35,7 +35,7 @@ export default function App() {
         <tr>
           <td>Small Round button</td>
           <td>
-            <WButton className="rounded small unfill">Button</WButton>
+            <WButton className="rounded small ghost">Button</WButton>
           </td>
         </tr>
         <tr>
@@ -53,12 +53,12 @@ export default function App() {
         <tr>
           <td>Test Button</td>
           <td>
-            <WButton className="medium unfill pill">Test Button</WButton>
+            <WButton className="medium ghost pill">Test Button</WButton>
           </td>
         </tr>
       </table>
 
-      <WButton className="large unfill span">Span Button</WButton>
+      <WButton className="large span">Span Button</WButton>
     </div>
   );
 }
