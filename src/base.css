@@ -1,0 +1,30 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+tr {
+  border: solid 1px;
+  border-left: none;
+  border-right: none;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 10px;
+}
+td:first-child {
+  border-right: solid 1px;
+}
