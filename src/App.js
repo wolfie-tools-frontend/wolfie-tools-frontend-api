@@ -57,6 +57,12 @@ export default function App() {
           </td>
         </tr>
         <tr>
+          <td>Texted button</td>
+          <td>
+            <WButton className="medium texted">Button</WButton>
+          </td>
+        </tr>
+        <tr>
           <td>Custom Color button</td>
           <td>
             <WButton style={{ backgroundColor: "teal" }} className="small pill">

@@ -1,25 +1,157 @@
 @import '../../variables';
 
+$button-font-family: inherit;
+$button-font-weight: null;
+
+$button-padding: 0.6em 1.2em;
+$button-margin: 0px 0px 5px 0px; 
+$button-background-color: orange;
+$button-text-color: black;
+/*
+$button-background-color: $primary-color;
+$button-text-color: $text-color;
+*/
+$button-radius: .3rem;
+$button-sizes: ("small": 0.9rem, "medium": 1rem, "large": 1.25rem);
+
 .wbtn {
-  /* font-family: */
-  padding: 10px 20px;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  padding: $button-padding;
+  margin: $button-margin;
+  background-color: $button-background-color;
+  color: $button-text-color;
   cursor: pointer;
   border: none;
   outline: none;
+  font-size: map-get($button-sizes, medium);
 }
 
-/* btn hover */
+/* ------ WButton Styles ------*/
+/* Button Shapes */
+.rounded {
+  border-radius: $button-radius;
+}
+
+.pill {
+  border-radius: 100px;
+}
+
+.span {
+  width: 100%;
+}
+
+/* Button Coloring */
+.primary {
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    background-color: darken($primary-color, 2%) !important;
+  }
+}
+
 /*
-.wbtn:hover {
-  background-color: var(--tint);
+.success {
+
 }
-.wbtn--primary:hover {
-  background-color: var(--primary-tint);
+
+.danger {
+
 }
-.wbtn--accent:hover {
-  background-color: var(--accent-tint);
+
+.warning {
+
 }
 */
+
+.accent {
+  background-color: $accent-color;
+  color: white;
+  &:hover {
+    background-color: darken($accent-color, 2%) !important;
+  }
+}
+
+.colored {
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border-color: $button-background-color !important;
+  &:hover {
+    background-color: darken($button-background-color, 2%) !important;
+  }
+}
+
+.ghost {
+  background-color: transparent !important;
+  color: $primary-color;
+  border-color: $primary-color;
+  border-style: solid;
+  border-width: 1.5px;
+  &:hover {
+    background-color: $primary-color !important;
+    color: $background-color;
+  }
+}
+
+.colored.ghost {
+  color: $button-background-color !important;
+  &:hover {
+    background-color: $button-background-color !important;
+    color: $background-color !important;
+  }
+}
+
+.texted {
+  background-color: transparent !important;
+  color: $primary-color;
+  border-style: none;
+  &:hover {
+    background-color: transparentize(black, 0.95) !important;
+  }
+}
+
+.transparent {
+  background-color: transparentize(black, 0.75);
+  color: white;
+  &:hover {
+    background-color: transparentize(black, 0.6) !important;
+  }
+}
+
+.shadowed {
+  box-shadow: 0px 4px 12px 0px transparentize(black, 0.5);
+}
+
+.disabled {
+  background-color: transparentize(lightgrey, 0.2);
+  color: gray;
+  cursor: default;
+}
+
+/* Other Button Hover Styles */
+/* solid white */
+/*
+.hover1:hover {
+  background-color: white !important;
+}
+*/
+
+/* fill transparent */
+/*
+.hover2:hover {
+  background-color: transparentize(black, 0.75) !important;
+}
+*/
+
+/* solid lighter */
+
+/* solid darker */
+
+/* more transparent */
+
+/* more opaque */
+
+/* to ghost */
 
 /* btn active(on click) */
 /*
@@ -44,53 +176,8 @@
 }
 */
 
-/* ------ Button Styles ------*/
-/* Button Shapes */
-.rounded {
-  border-radius: 4px;
-}
 
-.pill {
-  border-radius: 30px;
-}
 
-/* Button Coloring */
-.primary {
-  background-color: $primary-color;
-  color: white;
-}
-
-.accent {
-  background-color: $accent-color;
-  color: white;
-}
-
-.colored {
-  background-color: $button-color !important;
-  color: $button-text-color !important;
-  border-color: $button-color !important;
-}
-
-.ghost {
-  background-color: transparent !important;
-  color: $primary-color;
-  border-style: solid;
-  border-width: 1.5px;
-  border-color: $primary-color;
-}
-
-.transparent {
-  background-color: transparentize(black, 0.75);
-  color: white;
-}
-
-.shadowed {
-  box-shadow: 4px 4px 4px transparentize(black, 0.75);
-}
-
-.span {
-  width: 100%;
-}
 
 /* icon in button */
 /* icon size */
@@ -100,13 +187,13 @@
 
 /* Button Sizes */
 .small {
-  height: 40px;
+  font-size: map-get($button-sizes, small);
 }
 
 .medium {
-  height: 60px;
+  font-size: map-get($button-sizes, medium);
 }
 
 .large {
-  height: 80px;
+  font-size: map-get($button-sizes, large);
 }
