@@ -13,13 +13,19 @@ export default function App() {
       <h1>Buttons</h1>
       <table>
         <tr>
-          <td>Default button</td>
+          <td>Default Hover-lighten button</td>
           <td>
-            <WButton>Button</WButton>
+            <WButton className="hover-lighten">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Primary Small button</td>
+          <td>Default Hover-darken button</td>
+          <td>
+            <WButton className="hover-darken">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Primary Small Hover-darken button</td>
           <td>
             <WButton
               className="primary small hover-darken"
@@ -36,19 +42,19 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Large Primary Ghost button</td>
+          <td>Large Ghost Hover-fill button</td>
           <td>
             <WButton className="large ghost hover-fill">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Large Accent Ghost button</td>
+          <td>Large Primary Ghost Hover-fill button</td>
           <td>
             <WButton className="large ghost primary hover-fill">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Hover Darken Large Ghost Colored button</td>
+          <td>Large Ghost Warning Hover-darken button</td>
           <td>
             <WButton className="large ghost warning hover-darken">
               Button
@@ -56,21 +62,39 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Medium Ghost Colored button</td>
+          <td>Accent Ghost Hover-lighten button</td>
           <td>
-            <WButton className="medium ghost success">Button</WButton>
+            <WButton className="ghost accent hover-lighten">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Small Rounded Ghost button</td>
+          <td>Medium Ghost Success Hover-lighten button</td>
           <td>
-            <WButton className="rounded small ghost accent">Button</WButton>
+            <WButton className="medium ghost success hover-lighten">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
-          <td>Large Accent Shadowed button</td>
+          <td>Small Rounded Accent Ghost Hover-fill button</td>
           <td>
-            <WButton className="shadowed large accent">Button</WButton>
+            <WButton className="rounded small ghost accent hover-fill">
+              Button
+            </WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Accent Hover-darken button</td>
+          <td>
+            <WButton className=" shadowed primary hover-darken">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Large Accent Shadowed Hover-darken button</td>
+          <td>
+            <WButton className="shadowed large accent hover-darken">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
@@ -80,9 +104,11 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Large Success Shadowed button</td>
+          <td>Large Success Shadowed Hover-lighten button</td>
           <td>
-            <WButton className="shadowed large success">Button</WButton>
+            <WButton className="shadowed large success hover-lighten">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
@@ -92,15 +118,17 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Disabled GHOST ACCENT button</td>
+          <td>Disabled Ghost Accent button</td>
           <td>
             <WButton className="medium accent ghost disabled">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Transparent button</td>
+          <td>Transparent Hover-darken button</td>
           <td>
-            <WButton className="medium transparent pill">Button</WButton>
+            <WButton className="medium transparent pill hover-darken">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
@@ -134,9 +162,11 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Texted Success button</td>
+          <td>Texted Success Hover-darken button</td>
           <td>
-            <WButton className="medium texted success">Button</WButton>
+            <WButton className="medium texted success hover-darken">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
