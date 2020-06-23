@@ -27,21 +27,57 @@ export default function App() {
           </td>
         </tr>
         <tr>
+          <td>Large Ghost button</td>
+          <td>
+            <WButton className="large ghost">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Large Ghost button</td>
+          <td>
+            <WButton className="large ghost primary">Button</WButton>
+          </td>
+        </tr>
+        <tr>
           <td>Large Ghost Colored button</td>
           <td>
-            <WButton className="accent large ghost colored">Button</WButton>
+            <WButton className="large ghost warning">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Medium Ghost Colored button</td>
+          <td>
+            <WButton className="medium ghost success">Button</WButton>
           </td>
         </tr>
         <tr>
           <td>Small Rounded Ghost button</td>
           <td>
-            <WButton className="rounded small ghost">Button</WButton>
+            <WButton className="rounded small ghost accent">Button</WButton>
           </td>
         </tr>
         <tr>
           <td>Large Accent Shadowed button</td>
           <td>
             <WButton className="shadowed large accent">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Large Danger Shadowed button</td>
+          <td>
+            <WButton className="shadowed large danger">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Large Success Shadowed button</td>
+          <td>
+            <WButton className="shadowed large success">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Large Warning Shadowed button</td>
+          <td>
+            <WButton className="shadowed large warning">Button</WButton>
           </td>
         </tr>
         <tr>
@@ -60,6 +96,36 @@ export default function App() {
           <td>Texted button</td>
           <td>
             <WButton className="medium texted">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Texted Primary button</td>
+          <td>
+            <WButton className="medium texted primary">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Texted Accent button</td>
+          <td>
+            <WButton className="medium texted accent">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Texted Danger button</td>
+          <td>
+            <WButton className="medium texted danger">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Texted Warning button</td>
+          <td>
+            <WButton className="medium texted warning">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Texted Success button</td>
+          <td>
+            <WButton className="medium texted success">Button</WButton>
           </td>
         </tr>
         <tr>
