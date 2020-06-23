@@ -4,6 +4,10 @@ import "./base.css";
 import "./main.scss";
 
 export default function App() {
+  function myFunction() {
+    alert("I am an alert box!");
+  }
+
   return (
     <div className="App">
       <h1>Buttons</h1>
@@ -17,7 +21,12 @@ export default function App() {
         <tr>
           <td>Primary Small button</td>
           <td>
-            <WButton className="primary small">Button</WButton>
+            <WButton
+              className="primary small hover-darken"
+              onClick={myFunction}
+            >
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
@@ -27,21 +36,23 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Large Ghost button</td>
+          <td>Large Primary Ghost button</td>
           <td>
-            <WButton className="large ghost">Button</WButton>
+            <WButton className="large ghost hover-fill">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Large Ghost button</td>
+          <td>Large Accent Ghost button</td>
           <td>
-            <WButton className="large ghost primary">Button</WButton>
+            <WButton className="large ghost primary hover-fill">Button</WButton>
           </td>
         </tr>
         <tr>
-          <td>Large Ghost Colored button</td>
+          <td>Hover Darken Large Ghost Colored button</td>
           <td>
-            <WButton className="large ghost warning">Button</WButton>
+            <WButton className="large ghost warning hover-darken">
+              Button
+            </WButton>
           </td>
         </tr>
         <tr>
@@ -81,9 +92,9 @@ export default function App() {
           </td>
         </tr>
         <tr>
-          <td>Disabled button</td>
+          <td>Disabled GHOST ACCENT button</td>
           <td>
-            <WButton className="medium disabled">Button</WButton>
+            <WButton className="medium accent ghost disabled">Button</WButton>
           </td>
         </tr>
         <tr>
