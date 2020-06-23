@@ -47,13 +47,25 @@ export default function App() {
         <tr>
           <td>Disabled button</td>
           <td>
-            <WButton className="medium">Button</WButton>
+            <WButton className="medium disabled">Button</WButton>
           </td>
         </tr>
         <tr>
           <td>Transparent button</td>
           <td>
             <WButton className="medium transparent pill">Button</WButton>
+          </td>
+        </tr>
+        <tr>
+          <td>Custom Color button</td>
+          <td>
+            <WButton style={{ backgroundColor: "teal" }} className="small pill">
+              B1
+            </WButton>
+            <WButton className="small pill red">B2</WButton>
+            <WButton className="small pill" style={{ color: "yellow" }}>
+              B3
+            </WButton>
           </td>
         </tr>
       </table>

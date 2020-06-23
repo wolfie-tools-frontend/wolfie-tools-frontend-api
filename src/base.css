@@ -1,5 +1,4 @@
 .App {
-  font-family: sans-serif;
   text-align: center;
 }
 
@@ -27,4 +26,8 @@ td {
 }
 td:first-child {
   border-right: solid 1px;
+}
+
+.red {
+  background-color: red;
 }
