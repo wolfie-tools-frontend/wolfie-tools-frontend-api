@@ -1,0 +1,30 @@
+/* Hover Effects */
+$darken-value: 5%;
+$lighten-value: $darken-value;
+
+@mixin hover-effect($b-color, $t-color: "") {
+  background-color: $b-color;
+  color: unquote($t-color);
+}
+
+@mixin hover-darken($b-color, $d-value: "") {
+  @if $d-value == "" {
+    @include hover-effect(darken($b-color, $darken-value));
+  } @else {
+    @include hover-effect(darken($b-color, $d-value));
+  }
+}
+
+@mixin hover-lighten($b-color, $l-value: "") {
+  @if $l-value == "" {
+    @include hover-effect(lighten($b-color, $lighten-value));
+  } @else {
+    @include hover-effect(lighten($b-color, $l-value));
+  }
+}
+
+@mixin hover-fill($b-color, $t-color) {
+  @include hover-effect($b-color, $t-color);
+}
+
+/* onClick Effects & Animations */
