@@ -178,7 +178,7 @@ export default function WButtonPage() {
             <td>Custom Color button</td>
             <td>
               <WButton
-                style={{ backgroundColor: "violet" }}
+                style={{ backgroundColor: "pink" }}
                 className="small pill"
               >
                 B1
