@@ -1,8 +1,13 @@
 @import './theme';
 @import './animations/animations.scss';
 
+$disabled-background-color: transparentize(lightgrey, 0.2) !default;
+$disabled-color: gray !default;
+
 // Icons
 .material-icons {
+  font-size: 24px;
+  
   &.small{
     font-size: 18px;
   }
@@ -11,5 +16,8 @@
   }
   &.large {
    font-size: 36px; 
+  }
+  &.disabled {
+    color: $disabled-color;
   }
 }
