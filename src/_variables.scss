@@ -1,2 +1,15 @@
 @import './theme';
-@import './animations/animations.scss'
+@import './animations/animations.scss';
+
+// Icons
+.material-icons {
+  &.small{
+    font-size: 18px;
+  }
+  &.medium {
+    font-size: 24px;
+  }
+  &.large {
+   font-size: 36px; 
+  }
+}
