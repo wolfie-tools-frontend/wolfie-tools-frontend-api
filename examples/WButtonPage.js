@@ -20,9 +20,29 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
-            <td>Default Hover-darken button</td>
+            <td>Medium Disabled Hover-lighten ghost button</td>
             <td>
-              <WButton className="hover-darken">Button</WButton>
+              <WButton className="disabled medium hover-lighten">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Accent Icon Hover-lighten button</td>
+            <td>
+              <WButton className="accent hover-lighten">
+                <i class="material-icons small">verified</i>
+                <br />
+                <i class="material-icons large">shopping_cart</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Disabled Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="accent texted hover-darken">
+                <i class="material-icons">favorite</i>
+              </WButton>
             </td>
           </tr>
           <tr>
@@ -43,9 +63,17 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
-            <td>Large Ghost Hover-fill button</td>
+            <td>Large Ghost Hover-darken button</td>
             <td>
-              <WButton className="large ghost hover-fill">Button</WButton>
+              <WButton className="large ghost hover-darken">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Colored Ghost Hover-lighten button</td>
+            <td>
+              <WButton className="large colored ghost hover-lighten">
+                Button
+              </WButton>
             </td>
           </tr>
           <tr>
@@ -71,9 +99,9 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
-            <td>Medium Ghost Success Hover-lighten button</td>
+            <td>Medium Rounded Ghost Success Hover-lighten button</td>
             <td>
-              <WButton className="medium ghost success hover-lighten">
+              <WButton className="medium rounded ghost success hover-lighten">
                 Button
               </WButton>
             </td>
@@ -137,6 +165,14 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
+            <td>Disabled Transparent Hover-darken button</td>
+            <td>
+              <WButton className="medium disabled transparent pill hover-darken">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
             <td>Texted button</td>
             <td>
               <WButton className="medium texted">Button</WButton>
@@ -175,15 +211,23 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
+            <td>Texted Disabled Hover-darken button</td>
+            <td>
+              <WButton className="medium texted disabled hover-darken">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
             <td>Custom Color button</td>
             <td>
               <WButton
-                style={{ backgroundColor: "pink" }}
+                style={{ backgroundColor: "violet" }}
                 className="small pill"
               >
                 B1
               </WButton>
-              <WButton className="small pill red">B2</WButton>
+              <WButton className="small pill red-green">B2</WButton>
               <WButton className="small pill" style={{ color: "violet" }}>
                 B3
               </WButton>

@@ -5,26 +5,28 @@ $button-font-weight: null;
 
 $button-padding: 0.6em 1.2em;
 $button-margin: 0px 0px 5px 0px; 
-$button-background-color: orange;
-$button-text-color: black;
-/*
-$button-background-color: $primary-color;
-$button-text-color: $text-color;
-*/
-$button-radius: .3rem;
-$button-sizes: ("small": 0.9rem, "medium": 1rem, "large": 1.25rem);
+$success-color: #4caf50 !default;
+$danger-color: #d32f2f !default;
+$warning-color: #f9a825 !default;
+
+$button-radius: .25rem !default;
+$button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 
 .wbtn {
   font-family: $button-font-family;
   font-weight: $button-font-weight;
   padding: $button-padding;
   margin: $button-margin;
-  background-color: $button-background-color;
-  color: $button-text-color;
   cursor: pointer;
   border: none;
   outline: none;
   font-size: map-get($button-sizes, medium);
+  &.hover-darken:hover{
+    @include hover-darken(rgb(239, 239, 239));
+  }
+  &.hover-lighten:hover{
+    @include hover-lighten(rgb(239, 239, 239));
+  }
 }
 
 /* ------ WButton Styles ------*/
@@ -34,98 +36,190 @@ $button-sizes: ("small": 0.9rem, "medium": 1rem, "large": 1.25rem);
 }
 
 .pill {
-  border-radius: 100px;
+  border-radius: 2rem;
 }
 
-.span {
-  width: 100%;
+/* Button Types */
+.disabled {
+  background-color: $disabled-background-color !important;
+  color: $disabled-color !important;
+  border-color: $disabled-color !important;
+  cursor: default !important;
 }
 
 /* Button Coloring */
-.primary {
-  background-color: $primary-color;
-  color: white;
-  &:hover {
-    background-color: darken($primary-color, 2%) !important;
+.success {
+  background-color: $success-color;
+  color: $button-text-color-light;
+  &.hover-darken:hover{
+    @include hover-darken($success-color);
+  }
+  &.hover-lighten:hover{
+    @include hover-lighten($success-color);
   }
 }
 
-/*
-.success {
-
-}
-
 .danger {
-
+  background-color: $danger-color;
+  color: $button-text-color-light;
+  &.hover-darken:hover{
+    @include hover-darken($danger-color);
+   }
+  &.hover-lighten:hover{
+    @include hover-lighten($danger-color);
+  }
 }
 
 .warning {
-
+  background-color: $warning-color;
+  color: $button-text-color-light;
+  &.hover-darken:hover{
+    @include hover-darken($warning-color);
+   }
+  &.hover-lighten:hover{
+    @include hover-lighten($warning-color);
+  }
 }
-*/
+
+.primary {
+  background-color: $primary-color;
+  color: $button-text-color-light;
+  &.hover-darken:hover {
+    @include hover-darken($primary-color);
+  }
+  &.hover-lighten:hover{
+    @include hover-lighten($primary-color);
+  }
+}
 
 .accent {
   background-color: $accent-color;
-  color: white;
-  &:hover {
-    background-color: darken($accent-color, 2%) !important;
+  color: $button-text-color-light;
+  &.hover-darken:hover{
+    @include hover-darken($accent-color);
+  }
+  &.hover-lighten:hover{
+    @include hover-lighten($accent-color);
   }
 }
 
 .colored {
   background-color: $button-background-color;
   color: $button-text-color;
-  border-color: $button-background-color !important;
-  &:hover {
-    background-color: darken($button-background-color, 2%) !important;
+  border-color: $button-background-color;
+  &.hover-darken:hover{
+    @include hover-darken($button-background-color);
+  }
+  &.hover-lighten:hover{
+    @include hover-lighten($button-background-color);
   }
 }
 
 .ghost {
-  background-color: transparent !important;
-  color: $primary-color;
-  border-color: $primary-color;
+  background-color: transparent;
+  color: black;
+  border-color: black;
   border-style: solid;
-  border-width: 1.5px;
-  &:hover {
-    background-color: $primary-color !important;
-    color: $background-color;
+  border-width: 1px;
+  &.hover-fill:hover{
+    @include hover-fill($button-background-color,$background-color);
   }
-}
+  &.hover-darken:hover {
+    background-color: transparentize($button-background-color, 0.97);
+  }
+  &.hover-lighten:hover { /////////////
+    background-color: transparentize(white, 0.8);
+  }
 
-.colored.ghost {
-  color: $button-background-color !important;
-  &:hover {
-    background-color: $button-background-color !important;
-    color: $background-color !important;
+  @mixin ghost-color($color) {
+    color: $color;
+    border-color: $color;
+    &.hover-fill:hover {
+      @include hover-fill($color, $background-color);
+    }
+    &.hover-darken:hover{
+      @include hover-darken-transparent($color);
+    }
+  }
+  
+  &.primary {
+    @include ghost-color($primary-color);
+  }
+  &.accent {
+    @include ghost-color($accent-color);
+  }
+  &.colored {
+    @include ghost-color($button-background-color);
+  }
+  &.success {
+    @include ghost-color($success-color);
+  }
+  &.danger {
+    @include ghost-color($danger-color);
+  }
+  &.warning {
+    @include ghost-color($warning-color);
+  }
+  &.disabled {
+    background-color: transparent !important;
   }
 }
 
 .texted {
-  background-color: transparent !important;
-  color: $primary-color;
+  background-color: transparent;
+  $color: black;
+  color: $color;
   border-style: none;
-  &:hover {
-    background-color: transparentize(black, 0.95) !important;
+  &.hover-darken:hover{
+    @include hover-darken-transparent($color);
+  }
+
+  @mixin texted-color($color) {
+    color: $color;
+    &.hover-darken:hover{
+      @include hover-darken-transparent($color);
+    }
+  }
+  
+  &.primary {
+    @include texted-color($primary-color);
+  }
+  &.accent {
+    @include texted-color($accent-color);
+  }
+  &.colored {
+    @include texted-color($button-background-color);
+  }
+  &.success {
+    @include texted-color($success-color);
+  }
+  &.danger {
+    @include texted-color($danger-color);
+  }
+  &.warning {
+    @include texted-color($warning-color);
+  }
+  &.disabled {
+    background-color: transparent !important;
+    border-color: none !important;
   }
 }
 
 .transparent {
   background-color: transparentize(black, 0.75);
   color: white;
-  &:hover {
-    background-color: transparentize(black, 0.6) !important;
+  &.hover-darken:hover {
+    background-color: transparentize(black, 0.6);
+  }
+  &.hover-lighten:hover {
+    background-color: transparentize(black, 0.6);
   }
 }
 
 .shadowed {
-  box-shadow: 0px 4px 12px 0px transparentize(black, 0.5);
-}
-
-.disabled {
-  background-color: transparentize(lightgrey, 0.2);
-  color: gray;
-  cursor: default;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
+              0px 2px 2px 0px rgba(0,0,0,0.14), 
+              0px 1px 5px 0px rgba(0,0,0,0.12);
 }
 
 /* Other Button Hover Styles */
@@ -166,25 +260,6 @@ $button-sizes: ("small": 0.9rem, "medium": 1rem, "large": 1.25rem);
 }
 */
 
-/* disabled button */
-/*
-.wbtn:disabled {
-  background-color: var(--tint);
-  color: grey;
-  cursor: default;
-  box-shadow: none;
-}
-*/
-
-
-
-
-/* icon in button */
-/* icon size */
-/* icon color */
-/* icon: left, right, middle */
-/* text: left, right, middle */
-
 /* Button Sizes */
 .small {
   font-size: map-get($button-sizes, small);
@@ -196,4 +271,8 @@ $button-sizes: ("small": 0.9rem, "medium": 1rem, "large": 1.25rem);
 
 .large {
   font-size: map-get($button-sizes, large);
+}
+
+.span {
+  width: 100%;
 }

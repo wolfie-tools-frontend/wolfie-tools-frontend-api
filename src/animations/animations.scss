@@ -1,6 +1,7 @@
 /* Hover Effects */
-$darken-value: 5%;
+$darken-value: 13%;
 $lighten-value: $darken-value;
+$transparent-value: 0.94;
 
 @mixin hover-effect($b-color, $t-color: "") {
   background-color: $b-color;
@@ -27,4 +28,13 @@ $lighten-value: $darken-value;
   @include hover-effect($b-color, $t-color);
 }
 
+@mixin hover-darken-transparent($b-color, $t-value: "") {
+  @if $t-value == "" {
+    background-color: transparentize($b-color, $transparent-value);
+  } @else {
+    @include hover-effect(darken($b-color, $t-value));
+  }
+}
+
 /* onClick Effects & Animations */
+/*ripple dark ripple light*/

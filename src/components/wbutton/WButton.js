@@ -1,10 +1,9 @@
 import React from "react";
-// import "./wbutton.css";
 import "./wbutton.scss";
 
-const WButton = ({ children, className, onClick }) => {
+const WButton = ({ children, className, onClick, style }) => {
   return (
-    <button onClick={onClick} className={`wbtn ${className}`}>
+    <button onClick={onClick} className={`wbtn ${className}`} style={style}>
       {children}
     </button>
   );
