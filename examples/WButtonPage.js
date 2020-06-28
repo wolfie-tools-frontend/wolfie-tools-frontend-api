@@ -106,24 +106,48 @@ export default function WButtonPage() {
           <tr>
             <td>1 Texted Icon Hover-darken button</td>
             <td>
-              <WButton className="accent hover-darken circle small">
-                <i class="material-icons">favorite</i>
+              <WButton className="accent hover-darken circle">
+                <i class="material-icons small">favorite</i>
               </WButton>
             </td>
           </tr>
           <tr>
             <td>2 Texted Icon Hover-darken button</td>
             <td>
-              <WButton className="accent hover-darken circle medium">
-                <i class="material-icons">favorite</i>
+              <WButton className="accent hover-darken circle">
+                <i class="material-icons medium">favorite</i>
               </WButton>
             </td>
           </tr>
           <tr>
             <td>3 Texted Icon Hover-darken button</td>
             <td>
-              <WButton className="accent hover-darken circle large">
-                <i class="material-icons">favorite</i>
+              <WButton className="accent hover-darken circle">
+                <i class="material-icons large">verified</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="primary hover-darken square">
+                <i class="material-icons small">verified</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>2 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="primary hover-darken square">
+                <i class="material-icons medium">verified</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="primary hover-darken square">
+                <i class="material-icons large">verified</i>
               </WButton>
             </td>
           </tr>
