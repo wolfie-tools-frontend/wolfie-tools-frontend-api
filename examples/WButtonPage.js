@@ -14,9 +14,9 @@ export default function WButtonPage() {
       <table>
         <tbody>
           <tr>
-            <td>Ghost danger rounded Hover-border-darken-c button</td>
+            <td>Ghost danger rounded hover-ghost-darken button</td>
             <td>
-              <WButton className="ghost danger rounded hover-border-darken-c">
+              <WButton className="ghost danger rounded hover-ghost-darken">
                 Button
               </WButton>
             </td>
@@ -156,7 +156,7 @@ export default function WButtonPage() {
           <tr>
             <td>TEST Large Ghost Warning Hover-tl button</td>
             <td>
-              <WButton className="large ghost warning hover-transparent-dark">
+              <WButton className="large ghost warning hover-transparent-darken">
                 Button
               </WButton>
             </td>
@@ -248,7 +248,7 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Warning button</td>
             <td>
-              <WButton className="medium texted warning hover-transparent-light">
+              <WButton className="medium texted warning hover-transparent-lighten">
                 Button
               </WButton>
             </td>

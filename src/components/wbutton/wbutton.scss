@@ -144,10 +144,10 @@ are called from the animations.scss mixins*/
   border-style: solid;
   border-width: 1px;
   @include hover-fill($button-background-color,$background-color);
-  @include hover-transparent-dark();
-  @include hover-transparent-light(0.8);
-  @include hover-transparent-color($button-background-color);
-  @include hover-border-darken-c(black);
+  @include hover-transparent-darken();
+  @include hover-transparent-lighten(0.8);
+  @include hover-transparent-colored($button-background-color);
+  @include hover-ghost-darken(black);
 
   &.hover-darken:hover {
     background-color: transparentize(black, $transparent-value);
@@ -160,8 +160,8 @@ are called from the animations.scss mixins*/
     color: $color;
     border-color: $color;
     @include hover-fill($color, $background-color);
-    @include hover-transparent-color($color);
-    @include hover-border-darken-c($color);
+    @include hover-transparent-colored($color);
+    @include hover-ghost-darken($color);
 
     &.hover-darken:hover{
       background-color: transparentize($color, $transparent-value);
@@ -171,27 +171,27 @@ are called from the animations.scss mixins*/
   
   &.primary {
     @include ghost-color($primary-color);
-    @include hover-border-darken-c($primary-color);
+    @include hover-ghost-darken($primary-color);
   }
   &.accent {
     @include ghost-color($accent-color);
-    @include hover-border-darken-c($accent-color);
+    @include hover-ghost-darken($accent-color);
   }
   &.colored {
     @include ghost-color($button-background-color);
-    @include hover-border-darken-c($button-background-color);
+    @include hover-ghost-darken($button-background-color);
   }
   &.success {
     @include ghost-color($success-color);
-    @include hover-border-darken-c($success-color);
+    @include hover-ghost-darken($success-color);
   }
   &.danger {
     @include ghost-color($danger-color);
-    @include hover-border-darken-c($danger-color);
+    @include hover-ghost-darken($danger-color);
   }
   &.warning {
     @include ghost-color($warning-color);
-    @include hover-border-darken-c($warning-color);
+    @include hover-ghost-darken($warning-color);
   }
   &.disabled {
     background-color: transparent !important;
@@ -203,9 +203,9 @@ are called from the animations.scss mixins*/
   background-color: transparent;
   color: black;
   border-style: none;
-  @include hover-transparent-dark();
-  @include hover-transparent-light(0.8);
-  @include hover-transparent-color($button-background-color);
+  @include hover-transparent-darken();
+  @include hover-transparent-lighten(0.8);
+  @include hover-transparent-colored($button-background-color);
   
   &.hover-darken:hover {
     background-color: transparentize(black, $transparent-value);
@@ -213,7 +213,7 @@ are called from the animations.scss mixins*/
 
   @mixin texted-color($color) {
     color: $color;
-    @include hover-transparent-color($color);
+    @include hover-transparent-colored($color);
 
     &.hover-darken:hover {
       background-color: transparentize($color, $transparent-value);

@@ -34,8 +34,8 @@ $transparent-value: 0.94;
   }
 }
 
-@mixin hover-transparent-dark($t-value: "") {
-  &.hover-transparent-dark:hover {
+@mixin hover-transparent-darken($t-value: "") {
+  &.hover-transparent-darken:hover {
     @if $t-value == "" {
       background-color: transparentize(black, $transparent-value);
     } @else {
@@ -44,8 +44,8 @@ $transparent-value: 0.94;
   }
 }
 
-@mixin hover-transparent-light($t-value: "") {
-  &.hover-transparent-light:hover {
+@mixin hover-transparent-lighten($t-value: "") {
+  &.hover-transparent-lighten:hover {
     @if $t-value == "" {
       background-color: transparentize(white, $transparent-value);
     } @else {
@@ -54,8 +54,8 @@ $transparent-value: 0.94;
   }
 }
 
-@mixin hover-transparent-color($b-color, $t-value: "") {
-  &.hover-transparent-color:hover {
+@mixin hover-transparent-colored($b-color, $t-value: "") {
+  &.hover-transparent-colored:hover {
     @if $t-value == "" {
       background-color: transparentize($b-color, $transparent-value);
     } @else {
@@ -63,10 +63,6 @@ $transparent-value: 0.94;
     }
   }
 }
-
-
-
-
 
 @mixin hover-border-darken($b-color, $t-value: "") {
   &.hover-border-darken {
@@ -82,8 +78,8 @@ $transparent-value: 0.94;
 }
 
 // combined mixin
-@mixin hover-border-darken-c($b-color, $t-value: "") {
-  &.hover-border-darken-c {
+@mixin hover-ghost-darken($b-color, $t-value: "") {
+  &.hover-ghost-darken {
     //@include hover-border-darken($b-color, $t-value: "");
     border-color: transparentize($b-color, 0.5); //
     &:hover {
@@ -92,7 +88,7 @@ $transparent-value: 0.94;
       } @else {
         border-color: darken($b-color, $t-value); //
       }
-      //@include hover-transparent-dark($t-value: ""); 
+      //@include hover-transparent-darken($t-value: ""); 
       @if $t-value == "" {
         background-color: transparentize($b-color, $transparent-value);
       } @else {
