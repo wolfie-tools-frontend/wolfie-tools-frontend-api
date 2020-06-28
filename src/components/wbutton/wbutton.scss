@@ -12,6 +12,9 @@ $warning-color: #f9a825 !default;
 $button-radius: .25rem !default;
 $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 
+/* Button hover effect and click effects & animations 
+are called from the animations.scss mixins*/
+
 .wbtn {
   font-family: $button-font-family;
   font-weight: $button-font-weight;
@@ -21,12 +24,8 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
   border: none;
   outline: none;
   font-size: map-get($button-sizes, medium);
-  &.hover-darken:hover{
-    @include hover-darken(rgb(239, 239, 239));
-  }
-  &.hover-lighten:hover{
-    @include hover-lighten(rgb(239, 239, 239));
-  }
+  @include hover-darken(rgb(239, 239, 239));
+  @include hover-lighten(rgb(239, 239, 239));
 }
 
 /* ------ WButton Styles ------*/
@@ -37,6 +36,53 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 
 .pill {
   border-radius: 2rem;
+}
+
+.circle {
+  //color: inherit;
+  //border: 0;
+  //cursor: pointer;
+  //margin: 0;
+  display: inline-flex;
+  //outline: 0;
+  //padding: 0;
+  //position: relative;
+  //align-items: center;
+  //user-select: none;
+  //border-radius: 0;
+  //vertical-align: middle;
+  //-moz-appearance: none;
+  //justify-content: center;
+  //text-decoration: none;
+  //background-color: transparent;
+  //-webkit-appearance: none;
+  //-webkit-tap-highlight-color: transparent;
+  //flex: 0 0 auto;
+  //color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  //font-size: 1.5rem;
+  //text-align: center;
+  //transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;  
+  &.small i{
+    color: yellow;
+    font-size: 20px;
+  }
+  &.medium i{
+    color: blue;
+    font-size: 30px;
+  }
+  &.large i{
+    color: green;
+    font-size: 50px;
+  }
+}
+
+.square {
+  display: inline-flex;
+  padding: 12px;
+  overflow: visible;
 }
 
 /* Button Types */
@@ -51,68 +97,44 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 .success {
   background-color: $success-color;
   color: $button-text-color-light;
-  &.hover-darken:hover{
-    @include hover-darken($success-color);
-  }
-  &.hover-lighten:hover{
-    @include hover-lighten($success-color);
-  }
+  @include hover-darken($success-color);
+  @include hover-lighten($success-color);
 }
 
 .danger {
   background-color: $danger-color;
   color: $button-text-color-light;
-  &.hover-darken:hover{
-    @include hover-darken($danger-color);
-   }
-  &.hover-lighten:hover{
-    @include hover-lighten($danger-color);
-  }
+  @include hover-darken($danger-color);
+  @include hover-lighten($danger-color);
 }
 
 .warning {
   background-color: $warning-color;
   color: $button-text-color-light;
-  &.hover-darken:hover{
-    @include hover-darken($warning-color);
-   }
-  &.hover-lighten:hover{
-    @include hover-lighten($warning-color);
-  }
+  @include hover-darken($warning-color);
+  @include hover-lighten($warning-color);
 }
 
 .primary {
   background-color: $primary-color;
   color: $button-text-color-light;
-  &.hover-darken:hover {
-    @include hover-darken($primary-color);
-  }
-  &.hover-lighten:hover{
-    @include hover-lighten($primary-color);
-  }
+  @include hover-darken($primary-color);
+  @include hover-lighten($primary-color);
 }
 
 .accent {
   background-color: $accent-color;
   color: $button-text-color-light;
-  &.hover-darken:hover{
-    @include hover-darken($accent-color);
-  }
-  &.hover-lighten:hover{
-    @include hover-lighten($accent-color);
-  }
+  @include hover-darken($accent-color);
+  @include hover-lighten($accent-color);
 }
 
 .colored {
   background-color: $button-background-color;
   color: $button-text-color;
   border-color: $button-background-color;
-  &.hover-darken:hover{
-    @include hover-darken($button-background-color);
-  }
-  &.hover-lighten:hover{
-    @include hover-lighten($button-background-color);
-  }
+  @include hover-darken($button-background-color);
+  @include hover-lighten($button-background-color);
 }
 
 .ghost {
@@ -121,63 +143,80 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  &.hover-fill:hover{
-    @include hover-fill($button-background-color,$background-color);
-  }
+  @include hover-fill($button-background-color,$background-color);
+  @include hover-transparent-dark();
+  @include hover-transparent-light(0.8);
+  @include hover-transparent-color($button-background-color);
+  @include hover-border-darken-c(black);
+
   &.hover-darken:hover {
-    background-color: transparentize($button-background-color, 0.97);
+    background-color: transparentize(black, $transparent-value);
   }
-  &.hover-lighten:hover { /////////////
+  &.hover-lighten:hover {
     background-color: transparentize(white, 0.8);
-  }
+  }  
 
   @mixin ghost-color($color) {
     color: $color;
     border-color: $color;
-    &.hover-fill:hover {
-      @include hover-fill($color, $background-color);
-    }
+    @include hover-fill($color, $background-color);
+    @include hover-transparent-color($color);
+    @include hover-border-darken-c($color);
+
     &.hover-darken:hover{
-      @include hover-darken-transparent($color);
+      background-color: transparentize($color, $transparent-value);
     }
+    
   }
   
   &.primary {
     @include ghost-color($primary-color);
+    @include hover-border-darken-c($primary-color);
   }
   &.accent {
     @include ghost-color($accent-color);
+    @include hover-border-darken-c($accent-color);
   }
   &.colored {
     @include ghost-color($button-background-color);
+    @include hover-border-darken-c($button-background-color);
   }
   &.success {
     @include ghost-color($success-color);
+    @include hover-border-darken-c($success-color);
   }
   &.danger {
     @include ghost-color($danger-color);
+    @include hover-border-darken-c($danger-color);
   }
   &.warning {
     @include ghost-color($warning-color);
+    @include hover-border-darken-c($warning-color);
   }
   &.disabled {
     background-color: transparent !important;
   }
+
 }
 
 .texted {
   background-color: transparent;
-  $color: black;
-  color: $color;
+  color: black;
   border-style: none;
-  &.hover-darken:hover{
-    @include hover-darken-transparent($color);
+  @include hover-transparent-dark();
+  @include hover-transparent-light(0.8);
+  @include hover-transparent-color($button-background-color);
+  
+  &.hover-darken:hover {
+    background-color: transparentize(black, $transparent-value);
   }
 
   @mixin texted-color($color) {
     color: $color;
-    &.hover-darken:hover{
-      @include hover-darken-transparent($color);
+    @include hover-transparent-color($color);
+
+    &.hover-darken:hover {
+      background-color: transparentize($color, $transparent-value);
     }
   }
   
@@ -208,12 +247,10 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 .transparent {
   background-color: transparentize(black, 0.75);
   color: white;
-  &.hover-darken:hover {
-    background-color: transparentize(black, 0.6);
-  }
-  &.hover-lighten:hover {
-    background-color: transparentize(black, 0.6);
-  }
+  //$t-dark: transparentize(black, 0.6);
+  //$t-light: transparentize(white, 0.1);
+  @include hover-darken(black, 0.6);
+  @include hover-lighten(white, 0.1);
 }
 
 .shadowed {
@@ -221,44 +258,6 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
               0px 2px 2px 0px rgba(0,0,0,0.14), 
               0px 1px 5px 0px rgba(0,0,0,0.12);
 }
-
-/* Other Button Hover Styles */
-/* solid white */
-/*
-.hover1:hover {
-  background-color: white !important;
-}
-*/
-
-/* fill transparent */
-/*
-.hover2:hover {
-  background-color: transparentize(black, 0.75) !important;
-}
-*/
-
-/* solid lighter */
-
-/* solid darker */
-
-/* more transparent */
-
-/* more opaque */
-
-/* to ghost */
-
-/* btn active(on click) */
-/*
-.wbtn:active {
-  box-shadow: inset 0px 0px 0px 3px var(--tint);
-}
-.primary:active {
-  box-shadow: inset 0px 0px 0px 3px var(--primary-tint);
-}
-.accent:active {
-  box-shadow: inset 0px 0px 0px 3px var(--accent-tint);
-}
-*/
 
 /* Button Sizes */
 .small {

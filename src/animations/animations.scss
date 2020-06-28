@@ -9,30 +9,96 @@ $transparent-value: 0.94;
 }
 
 @mixin hover-darken($b-color, $d-value: "") {
-  @if $d-value == "" {
-    @include hover-effect(darken($b-color, $darken-value));
-  } @else {
-    @include hover-effect(darken($b-color, $d-value));
+  &.hover-darken:hover {
+    @if $d-value == "" {
+      @include hover-effect(darken($b-color, $darken-value));
+    } @else {
+      @include hover-effect(darken($b-color, $d-value));
+    }
   }
 }
 
 @mixin hover-lighten($b-color, $l-value: "") {
-  @if $l-value == "" {
-    @include hover-effect(lighten($b-color, $lighten-value));
-  } @else {
-    @include hover-effect(lighten($b-color, $l-value));
-  }
+  &.hover-lighten:hover {
+    @if $l-value == "" {
+      @include hover-effect(lighten($b-color, $lighten-value));
+    } @else {
+      @include hover-effect(lighten($b-color, $l-value));
+    }
+  }  
 }
 
 @mixin hover-fill($b-color, $t-color) {
-  @include hover-effect($b-color, $t-color);
+  &.hover-fill:hover {
+    @include hover-effect($b-color, $t-color);
+  }
 }
 
-@mixin hover-darken-transparent($b-color, $t-value: "") {
-  @if $t-value == "" {
-    background-color: transparentize($b-color, $transparent-value);
-  } @else {
-    @include hover-effect(darken($b-color, $t-value));
+@mixin hover-transparent-dark($t-value: "") {
+  &.hover-transparent-dark:hover {
+    @if $t-value == "" {
+      background-color: transparentize(black, $transparent-value);
+    } @else {
+      background-color: transparentize(black, $t-value);
+    }
+  }
+}
+
+@mixin hover-transparent-light($t-value: "") {
+  &.hover-transparent-light:hover {
+    @if $t-value == "" {
+      background-color: transparentize(white, $transparent-value);
+    } @else {
+      background-color: transparentize(white, $t-value);
+    }
+  }
+}
+
+@mixin hover-transparent-color($b-color, $t-value: "") {
+  &.hover-transparent-color:hover {
+    @if $t-value == "" {
+      background-color: transparentize($b-color, $transparent-value);
+    } @else {
+      background-color: transparentize($b-color, $t-value);
+    }
+  }
+}
+
+
+
+
+
+@mixin hover-border-darken($b-color, $t-value: "") {
+  &.hover-border-darken {
+    border-color: darken($b-color, $transparent-value); // value before lightened
+    &:hover {
+      @if $t-value == "" {
+        border-color: $b-color;
+      } @else {
+        border-color: darken($b-color, $t-value); // value after
+      }
+    }
+  }
+}
+
+// combined mixin
+@mixin hover-border-darken-c($b-color, $t-value: "") {
+  &.hover-border-darken-c {
+    //@include hover-border-darken($b-color, $t-value: "");
+    border-color: transparentize($b-color, 0.5); //
+    &:hover {
+      @if $t-value == "" {
+        border-color: $b-color;
+      } @else {
+        border-color: darken($b-color, $t-value); //
+      }
+      //@include hover-transparent-dark($t-value: ""); 
+      @if $t-value == "" {
+        background-color: transparentize($b-color, $transparent-value);
+      } @else {
+        background-color: transparentize($b-color, $t-value); 
+      }
+    }
   }
 }
 

@@ -14,9 +14,18 @@ export default function WButtonPage() {
       <table>
         <tbody>
           <tr>
-            <td>Default Hover-lighten button</td>
+            <td>Ghost danger rounded Hover-border-darken-c button</td>
             <td>
-              <WButton className="hover-lighten">Button</WButton>
+              <WButton className="ghost danger rounded hover-border-darken-c">
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Default Hover-darken button</td>
+            <td>
+              <WButton className="hover-darken">Button</WButton>
             </td>
           </tr>
           <tr>
@@ -24,24 +33,6 @@ export default function WButtonPage() {
             <td>
               <WButton className="disabled medium hover-lighten">
                 Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Accent Icon Hover-lighten button</td>
-            <td>
-              <WButton className="accent hover-lighten">
-                <i class="material-icons small">verified</i>
-                <br />
-                <i class="material-icons large">shopping_cart</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Disabled Texted Icon Hover-darken button</td>
-            <td>
-              <WButton className="accent texted hover-darken">
-                <i class="material-icons">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -57,63 +48,16 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
-            <td>Medium Pill Colored button</td>
+            <td>Accent Icon Hover-lighten button</td>
             <td>
-              <WButton className="medium pill colored">Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Ghost Hover-darken button</td>
-            <td>
-              <WButton className="large ghost hover-darken">Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Colored Ghost Hover-lighten button</td>
-            <td>
-              <WButton className="large colored ghost hover-lighten">
-                Button
+              <WButton className="accent hover-lighten">
+                <i class="material-icons small">verified</i>
+                <br />
+                <i class="material-icons large">shopping_cart</i>
               </WButton>
             </td>
           </tr>
-          <tr>
-            <td>Large Primary Ghost Hover-fill button</td>
-            <td>
-              <WButton className="large ghost primary hover-fill">
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Ghost Warning Hover-darken button</td>
-            <td>
-              <WButton className="large ghost warning hover-darken">
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Accent Ghost Hover-lighten button</td>
-            <td>
-              <WButton className="ghost accent hover-lighten">Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Medium Rounded Ghost Success Hover-lighten button</td>
-            <td>
-              <WButton className="medium rounded ghost success hover-lighten">
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Small Rounded Accent Ghost Hover-fill button</td>
-            <td>
-              <WButton className="rounded small ghost accent hover-fill">
-                Button
-              </WButton>
-            </td>
-          </tr>
+
           <tr>
             <td>Accent Hover-darken button</td>
             <td>
@@ -150,6 +94,103 @@ export default function WButtonPage() {
               <WButton className="shadowed large warning">Button</WButton>
             </td>
           </tr>
+
+          <tr>
+            <td>Disabled Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="accent texted hover-darken disabled">
+                <i class="material-icons">favorite</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="accent hover-darken circle small">
+                <i class="material-icons">favorite</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>2 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="accent hover-darken circle medium">
+                <i class="material-icons">favorite</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Texted Icon Hover-darken button</td>
+            <td>
+              <WButton className="accent hover-darken circle large">
+                <i class="material-icons">favorite</i>
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Medium Pill Colored button</td>
+            <td>
+              <WButton className="medium pill colored">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Ghost Hover-tl button</td>
+            <td>
+              <WButton className="large ghost hover-lighten">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Ghost Hover-td button</td>
+            <td>
+              <WButton className="large ghost hover-darken">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Primary Ghost Hover-fill button</td>
+            <td>
+              <WButton className="large ghost primary hover-fill">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>TEST Large Ghost Warning Hover-tl button</td>
+            <td>
+              <WButton className="large ghost warning hover-transparent-dark">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Ghost Warning Hover-td button</td>
+            <td>
+              <WButton className="large ghost warning hover-darken">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Accent Ghost Hover-lighten button</td>
+            <td>
+              <WButton className="ghost accent hover-lighten">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Medium Rounded Ghost Success Hover-lighten button</td>
+            <td>
+              <WButton className="medium rounded ghost success hover-lighten">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Small Rounded Accent Ghost Hover-fill button</td>
+            <td>
+              <WButton className="rounded small ghost accent hover-fill">
+                Button
+              </WButton>
+            </td>
+          </tr>
           <tr>
             <td>Disabled Ghost Accent button</td>
             <td>
@@ -160,6 +201,14 @@ export default function WButtonPage() {
             <td>Transparent Hover-darken button</td>
             <td>
               <WButton className="medium transparent pill hover-darken">
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Transparent Hover-lighten button</td>
+            <td>
+              <WButton className="medium transparent pill hover-lighten">
                 Button
               </WButton>
             </td>
@@ -199,7 +248,9 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Warning button</td>
             <td>
-              <WButton className="medium texted warning">Button</WButton>
+              <WButton className="medium texted warning hover-transparent-light">
+                Button
+              </WButton>
             </td>
           </tr>
           <tr>
