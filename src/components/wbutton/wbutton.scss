@@ -234,10 +234,13 @@ are called from the animations.scss mixins*/
 .transparent {
   background-color: transparentize(black, 0.75);
   color: white;
-  //$t-dark: transparentize(black, 0.6);
-  //$t-light: transparentize(white, 0.1);
-  @include hover-darken(black, 0.6);
-  @include hover-lighten(white, 0.1);
+
+  &.hover-darken:hover {
+    background-color: transparentize(black, 0.6);
+  }
+  &.hover-lighten:hover {
+    background-color: transparentize(white, 0.8);
+  }  
 }
 
 .raised {
