@@ -17,7 +17,9 @@ export default function WButtonPage() {
             <td>Ghost danger rounded hover-ghost-darken button</td>
             <td>
               <WButton className="ghost danger rounded hover-ghost-darken">
+                <i class="material-icons medium left">favorite</i>
                 Button
+                <i class="material-icons medium right">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -52,7 +54,6 @@ export default function WButtonPage() {
             <td>
               <WButton className="accent hover-lighten">
                 <i class="material-icons small">verified</i>
-                <br />
                 <i class="material-icons large">shopping_cart</i>
               </WButton>
             </td>
@@ -61,37 +62,35 @@ export default function WButtonPage() {
           <tr>
             <td>Accent Hover-darken button</td>
             <td>
-              <WButton className=" shadowed primary hover-darken">
+              <WButton className="raised primary hover-darken">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Accent Raised Hover-darken button</td>
+            <td>
+              <WButton className="raised large accent hover-darken">
                 Button
               </WButton>
             </td>
           </tr>
           <tr>
-            <td>Large Accent Shadowed Hover-darken button</td>
+            <td>Large Danger Raised button</td>
             <td>
-              <WButton className="shadowed large accent hover-darken">
+              <WButton className="raised large danger">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Large Success Raised Hover-lighten button</td>
+            <td>
+              <WButton className="raised large success hover-lighten">
                 Button
               </WButton>
             </td>
           </tr>
           <tr>
-            <td>Large Danger Shadowed button</td>
+            <td>Large Warning Raised button</td>
             <td>
-              <WButton className="shadowed large danger">Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Success Shadowed Hover-lighten button</td>
-            <td>
-              <WButton className="shadowed large success hover-lighten">
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Warning Shadowed button</td>
-            <td>
-              <WButton className="shadowed large warning">Button</WButton>
+              <WButton className="raised large warning">Button</WButton>
             </td>
           </tr>
 

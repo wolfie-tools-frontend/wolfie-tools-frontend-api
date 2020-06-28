@@ -25,8 +25,21 @@ are called from the animations.scss mixins*/
   outline: none;
   font-size: map-get($button-sizes, medium);
   text-align: center;
+  display: inline-flex; // center (icons)
+  align-items: center;
   @include hover-darken(rgb(239, 239, 239));
   @include hover-lighten(rgb(239, 239, 239));
+
+  i {
+    &.left {
+      margin-left: -0.25rem;
+      margin-right: 0.5rem;
+    }
+    &.right {
+      margin-left: 0.5rem;
+      margin-right: -0.25rem;
+    }
+  }
 }
 
 /* ------ WButton Styles ------*/
@@ -44,22 +57,19 @@ are called from the animations.scss mixins*/
   padding: 0.75rem;
   //overflow: visible;
   border-radius: 50%;
-  /*  
-  &.small i{
-    //font-size: 20px;
+
+  & i { // left
+    margin: 0;
   }
-  &.medium i{
-    //font-size: 30px;
-  }
-  &.large i{
-    //font-size: 50px;
-  }
-  */
 }
 
 .square {
   padding: 0.75rem;
   display: inline-flex;
+
+  & i { // left
+    margin: 0;
+  }
 }
 
 /* Button Types */
@@ -230,7 +240,7 @@ are called from the animations.scss mixins*/
   @include hover-lighten(white, 0.1);
 }
 
-.shadowed {
+.raised {
   box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
               0px 2px 2px 0px rgba(0,0,0,0.14), 
               0px 1px 5px 0px rgba(0,0,0,0.12);
