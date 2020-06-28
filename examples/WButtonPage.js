@@ -14,16 +14,30 @@ export default function WButtonPage() {
       <table>
         <tbody>
           <tr>
-            <td>Ghost danger rounded hover-ghost-darken button</td>
+            <td>Default Ripple-light button</td>
             <td>
-              <WButton className="ghost danger rounded hover-ghost-darken">
+              <WButton className="ripple-light">Button</WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Ghost danger rounded hover-ghost-darken ripple-light button</td>
+            <td>
+              <WButton className="ghost primary rounded hover-ghost-darken ripple-light">
+                <i class="material-icons medium left">thumb_up</i>
+                Like
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Ghost danger rounded hover-ghost-darken ripple-dark button</td>
+            <td>
+              <WButton className="ghost danger rounded hover-ghost-darken ripple-dark">
                 <i class="material-icons medium left">favorite</i>
                 Button
                 <i class="material-icons medium right">favorite</i>
               </WButton>
             </td>
           </tr>
-
           <tr>
             <td>Default Hover-darken button</td>
             <td>

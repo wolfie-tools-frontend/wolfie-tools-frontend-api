@@ -1,0 +1,34 @@
+//wnavbar = wrapper
+//wnavbar-left
+//wnavbar-right
+
+// menu?
+
+/*
+navbar-padding
+navbar-background-color
+navbar-submenu-color
+navbar-title-spacing
+navbar-input-width
+
+navbar-container
+navbar-stacked
+navbar-unstacked
+*/
+nav {
+  background-color: blue;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+}
+
+li, a{
+  float: left;
+  background-color: red;
+}
