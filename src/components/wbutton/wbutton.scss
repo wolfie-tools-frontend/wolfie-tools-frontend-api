@@ -16,7 +16,7 @@ $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 are called from the animations.scss mixins*/
 
 .wbutton {
-  background-color: rgb(224, 224, 224);
+  //background-color: rgb(224, 224, 224);
   font-family: $button-font-family;
   font-weight: $button-font-weight;
   padding: $button-padding;
@@ -30,6 +30,8 @@ are called from the animations.scss mixins*/
   align-items: center;
   @include hover-darken(rgb(239, 239, 239));
   @include hover-lighten(rgb(239, 239, 239));
+  @include ripple-light;
+  @include ripple-dark;
 
   i {
     &.left {
@@ -265,13 +267,5 @@ are called from the animations.scss mixins*/
 
 .span {
   width: 100%;
-}
-
-
-.ripple-light {
-  @include ripple-light;
-}
-
-.ripple-dark {
-  @include ripple-dark;
+  justify-content: center;
 }

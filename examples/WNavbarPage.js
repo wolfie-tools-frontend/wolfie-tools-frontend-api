@@ -7,61 +7,63 @@ import "../src/main.scss";
 export default function WButtonPage() {
   return (
     <div className="WNavbarPage">
+      <h1>Navbars</h1>
+
       <WNavbar>
-        <a href="#">Logo</a>
+        <a href="#" class="hover-transparent-lighten">
+          Logo
+        </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">Sass</a>
+            <a href="sass.html" class="hover-transparent-darken">
+              Sass
+            </a>
           </li>
           <li>
-            <a href="badges.html">Components</a>
+            <a href="badges.html" class="ripple-dark">
+              Components
+            </a>
           </li>
           <li>
             <a href="collapsible.html">JavaScript</a>
           </li>
         </ul>
+        <a href="#" class="hover-darken">
+          aaaa
+        </a>
+        <div class="hover-darken">other</div>
       </WNavbar>
-      <h1>Buttons</h1>
+
       <table>
         <tbody>
           <tr>
-            <td>2 Texted Icon Hover-darken button</td>
+            <td>A </td>
             <td>
-              <WButton className="accent hover-darken circle">
-                <i class="material-icons medium">favorite</i>
-              </WButton>
+              <WButton className="accent circle" />
             </td>
           </tr>
           <tr>
-            <td>3 Texted Icon Hover-darken button</td>
+            <td>B </td>
             <td>
-              <WButton className="accent hover-darken circle">
-                <i class="material-icons large">verified</i>
-              </WButton>
+              <WButton className="accent circle" />
             </td>
           </tr>
           <tr>
-            <td>1 Texted Icon Hover-darken button</td>
+            <td>1</td>
             <td>
-              <WButton className="primary hover-darken square">
-                <i class="material-icons small">verified</i>
-              </WButton>
+              <WButton className="primary square" />
             </td>
           </tr>
           <tr>
-            <td>2 Texted Icon Hover-darken button</td>
+            <td>2</td>
             <td>
-              <WButton className="primary hover-darken square">
-                <i class="material-icons medium">verified</i>
-              </WButton>
+              <WButton className="primary square" />
             </td>
           </tr>
           <tr>
-            <td>3 Texted Icon Hover-darken button</td>
+            <td>3</td>
             <td>
-              <WButton className="primary hover-darken square">
-                <i class="material-icons large">verified</i>
-              </WButton>
+              <WButton className="primary square" />
             </td>
           </tr>
         </tbody>

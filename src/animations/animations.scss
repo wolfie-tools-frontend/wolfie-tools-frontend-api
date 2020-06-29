@@ -1,36 +1,36 @@
 /* Hover Effects */
-$darken-value: 13%;
-$lighten-value: $darken-value;
+$darken-value: 4%;
+$lighten-value: 3%;
 $transparent-value: 0.94;
 
-@mixin hover-effect($b-color, $t-color: "") {
-  background-color: $b-color;
-  color: unquote($t-color);
+@mixin hover-effect($background-color, $text-color: "") {
+  background-color: $background-color;
+  color: unquote($text-color);
 }
 
-@mixin hover-darken($b-color, $d-value: "") {
+@mixin hover-darken($background-color, $d-value: "") {
   &.hover-darken:hover {
     @if $d-value == "" {
-      @include hover-effect(darken($b-color, $darken-value));
+      @include hover-effect(darken($background-color, $darken-value));
     } @else {
-      @include hover-effect(darken($b-color, $d-value));
+      @include hover-effect(darken($background-color, $d-value));
     }
   }
 }
 
-@mixin hover-lighten($b-color, $l-value: "") {
+@mixin hover-lighten($background-color, $l-value: "") {
   &.hover-lighten:hover {
     @if $l-value == "" {
-      @include hover-effect(lighten($b-color, $lighten-value));
+      @include hover-effect(lighten($background-color, $lighten-value));
     } @else {
-      @include hover-effect(lighten($b-color, $l-value));
+      @include hover-effect(lighten($background-color, $l-value));
     }
   }  
 }
 
-@mixin hover-fill($b-color, $t-color) {
+@mixin hover-fill($background-color, $t-color) {
   &.hover-fill:hover {
-    @include hover-effect($b-color, $t-color);
+    @include hover-effect($background-color, $t-color);
   }
 }
 
@@ -54,40 +54,40 @@ $transparent-value: 0.94;
   }
 }
 
-@mixin hover-transparent-colored($b-color, $t-value: "") {
+@mixin hover-transparent-colored($background-color, $t-value: "") {
   &.hover-transparent-colored:hover {
     @if $t-value == "" {
-      background-color: transparentize($b-color, $transparent-value);
+      background-color: transparentize($background-color, $transparent-value);
     } @else {
-      background-color: transparentize($b-color, $t-value);
+      background-color: transparentize($background-color, $t-value);
     }
   }
 }
 
-@mixin hover-border-darken($b-color, $t-value: "") {
+@mixin hover-border-darken($border-color, $t-value: "") {
   &.hover-border-darken {
-    border-color: darken($b-color, $transparent-value); // value before lightened
+    border-color: darken($border-color, $transparent-value); // value before lightened
     &:hover {
       @if $t-value == "" {
-        border-color: $b-color;
+        border-color: $border-color;
       } @else {
-        border-color: darken($b-color, $t-value); // value after
+        border-color: darken($border-color, $t-value); // value after
       }
     }
   }
 }
 
 // combined mixin
-@mixin hover-ghost-darken($b-color, $t-value: "") {
+@mixin hover-ghost-darken($background-color, $t-value: "") {
   &.hover-ghost-darken {
-    border-color: transparentize($b-color, 0.5);
+    border-color: transparentize($background-color, 0.5);
     &:hover {
-      border-color: $b-color;
+      border-color: $background-color;
       //@include hover-transparent-darken($t-value: ""); 
       @if $t-value == "" {
-        background-color: transparentize($b-color, $transparent-value);
+        background-color: transparentize($background-color, $transparent-value);
       } @else {
-        background-color: transparentize($b-color, $t-value); 
+        background-color: transparentize($background-color, $t-value); 
       }
     }
   }
@@ -124,9 +124,27 @@ $transparent-value: 0.94;
 }
 
 @mixin ripple-light() {
-  @include ripple(white);
+  &.ripple-light {
+    @include ripple(white);
+  }
 }
 
 @mixin ripple-dark() {
-  @include ripple(black);
+  &.ripple-dark {
+    @include ripple(black);
+  }
+}
+
+/* Allow animations to be called by any element */
+* {
+  @include hover-darken($primary-color);
+  @include hover-lighten($primary-color);
+  @include hover-fill($primary-color, $text-color);
+  @include hover-transparent-darken();
+  @include hover-transparent-lighten();
+  @include hover-transparent-colored($primary-color);
+  @include hover-border-darken($primary-color);
+  @include hover-ghost-darken($primary-color);
+  @include ripple-light();
+  @include ripple-dark();
 }

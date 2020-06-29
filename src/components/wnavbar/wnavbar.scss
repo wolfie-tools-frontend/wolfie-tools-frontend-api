@@ -1,11 +1,14 @@
+@import '../../variables';
+
 //wnavbar = wrapper
 //wnavbar-left
 //wnavbar-right
 
 // menu?
 
+$navbar-padding: 0.7rem 1rem;
+
 /*
-navbar-padding
 navbar-background-color
 navbar-submenu-color
 navbar-title-spacing
@@ -15,9 +18,28 @@ navbar-container
 navbar-stacked
 navbar-unstacked
 */
-nav {
-  background-color: blue;
-  padding: 10px;
+
+.wnavbar {
+  display: flex;
+  background-color: $primary-color;
+  margin-bottom: 10px;
+  
+}
+
+.wnavbar *{
+  //color: red !important;
+  //background-color: blue !important;
+}
+
+nav * {
+  //color: yellow !important;
+  //background-color: blue !important;
+  padding: 0.7rem 1rem;
+}
+
+a {
+  text-decoration: none;
+  //background-color: pink;
 }
 
 ul {
@@ -25,10 +47,23 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: green;
 }
 
-li, a{
+li {
   float: left;
-  background-color: red;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+li a {
+  //color: white;
+  //text-align: center;
+  //display: block;
+  //padding: 10px;
+  background-color: orange;
+}
+
+ul a {
+  //background-color: darkorchid;
+  //color: blue;
 }
