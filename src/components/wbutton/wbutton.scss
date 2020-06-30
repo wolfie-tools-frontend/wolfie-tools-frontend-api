@@ -2,13 +2,18 @@
 
 $button-font-family: inherit;
 $button-font-weight: null;
-
+/// @type Number
 $button-padding: 0.6em 1.2em;
-$button-margin: 0px 0px 5px 0px; 
+/// @type Number
+$button-margin: 0px 0px 5px 0px;
+/// @type Color
 $success-color: #4caf50 !default;
+/// @type Color
 $danger-color: #d32f2f !default;
+/// @type Color
 $warning-color: #f9a825 !default;
 
+/// @type Number
 $button-radius: .25rem !default;
 $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 
@@ -186,7 +191,6 @@ are called from the animations.scss mixins*/
   &.disabled {
     background-color: transparent !important;
   }
-
 }
 
 .texted {
@@ -199,6 +203,9 @@ are called from the animations.scss mixins*/
   
   &.hover-darken:hover {
     background-color: transparentize(black, $transparent-value);
+  }
+  &.hover-lighten:hover {
+    background-color: transparentize(white, 0.8);
   }
 
   @mixin texted-color($color) {

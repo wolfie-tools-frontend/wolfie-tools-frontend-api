@@ -1,14 +1,12 @@
 import React from "react";
 import "../examples/example.css";
 import "./main.scss";
-import WButtonPage from "../examples/WButtonPage";
-import WNavbarPage from "../examples/WNavbarPage";
+import Routes from "./Routes";
 
 export default function App() {
   return (
     <div>
-      <WButtonPage />
-      <WNavbarPage />
+      <Routes />
     </div>
   );
 }

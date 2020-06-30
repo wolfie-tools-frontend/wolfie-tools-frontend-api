@@ -1,69 +1,57 @@
 @import '../../variables';
 
-//wnavbar = wrapper
-//wnavbar-left
-//wnavbar-right
-
-// menu?
-
-$navbar-padding: 0.7rem 1rem;
-
-/*
-navbar-background-color
-navbar-submenu-color
-navbar-title-spacing
-navbar-input-width
-
-navbar-container
-navbar-stacked
-navbar-unstacked
-*/
+$navbar-background-color: $primary-color;
+$navbar-element-padding: 0.7rem 1rem;
 
 .wnavbar {
   display: flex;
-  background-color: $primary-color;
-  margin-bottom: 10px;
-  
-}
+  justify-content: space-between;
+  align-items: center;
+  //align-content: stretch;
 
-.wnavbar *{
-  //color: red !important;
-  //background-color: blue !important;
+  position: sticky;
+  height: 4rem;
+  background-color: $navbar-background-color;
+  margin-bottom: 10px;
 }
 
 nav * {
-  //color: yellow !important;
-  //background-color: blue !important;
-  padding: 0.7rem 1rem;
+  padding: $navbar-element-padding;
 }
 
 a {
   text-decoration: none;
-  //background-color: pink;
+  height:inherit;
+  display:flex;
+  align-items: center;
+  padding-top:0;
+  padding-bottom:0;
 }
 
-ul {
+a, a:visited {
+  color: inherit;
+}
+
+ul, ol, li{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display:flex;
+  align-items: center;
+  height:inherit;
 }
 
 li {
-  float: left;
+  float:left;
   padding-left: 0;
   padding-right: 0;
 }
 
-li a {
-  //color: white;
-  //text-align: center;
-  //display: block;
-  //padding: 10px;
-  background-color: orange;
+.left {
+
 }
 
-ul a {
-  //background-color: darkorchid;
-  //color: blue;
+.right {
+
 }
