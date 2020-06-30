@@ -10,7 +10,7 @@ export default function WButtonPage() {
 
   return (
     <div className="WButtonPage">
-      <h1>Buttons</h1>
+      <h1>WButton</h1>
       <table>
         <tbody>
           <tr>
@@ -26,7 +26,7 @@ export default function WButtonPage() {
           </tr>
 
           <tr>
-            <td>Primary Raised Hover-darken!</td>
+            <td>Primary Raised Hover-lighten</td>
             <td>
               <WButton className="raised primary hover-lighten">Button</WButton>
             </td>
@@ -120,17 +120,17 @@ export default function WButtonPage() {
             </td>
           </tr>
           <tr>
-            <td>Large Icon Circle Hover-darken</td>
+            <td>Large Raised Icon Circle Hover-darken</td>
             <td>
-              <WButton className="accent hover-darken circle">
+              <WButton className="accent raised hover-darken circle">
                 <i class="material-icons large">verified</i>
               </WButton>
             </td>
           </tr>
           <tr>
-            <td>Small Icon Square Primary</td>
+            <td>Small Icon Raised Square Primary</td>
             <td>
-              <WButton className="primary square">
+              <WButton className="primary raised square">
                 <i class="material-icons small">verified</i>
               </WButton>
             </td>

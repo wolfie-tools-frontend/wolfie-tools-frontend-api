@@ -1,4 +1,5 @@
-.WButtonPage {
+.WButtonPage,
+.WNavbarPage {
   text-align: center;
 }
 
@@ -31,4 +32,13 @@ td:first-child {
 .red-green {
   background-color: red;
   color: palegreen;
+}
+
+.logo {
+  padding: 0rem;
+  filter: brightness(0) invert(1);
+}
+
+.wnavbar {
+  color: white !important;
 }
