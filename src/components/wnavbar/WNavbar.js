@@ -12,7 +12,7 @@ const WNavbar = ({ children, className, onClick, style }) => {
 export default WNavbar;
 
 // wnavbar wrapper
-// a
+// li a
 // ul class
 // li
-// a (link)
+// li a (link)

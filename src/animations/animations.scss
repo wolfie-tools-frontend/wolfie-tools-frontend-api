@@ -1,8 +1,8 @@
-/* Hover Effects */
 $darken-value: 4%;
 $lighten-value: 3%;
 $transparent-value: 0.94;
 
+/* Hover Effects */
 @mixin hover-effect($background-color, $text-color: "") {
   background-color: $background-color;
   color: unquote($text-color);
@@ -93,6 +93,43 @@ $transparent-value: 0.94;
   }
 }
 
+@mixin hover-text-lighten($text-color, $t-value: "") {
+  &.hover-text-lighten:hover {
+    @if $t-value == "" {
+      color: lighten($text-color, $transparent-value);
+    } @else {
+      color: lighten($text-color, $t-value); 
+    }
+  }
+}
+
+@mixin hover-text-darken($text-color, $t-value: "") {
+  &.hover-text-darken:hover {
+    @if $t-value == "" {
+      color: darken($text-color, $transparent-value);
+    } @else {
+      color: darken($text-color, $t-value); 
+    }
+  }
+}
+
+@mixin hover-text-transparent() {
+  &.hover-text-transparent:hover {
+    color: $background-color;
+  }
+}
+
+@mixin hover-text-color($text-color) {
+  &.hover-text-color:hover {
+    color: $text-color;
+  }
+}
+
+@mixin hover-text-primary() {
+  
+}
+
+
 /* onClick Effects & Animations */
 @mixin ripple($color) {
   position: relative;
@@ -147,4 +184,7 @@ $transparent-value: 0.94;
   @include hover-ghost-darken($primary-color);
   @include ripple-light();
   @include ripple-dark();
+  @include hover-text-lighten($text-color);
+  @include hover-text-darken($text-color);
+  @include hover-text-transparent();
 }

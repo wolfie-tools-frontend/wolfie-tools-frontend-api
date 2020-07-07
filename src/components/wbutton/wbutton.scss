@@ -14,7 +14,7 @@ $danger-color: #d32f2f !default;
 $warning-color: #f9a825 !default;
 
 /// @type Number
-$button-radius: .25rem !default;
+$button-radius: $rounded-radius !default;
 $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
 
 /* Button hover effect and click effects & animations 
