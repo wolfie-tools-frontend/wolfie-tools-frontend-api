@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-import WButtonPage from "../examples/WButtonPage";
-import WNavbarPage from "../examples/WNavbarPage";
+import WButtonPage from "./examples/WButtonPage";
+import WNavbarPage from "./examples/WNavbarPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 
 class Routes extends React.Component {

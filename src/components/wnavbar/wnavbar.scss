@@ -1,4 +1,5 @@
-@import '../../variables';
+//@use '../../variables';  
+@import '../../global/variables';  
 
 $navbar-background-color: $primary-color;
 $navbar-element-padding: 0rem 1rem;
@@ -7,7 +8,6 @@ $navbar-element-padding: 0rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //align-content: stretch;
   position: sticky;
   height: 4rem;
   background-color: $navbar-background-color;

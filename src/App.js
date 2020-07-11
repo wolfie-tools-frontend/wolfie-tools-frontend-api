@@ -1,5 +1,5 @@
 import React from "react";
-import "../examples/example.css";
+import "./examples/example.css";
 import "./main.scss";
 import Routes from "./Routes";
 

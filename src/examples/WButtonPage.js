@@ -1,7 +1,7 @@
 import React from "react";
-import WButton from "../src/components/wbutton/WButton";
+import WButton from "../components/wbutton/WButton";
 import "./example.css";
-import "../src/main.scss";
+import "../main.scss";
 
 export default function WButtonPage() {
   function myFunction() {
@@ -70,7 +70,7 @@ export default function WButtonPage() {
             <td>Disabled Texted</td>
             <td>
               <WButton className="accent texted hover-darken disabled">
-                <i class="material-icons">favorite</i>
+                <i className="material-icons">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -79,7 +79,7 @@ export default function WButtonPage() {
             <td>Ghost Primary Rounded Hover-ghost-darken Ripple-light</td>
             <td>
               <WButton className="ghost primary rounded hover-ghost-darken ripple-light">
-                <i class="material-icons medium left">thumb_up</i>
+                <i className="material-icons medium left">thumb_up</i>
                 Like
               </WButton>
             </td>
@@ -88,9 +88,9 @@ export default function WButtonPage() {
             <td>Ghost Danger Rounded Hover-ghost-darken Ripple-dark</td>
             <td>
               <WButton className="ghost danger rounded hover-ghost-darken ripple-dark">
-                <i class="material-icons medium left">favorite</i>
+                <i className="material-icons medium left">favorite</i>
                 Button
-                <i class="material-icons medium right">favorite</i>
+                <i className="material-icons medium right">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -98,8 +98,8 @@ export default function WButtonPage() {
             <td>Success Pill Hover-lighten Ripple-light</td>
             <td>
               <WButton className="success hover-lighten pill ripple-light">
-                <i class="material-icons small">check</i>
-                <i class="material-icons large">shopping_cart</i>
+                <i className="material-icons small">check</i>
+                <i className="material-icons large">shopping_cart</i>
               </WButton>
             </td>
           </tr>
@@ -107,7 +107,7 @@ export default function WButtonPage() {
             <td>Small Icon Circle Accent Hover-darken</td>
             <td>
               <WButton className="accent hover-darken circle">
-                <i class="material-icons small">favorite</i>
+                <i className="material-icons small">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -115,7 +115,7 @@ export default function WButtonPage() {
             <td>Medium Icon Circle Hover-ligthen</td>
             <td>
               <WButton className="accent hover-lighten circle">
-                <i class="material-icons medium">favorite</i>
+                <i className="material-icons medium">favorite</i>
               </WButton>
             </td>
           </tr>
@@ -123,7 +123,7 @@ export default function WButtonPage() {
             <td>Large Raised Icon Circle Hover-darken</td>
             <td>
               <WButton className="accent raised hover-darken circle">
-                <i class="material-icons large">verified</i>
+                <i className="material-icons large">verified</i>
               </WButton>
             </td>
           </tr>
@@ -131,7 +131,7 @@ export default function WButtonPage() {
             <td>Small Icon Raised Square Primary</td>
             <td>
               <WButton className="primary raised square">
-                <i class="material-icons small">verified</i>
+                <i className="material-icons small">verified</i>
               </WButton>
             </td>
           </tr>
@@ -139,7 +139,7 @@ export default function WButtonPage() {
             <td>Medium Icon Square Primary Hover-lighten</td>
             <td>
               <WButton className="primary hover-lighten square">
-                <i class="material-icons medium">verified</i>
+                <i className="material-icons medium">verified</i>
               </WButton>
             </td>
           </tr>
@@ -147,7 +147,7 @@ export default function WButtonPage() {
             <td>Large Icon Square Hover-darken</td>
             <td>
               <WButton className="primary hover-darken square">
-                <i class="material-icons large">verified</i>
+                <i className="material-icons large">verified</i>
               </WButton>
             </td>
           </tr>
@@ -350,7 +350,7 @@ export default function WButtonPage() {
       </table>
       <WButton className="large warning span ripple-dark">
         Span Button
-        <i class="material-icons right">anchor</i>
+        <i className="material-icons right">anchor</i>
       </WButton>
     </div>
   );

@@ -42,3 +42,21 @@ td:first-child {
 .wnavbar {
   color: white !important;
 }
+
+.mckilla-nav {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+}
+.mckilla {
+  width: 80px;
+  justify-content: center;
+}
+
+.mckilla:hover {
+  color: rgb(118, 143, 165);
+}
+
+.mckilla:active {
+  font-size: 18pt;
+  font-weight: bold;
+}

@@ -1,0 +1,216 @@
+$darken-value: 4%;
+$lighten-value: 3%;
+$transparent-value: 0.94;
+
+/* Hover Effects */
+@mixin hover-effect($background-color, $text-color: "") {
+  background-color: $background-color;
+  color: unquote($text-color);
+}
+
+@mixin hover-darken($background-color, $d-value: "") {
+  &.hover-darken:hover {
+    @if $d-value == "" {
+      @include hover-effect(darken($background-color, $darken-value));
+    } @else {
+      @include hover-effect(darken($background-color, $d-value));
+    }
+  }
+}
+
+@mixin hover-lighten($background-color, $l-value: "") {
+  &.hover-lighten:hover {
+    @if $l-value == "" {
+      @include hover-effect(lighten($background-color, $lighten-value));
+    } @else {
+      @include hover-effect(lighten($background-color, $l-value));
+    }
+  }  
+}
+
+@mixin hover-fill($background-color, $t-color) {
+  &.hover-fill:hover {
+    @include hover-effect($background-color, $t-color);
+  }
+}
+
+@mixin hover-transparent-darken($t-value: "") {
+  &.hover-transparent-darken:hover {
+    @if $t-value == "" {
+      background-color: transparentize(black, $transparent-value);
+    } @else {
+      background-color: transparentize(black, $t-value);
+    }
+  }
+}
+
+@mixin hover-transparent-lighten($t-value: "") {
+  &.hover-transparent-lighten:hover {
+    @if $t-value == "" {
+      background-color: transparentize(white, $transparent-value);
+    } @else {
+      background-color: transparentize(white, $t-value);
+    }
+  }
+}
+
+@mixin hover-transparent-colored($background-color, $t-value: "") {
+  &.hover-transparent-colored:hover {
+    @if $t-value == "" {
+      background-color: transparentize($background-color, $transparent-value);
+    } @else {
+      background-color: transparentize($background-color, $t-value);
+    }
+  }
+}
+
+@mixin hover-border-darken($border-color, $t-value: "") {
+  &.hover-border-darken {
+    border-color: darken($border-color, $transparent-value); // value before lightened
+    &:hover {
+      @if $t-value == "" {
+        border-color: $border-color;
+      } @else {
+        border-color: darken($border-color, $t-value); // value after
+      }
+    }
+  }
+}
+
+// combined mixin
+@mixin hover-ghost-darken($background-color, $t-value: "") {
+  &.hover-ghost-darken {
+    border-color: transparentize($background-color, 0.5);
+    &:hover {
+      border-color: $background-color;
+      //@include hover-transparent-darken($t-value: ""); 
+      @if $t-value == "" {
+        background-color: transparentize($background-color, $transparent-value);
+      } @else {
+        background-color: transparentize($background-color, $t-value); 
+      }
+    }
+  }
+}
+
+@mixin hover-text-lighten($text-color, $t-value: "") {
+  &.hover-text-lighten:hover {
+    @if $t-value == "" {
+      color: lighten($text-color, $transparent-value);
+    } @else {
+      color: lighten($text-color, $t-value); 
+    }
+  }
+}
+
+@mixin hover-text-darken($text-color, $t-value: "") {
+  &.hover-text-darken:hover {
+    @if $t-value == "" {
+      color: darken($text-color, $transparent-value);
+    } @else {
+      color: darken($text-color, $t-value); 
+    }
+  }
+}
+
+@mixin hover-text-transparent() {
+  &.hover-text-transparent:hover {
+    color: $background-color;
+  }
+}
+
+@mixin hover-text-color($text-color) {
+  &:hover {
+    color: $text-color;
+  }
+}
+@mixin hover-text-primary() {
+  &.hover-text-primary {
+    @include hover-text-color($primary-color);
+  }
+}
+
+@mixin hover-text-accent() {
+  &.hover-text-primary {
+    @include hover-text-color($accent-color);
+  }
+}
+
+/*
+@mixin hover-text-colored() {
+}
+*/
+
+@mixin hover-text-danger() {
+  
+}
+
+@mixin hover-text-success() {
+  
+}
+
+@mixin hover-text-warning() {
+  
+}
+
+
+/* onClick Effects & Animations */
+@mixin ripple($color) {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, $color 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+  }
+
+  &:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+  }
+}
+
+@mixin ripple-light() {
+  &.ripple-light {
+    @include ripple(white);
+  }
+}
+
+@mixin ripple-dark() {
+  &.ripple-dark {
+    @include ripple(black);
+  }
+}
+
+/* Allow animations to be called by any element */
+* {
+  @include hover-darken($primary-color);
+  @include hover-lighten($primary-color);
+  @include hover-fill($primary-color, $text-color);
+  @include hover-transparent-darken();
+  @include hover-transparent-lighten();
+  @include hover-transparent-colored($primary-color);
+  @include hover-border-darken($primary-color);
+  @include hover-ghost-darken($primary-color);
+  @include ripple-light();
+  @include ripple-dark();
+  @include hover-text-lighten($text-color);
+  @include hover-text-darken($text-color);
+  @include hover-text-transparent();
+  @include hover-text-primary();
+  @include hover-text-accent();
+}
