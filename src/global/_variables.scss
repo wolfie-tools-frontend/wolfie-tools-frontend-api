@@ -1,10 +1,5 @@
-@import './theme';
+@import './color';
 @import './mixins';
-
-$disabled-background-color: transparentize(lightgrey, 0.2) !default;
-$disabled-color: rgba(0, 0, 0, 0.26) !default;
-
-$transparent-dark-color: transparentize(black, $transparent-value);
 
 $rounded-radius: 0.25rem;
 
@@ -28,17 +23,3 @@ $icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
     color: $disabled-color;
   }
 }
-
-/*
-.transparent-dark-color {
-  background-color: $transparent-dark-color;
-  color: $text-color-light;
-}
-*/
-
-/*
-.primary {
-  background-color: $primary-color;
-  color: $button-text-color-light;
-}
-*/

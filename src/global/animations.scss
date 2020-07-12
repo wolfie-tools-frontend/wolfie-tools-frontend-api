@@ -1,6 +1,4 @@
-$darken-value: 4%;
-$lighten-value: 3%;
-$transparent-value: 0.94;
+@import './color';
 
 /* Hover Effects */
 @mixin hover-effect($background-color, $text-color: "") {
