@@ -1,9 +1,10 @@
-@import './color';
+@use './colors' as *;
+@use "theme";
 
 /* Hover Effects */
 @mixin hover-effect($background-color, $text-color: "") {
   background-color: $background-color;
-  color: unquote($text-color);
+  color: $text-color;
 }
 
 @mixin hover-darken($background-color, $d-value: "") {
@@ -113,7 +114,7 @@
 
 @mixin hover-text-transparent() {
   &.hover-text-transparent:hover {
-    color: $background-color;
+    color: theme.$background-color;
   }
 }
 
@@ -124,13 +125,13 @@
 }
 @mixin hover-text-primary() {
   &.hover-text-primary {
-    @include hover-text-color($primary-color);
+    @include hover-text-color(theme.$primary-color);
   }
 }
 
 @mixin hover-text-accent() {
   &.hover-text-primary {
-    @include hover-text-color($accent-color);
+    @include hover-text-color(theme.$accent-color);
   }
 }
 
@@ -150,7 +151,6 @@
 @mixin hover-text-warning() {
   
 }
-
 
 /* onClick Effects & Animations */
 @mixin ripple($color) {
@@ -196,18 +196,18 @@
 
 /* Allow animations to be called by any element */
 * {
-  @include hover-darken($primary-color);
-  @include hover-lighten($primary-color);
-  @include hover-fill($primary-color, $text-color);
+  @include hover-darken(theme.$primary-color);
+  @include hover-lighten(theme.$primary-color);
+  @include hover-fill(theme.$primary-color, theme.$text-color);
   @include hover-transparent-darken();
   @include hover-transparent-lighten();
-  @include hover-transparent-colored($primary-color);
-  @include hover-border-darken($primary-color);
-  @include hover-ghost-darken($primary-color);
+  @include hover-transparent-colored(theme.$primary-color);
+  @include hover-border-darken(theme.$primary-color);
+  @include hover-ghost-darken(theme.$primary-color);
   @include ripple-light();
   @include ripple-dark();
-  @include hover-text-lighten($text-color);
-  @include hover-text-darken($text-color);
+  @include hover-text-lighten(theme.$text-color);
+  @include hover-text-darken(theme.$text-color);
   @include hover-text-transparent();
   @include hover-text-primary();
   @include hover-text-accent();

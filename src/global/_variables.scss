@@ -1,5 +1,5 @@
-@import './color';
-@import './mixins';
+@use './colors' as *;
+@use './mixins' as *;
 
 $rounded-radius: 0.25rem;
 

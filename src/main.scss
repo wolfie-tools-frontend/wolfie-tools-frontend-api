@@ -1,4 +1,5 @@
-@import './global/variables';
+@use './global/variables' as *;
+@use './global/theme' as *;
 
 body {
   font-family: $font-family;

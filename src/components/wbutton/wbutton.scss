@@ -1,4 +1,7 @@
-@import '../../global/variables';  
+@use '../../global/variables' as *;
+@use '../../global/animations' as *;
+@use '../../global/colors' as *;
+@use '../../global/theme' as *;
 
 $button-font-family: inherit;
 $button-font-weight: null;
@@ -6,13 +9,6 @@ $button-font-weight: null;
 $button-padding: 0.6em 1.2em;
 /// @type Number
 $button-margin: 0px 0px 5px 0px;
-/// @type Color
-$success-color: #4caf50 !default;
-/// @type Color
-$danger-color: #d32f2f !default;
-/// @type Color
-$warning-color: #f9a825 !default;
-
 /// @type Number
 $button-radius: $rounded-radius !default;
 $button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;

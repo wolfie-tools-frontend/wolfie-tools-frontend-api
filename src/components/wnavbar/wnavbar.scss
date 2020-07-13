@@ -1,5 +1,7 @@
-//@use '../../variables';  
-@import '../../global/variables';  
+@use '../../global/variables' as *;
+@use '../../global/animations' as *;
+@use '../../global/colors' as *;
+@use '../../global/theme' as *; 
 
 $navbar-background-color: $primary-color;
 $navbar-element-padding: 0rem 1rem;
