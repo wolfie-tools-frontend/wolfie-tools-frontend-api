@@ -27,7 +27,7 @@ export default function WButtonPage() {
         </ul>
       </WNavbar>
 
-      <WNavbar>
+      <WNavbar className="colored">
         <ul id="nav-mobile" className="hide-on-med-and-down">
           <li className="hover-transparent-lighten">
             <a href="#">Logo</a>

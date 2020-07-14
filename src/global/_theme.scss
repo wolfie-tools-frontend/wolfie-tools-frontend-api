@@ -15,5 +15,7 @@ $text-color: black !default;
 $text-color-light: white !default;
 
 $button-background-color: #354856 !default;
-$button-text-color: lightgrey !default;
-$button-text-color-light: white !default;
+$button-text-color: $text-color-light !default;
+
+$navbar-background-color: $primary-color !default;
+$navbar-text-color: $text-color-light !default;

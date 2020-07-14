@@ -1,7 +1,6 @@
 @use "sass:color";
 @use '../../global/wolfie' as *;
 
-$navbar-background-color: $primary-color;
 $navbar-element-padding: 0rem 1rem;
 
 .wnavbar {
@@ -10,24 +9,26 @@ $navbar-element-padding: 0rem 1rem;
   align-items: center;
   position: sticky;
   height: 4rem;
-  background-color: $navbar-background-color;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   margin-bottom: 10px;
-
+  color: $navbar-text-color;
+  background-color: rgb(224, 224, 224);
+  
   &.primary {
     background-color: $primary-color;
-    color: $button-text-color-light;
   }
-  
+
   &.accent {
     background-color: $accent-color;
-    color: $button-text-color-light;
+  }
+
+  &.colored {
+    background-color: $navbar-background-color;
   }
 
   &.transparent-dark-color {
     background-color: $transparent-dark-color;
-    color: $text-color-light;
   }
 }
 

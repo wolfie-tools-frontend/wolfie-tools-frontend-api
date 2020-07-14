@@ -18,7 +18,7 @@ class Routes extends React.Component {
       <>
         <BrowserRouter>
           <div>
-            <WNavbar>
+            <WNavbar className={"primary"}>
               <li>
                 <a href="/">
                   <img

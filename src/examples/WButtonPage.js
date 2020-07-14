@@ -484,13 +484,14 @@ export default function WButtonPage() {
           <tr>
             <td>Hover-darken</td>
             <td>
-              <div class="stacked">
+              <div className="stacked">
                 <WButton
                   className="primary hover-darken"
                   onClick={myFunction}
                 >
                   Button
                 </WButton>
+
                 <WButton
                   className="primary ghost hover-darken"
                   onClick={myFunction}
