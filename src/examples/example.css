@@ -16,6 +16,7 @@ tr {
 
 tr:first-child {
   border-top: none;
+  
 }
 
 tr:last-child {
@@ -23,15 +24,21 @@ tr:last-child {
 }
 
 td {
-  padding: 10px;
+  padding: 1rem;
 }
+/*
 td:first-child {
   border-right: solid #7f9199 1px;
 }
+*/
 
 .red-green {
   background-color: red;
   color: palegreen;
+}
+.custom-color {
+  background-color: plum;
+  color: indianred;
 }
 
 .logo {
@@ -51,12 +58,18 @@ td:first-child {
   width: 80px;
   justify-content: center;
 }
-
 .mckilla:hover {
   color: rgb(118, 143, 165);
 }
-
 .mckilla:active {
   font-size: 18pt;
   font-weight: bold;
+}
+
+.fancy-buttons > .wbutton{
+  
+  display: inline-flexbox;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 }

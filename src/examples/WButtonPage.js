@@ -11,8 +11,473 @@ export default function WButtonPage() {
   return (
     <div className="WButtonPage">
       <h1>WButton</h1>
+      
+      <h2>Types</h2>
       <table>
         <tbody>
+          <tr>
+            <td>Default</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Ghost</td>
+            <td>
+              <WButton
+                className="ghost primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Texted</td>
+            <td>
+              <WButton
+                className="texted primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Transparent</td>
+            <td>
+              <WButton
+                className="transparent"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+        <WButton
+          className="ghost success rounded hover-fill ripple-light"
+          >
+          Ghost
+        </WButton>
+        <WButton
+          className="texted hover-darken ripple-light"
+          style={{color:"#e91e63"}}
+          >
+          Texted
+        </WButton>
+        <WButton
+          className="transparent pill ripple-light"
+          >
+          Transparent
+        </WButton>
+      </div>  
+      
+      <h2>Shapes</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Rounded</td>
+            <td>
+              <WButton
+                className="rounded primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Pill</td>
+            <td>
+              <WButton
+                className="pill primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Circle</td>
+            <td>
+              <WButton
+                className="circle primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons medium">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Square</td>
+            <td>
+              <WButton
+                className="square primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons medium">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+        <WButton
+          className="success rounded hover-darken ripple-light"
+          >
+          Rounded
+        </WButton>
+        <WButton
+          className="pill accent hover-darken ripple-light"
+          >
+          Pill
+        </WButton>
+        <WButton
+          className="circle accent ripple-light"
+          >
+          <i className="material-icons medium">thumb_up</i>
+        </WButton>
+        <WButton
+          className="square accent ripple-light"
+          >
+          <i className="material-icons medium">thumb_up</i>
+        </WButton>
+      </div>
+
+      <h2>Color</h2>
+      <table>
+        <tbody>
+         <tr>
+            <td>Default</td>
+            <td>
+              <WButton
+                className=""
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Primary</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Accent</td>
+            <td>
+              <WButton
+                className="accent"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Colored</td>
+            <td>
+              <WButton
+                className="colored"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Success</td>
+            <td>
+              <WButton
+                className="success"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Danger</td>
+            <td>
+              <WButton
+                className="danger"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Warning</td>
+            <td>
+              <WButton
+                className="warning"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+          <tr>
+            <td>Custom</td>
+            <td>
+              <WButton
+                className="custom-color"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+        <WButton
+          className="success rounded hover-lighten ripple-light"
+          >
+          Success
+        </WButton>
+        <WButton
+          className="pill danger hover-darken ripple-dark"
+          >
+          Danger
+        </WButton>
+        <WButton
+          className="pill warning hover-darken ripple-dark"
+          >
+          Warning
+        </WButton>
+      </div>
+
+      <h2>Size</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Small</td>
+            <td>
+              <WButton
+                className="small primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Medium</td>
+            <td>
+              <WButton
+                className="medium primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Large</td>
+            <td>
+              <WButton
+                className="large primary"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+        <WButton
+          className="ghost success rounded hover-fill ripple-light"
+          >
+          Ghost
+        </WButton>
+        <WButton
+          className="texted hover-darken ripple-light"
+          style={{color:"#e91e63"}}
+          >
+          Texted
+        </WButton>
+        <WButton
+          className="transparent pill ripple-light"
+          >
+          Transparent
+        </WButton>
+      </div>
+
+      <h2>Icons</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Small</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons small">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Medium</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons medium">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Large</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons large">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Left Align</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                <i className="material-icons left">thumb_up</i>
+                Like
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Center Align</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Like
+                <i className="material-icons center">thumb_up</i>
+                Like
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Right Align</td>
+            <td>
+              <WButton
+                className="primary"
+                onClick={myFunction}
+              >
+                Like
+                <i className="material-icons right">thumb_up</i>
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+        <WButton
+          className="ghost success rounded hover-fill ripple-light"
+          >
+          Ghost
+        </WButton>
+        <WButton
+          className="texted hover-darken ripple-light"
+          style={{color:"#e91e63"}}
+          >
+          Texted
+        </WButton>
+        <WButton
+          className="transparent pill ripple-light"
+          >
+          Transparent
+        </WButton>
+      </div>
+
+
+
+
+      <br/><br/><br/><br/><br/>
+
+      <h2>Examples</h2>
+      <table>
+        <tbody>
+
           <tr>
             <td>Primary Small Hover-darken</td>
             <td>
