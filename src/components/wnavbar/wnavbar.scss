@@ -38,7 +38,7 @@ nav * {
 
 li {
   float:left;
-  //padding: $navbar-element-padding !important;
+  padding: 0;
 }
 
 a {
@@ -46,7 +46,7 @@ a {
   height:inherit;
   display:flex;
   align-items: center;
-  padding: 0;
+  padding: $navbar-element-padding;
   //padding-top:0;
   //padding-bottom:0;
   //padding: $navbar-element-padding;
@@ -73,10 +73,6 @@ ul, ol, li{
 li {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.show-current-dark {
-  background-color: color.scale(black, $alpha: $transparent-value);
 }
 
 .left {
