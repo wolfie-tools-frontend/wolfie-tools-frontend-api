@@ -1,7 +1,9 @@
+@use "sass:color";
 @use '../../global/variables' as *;
 @use '../../global/animations' as *;
 @use '../../global/colors' as *;
 @use '../../global/theme' as *; 
+
 
 $navbar-background-color: $primary-color;
 $navbar-element-padding: 0rem 1rem;
@@ -77,7 +79,7 @@ li {
 }
 
 .show-current-dark {
-  background-color: transparentize(black, $transparent-value);
+  background-color: color.scale(black, $alpha: $transparent-value);
 }
 
 .left {

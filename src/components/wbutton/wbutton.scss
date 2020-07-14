@@ -1,7 +1,10 @@
+@use "sass:color";
+@use "sass:map";
 @use '../../global/variables' as *;
 @use '../../global/animations' as *;
 @use '../../global/colors' as *;
 @use '../../global/theme' as *;
+
 
 $button-font-family: inherit;
 $button-font-weight: null;
@@ -25,7 +28,7 @@ are called from the animations.scss mixins*/
   cursor: pointer;
   border: none;
   outline: none;
-  font-size: map-get($button-sizes, medium);
+  font-size: map.get($button-sizes, medium);
   text-align: center;
   display: inline-flex; // center (icons)
   align-items: center;
@@ -42,6 +45,10 @@ are called from the animations.scss mixins*/
     &.right {
       margin-left: 0.5rem;
       margin-right: -0.25rem;
+    }
+    &.center {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -136,18 +143,19 @@ are called from the animations.scss mixins*/
   border-width: 1px;
   @include hover-fill($button-background-color,$background-color);
   @include hover-transparent-darken();
-  @include hover-transparent-lighten(0.8);
+  @include hover-transparent-lighten(-80%);
   @include hover-transparent-colored($button-background-color);
   @include hover-ghost-darken(black);
 
   &.hover-darken:hover {
-    background-color: transparentize(black, $transparent-value);
+    background-color: color.scale(black, $alpha: $transparent-value);
   }
   &.hover-lighten:hover {
-    background-color: transparentize(white, 0.8);
+    background-color: color.scale(white, $alpha: -80%);
   }  
 
   @mixin ghost-color($color) {
+    background-color: transparent;
     color: $color;
     border-color: $color;
     @include hover-fill($color, $background-color);
@@ -155,7 +163,7 @@ are called from the animations.scss mixins*/
     @include hover-ghost-darken($color);
 
     &.hover-darken:hover{
-      background-color: transparentize($color, $transparent-value);
+      background-color: color.scale($color, $alpha: $transparent-value);
     }
     
   }
@@ -194,22 +202,23 @@ are called from the animations.scss mixins*/
   color: black;
   border-style: none;
   @include hover-transparent-darken();
-  @include hover-transparent-lighten(0.8);
+  @include hover-transparent-lighten(-80%);
   @include hover-transparent-colored($button-background-color);
   
   &.hover-darken:hover {
-    background-color: transparentize(black, $transparent-value);
+    background-color: color.scale(black, $alpha: $transparent-value);
   }
   &.hover-lighten:hover {
-    background-color: transparentize(white, 0.8);
+    background-color: color.scale(white, $alpha: -80%);
   }
 
   @mixin texted-color($color) {
+    background-color: transparent;
     color: $color;
     @include hover-transparent-colored($color);
 
     &.hover-darken:hover {
-      background-color: transparentize($color, $transparent-value);
+      background-color: color.scale($color, $alpha: $transparent-value);
     }
   }
   
@@ -238,14 +247,14 @@ are called from the animations.scss mixins*/
 }
 
 .transparent {
-  background-color: transparentize(black, 0.75);
+  background-color: color.scale(black, $alpha: -75%);
   color: white;
 
   &.hover-darken:hover {
-    background-color: transparentize(black, 0.6);
+    background-color: color.scale(black, $alpha: -60%);
   }
   &.hover-lighten:hover {
-    background-color: transparentize(white, 0.8);
+    background-color: color.scale(white, $alpha: -80%);
   }  
 }
 
@@ -257,15 +266,15 @@ are called from the animations.scss mixins*/
 
 /* Button Sizes */
 .small {
-  font-size: map-get($button-sizes, small);
+  font-size: map.get($button-sizes, small);
 }
 
 .medium {
-  font-size: map-get($button-sizes, medium);
+  font-size: map.get($button-sizes, medium);
 }
 
 .large {
-  font-size: map-get($button-sizes, large);
+  font-size: map.get($button-sizes, large);
 }
 
 .span {

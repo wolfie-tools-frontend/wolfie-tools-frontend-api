@@ -8,7 +8,6 @@ export default function WButtonPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
-
       <WNavbar className="accent">
         <ul>
           <li className="hover-transparent-darken">

@@ -1,5 +1,6 @@
-@use './colors' as *;
-@use './mixins' as *;
+@use "sass:map";
+@use './colors';
+@forward './mixins';
 
 $rounded-radius: 0.25rem;
 
@@ -11,15 +12,15 @@ $icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
   font-size: $icon-font-size;
   
   &.small{
-    font-size: map-get($icon-sizes, small);
+    font-size: map.get($icon-sizes, small);
   }
   &.medium {
-    font-size: map-get($icon-sizes, medium);
+    font-size: map.get($icon-sizes, medium);
   }
   &.large {
-   font-size: map-get($icon-sizes, large);
+   font-size: map.get($icon-sizes, large);
   }
   &.disabled {
-    color: $disabled-color;
+    color: colors.$disabled-color;
   }
 }
