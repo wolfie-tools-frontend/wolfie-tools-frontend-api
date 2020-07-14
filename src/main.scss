@@ -1,8 +1,7 @@
-@use './global/variables' as *;
-@use './global/theme' as *;
+@use './global/wolfie';
 
 body {
-  font-family: $font-family;
-  background: $background-color;
-  color: $text-color;
+  font-family: wolfie.$font-family;
+  background: wolfie.$background-color;
+  color: wolfie.$text-color;
 }

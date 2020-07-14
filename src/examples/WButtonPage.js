@@ -66,13 +66,12 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="ghost success rounded hover-fill ripple-light"
+          className="ghost accent rounded hover-fill ripple-light"
           >
           Ghost
         </WButton>
         <WButton
-          className="texted hover-darken ripple-light"
-          style={{color:"#e91e63"}}
+          className="texted accent pill hover-darken ripple-light"
           >
           Texted
         </WButton>
@@ -149,24 +148,24 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="success rounded hover-darken ripple-light"
+          className="success rounded hover-lighten ripple-light"
           >
           Rounded
         </WButton>
         <WButton
-          className="pill accent hover-darken ripple-light"
+          className="pill accent hover-lighten ripple-light"
           >
           Pill
         </WButton>
         <WButton
-          className="circle accent ripple-light"
+          className="circle warning ripple-light"
           >
-          <i className="material-icons medium">thumb_up</i>
+          <i className="material-icons medium">stars</i>
         </WButton>
         <WButton
-          className="square accent ripple-light"
+          className="square danger ripple-light"
           >
-          <i className="material-icons medium">thumb_up</i>
+          <i className="material-icons medium">delete</i>
         </WButton>
       </div>
 
@@ -271,6 +270,16 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
+          className="ghost rounded primary hover-darken ripple-light"
+          >
+          Primary
+        </WButton>
+        <WButton
+          className="ghost rounded accent hover-darken ripple-light"
+          >
+          Warning
+        </WButton>
+        <WButton
           className="success rounded hover-lighten ripple-light"
           >
           Success
@@ -281,7 +290,7 @@ export default function WButtonPage() {
           Danger
         </WButton>
         <WButton
-          className="pill warning hover-darken ripple-dark"
+          className="pill warning hover-darken ripple-light"
           >
           Warning
         </WButton>
@@ -341,20 +350,19 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="ghost success rounded hover-fill ripple-light"
+          className="small ghost danger rounded hover-fill ripple-light"
           >
-          Ghost
+          Small
         </WButton>
         <WButton
-          className="texted hover-darken ripple-light"
-          style={{color:"#e91e63"}}
+          className="rounded colored hover-lighten ripple-light"
           >
-          Texted
+          Medium
         </WButton>
         <WButton
-          className="transparent pill ripple-light"
+          className="accent large rounded hover-darken ripple-light"
           >
-          Transparent
+          Large
         </WButton>
       </div>
 
@@ -417,7 +425,7 @@ export default function WButtonPage() {
                 onClick={myFunction}
               >
                 <i className="material-icons left">thumb_up</i>
-                Like
+                Button
               </WButton>
             </td>
           </tr>
@@ -429,9 +437,9 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                Like
+                Button
                 <i className="material-icons center">thumb_up</i>
-                Like
+                Button
               </WButton>
             </td>
           </tr>
@@ -443,7 +451,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                Like
+                Button
                 <i className="material-icons right">thumb_up</i>
               </WButton>
             </td>
@@ -452,27 +460,115 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="ghost success rounded hover-fill ripple-light"
+          className="small circle accent hover-light ripple-light"
           >
-          Ghost
+          <i className="material-icons small">verified</i>
         </WButton>
         <WButton
-          className="texted hover-darken ripple-light"
-          style={{color:"#e91e63"}}
+          className="rounded success hover-ligthen ripple-light"
           >
-          Texted
+          <i className="material-icons left">add</i>
+          Add
         </WButton>
         <WButton
-          className="transparent pill ripple-light"
+          className="rounded colored hover-lighten ripple-light"
           >
-          Transparent
+            Edit
+            <i className="material-icons right">edit</i>
         </WButton>
       </div>
 
+      <h2>Animations</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Hover-darken</td>
+            <td>
+              <div class="stacked">
+                <WButton
+                  className="primary hover-darken"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  className="primary ghost hover-darken"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
+            </td>
+          </tr>
 
+          <tr>
+            <td>Hover-lighten</td>
+            <td>
+              <WButton
+                className="primary hover-lighten"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
 
+          <tr>
+            <td>Hover-fill</td>
+            <td>
+              <WButton
+                className="primary ghost hover-fill"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
 
-      <br/><br/><br/><br/><br/>
+          <tr>
+            <td>Hover-transparent-darken</td>
+            <td>
+              <WButton
+                className="primary texted hover-transparent-darken"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hover-transparent-lighten</td>
+            <td>
+              <WButton
+                className="primary texted hover-transparent-lighten"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Hover-transparent-colored</td>
+            <td>
+              <WButton
+                className="primary texted hover-transparent-colored"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+
+      </div>
+
+      <br></br><br></br><br></br>
+
+<br/><br/>
 
       <h2>Examples</h2>
       <table>

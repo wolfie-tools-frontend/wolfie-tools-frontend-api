@@ -1,10 +1,6 @@
 @use "sass:color";
 @use "sass:map";
-@use '../../global/variables' as *;
-@use '../../global/animations' as *;
-@use '../../global/colors' as *;
-@use '../../global/theme' as *;
-
+@use '../../global/wolfie' as *;
 
 $button-font-family: inherit;
 $button-font-weight: null;

@@ -26,11 +26,6 @@ tr:last-child {
 td {
   padding: 1rem;
 }
-/*
-td:first-child {
-  border-right: solid #7f9199 1px;
-}
-*/
 
 .red-green {
   background-color: red;
@@ -67,9 +62,10 @@ td:first-child {
 }
 
 .fancy-buttons > .wbutton{
-  
-  display: inline-flexbox;
-  justify-content: center;
-  align-items: center;
+
   margin: 1rem;
+}
+
+.stacked {
+  display: block;
 }
