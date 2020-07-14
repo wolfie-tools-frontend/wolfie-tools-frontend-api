@@ -1,3 +1,6 @@
+@use "sass:color";
+@use './colors' as *;
+
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // Font Variables
@@ -14,6 +17,16 @@ $accent-color: #fd5523 !default;
 $text-color: black !default;
 $text-color-light: white !default;
 
+/* Theme Color Palette */
+// Background color: base, dark, light
+// Primary: base, dark, light
+$primary-color-dark: color.scale($primary-color, $lightness: $darken-value);
+$primary-color-light: color.scale($primary-color, $lightness: $lighten-value);
+// Accent: base, dark, light
+$accent-color-dark: color.scale($accent-color, $lightness: $darken-value);
+$accent-color-light: color.scale($accent-color, $lightness: $lighten-value);
+
+/* Component Colors */
 $button-background-color: #354856 !default;
 $button-text-color: $text-color-light !default;
 

@@ -26,12 +26,12 @@ export default function App() {
             </li>
             <ol>
               <li className={"hover-darken"}>
-                <NavLink to="/wbutton" id="wbutton" activeClassName="accent">
+                <NavLink to="/wbutton" id="wbutton" activeClassName="primary-dark">
                   WButton
                 </NavLink>
               </li>
               <li className={"hover-darken"}>
-                <NavLink to="/wnavbar" id="wnavbar" activeClassName="accent">
+                <NavLink to="/wnavbar" id="wnavbar" activeClassName="primary-dark">
                   WNavbar
                 </NavLink>
               </li>

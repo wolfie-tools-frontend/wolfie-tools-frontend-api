@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use './colors' as *;
+@use './theme' as *;
 
 /* Hover Effects */
 @mixin hover-effect($background-color, $text-color: "") {
