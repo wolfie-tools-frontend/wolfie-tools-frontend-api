@@ -1,0 +1,75 @@
+.WButtonPage,
+.WNavbarPage {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+tr {
+  border: solid #7f9199 1px;
+  border-left: none;
+  border-right: none;
+}
+
+tr:first-child {
+  border-top: none;
+  
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 1rem;
+}
+/*
+td:first-child {
+  border-right: solid #7f9199 1px;
+}
+*/
+
+.red-green {
+  background-color: red;
+  color: palegreen;
+}
+.custom-color {
+  background-color: plum;
+  color: indianred;
+}
+
+.logo {
+  padding: 0rem;
+  filter: brightness(0) invert(1);
+}
+
+.wnavbar {
+  color: white !important;
+}
+
+.mckilla-nav {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+}
+.mckilla {
+  width: 80px;
+  justify-content: center;
+}
+.mckilla:hover {
+  color: rgb(118, 143, 165);
+}
+.mckilla:active {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.fancy-buttons > .wbutton{
+  
+  display: inline-flexbox;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
