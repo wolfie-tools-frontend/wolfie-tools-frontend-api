@@ -128,7 +128,7 @@ export default function WButtonPage() {
                 className="circle primary"
                 onClick={myFunction}
               >
-                <i className="material-icons medium">thumb_up</i>
+                <i className="material-icons medium">cake</i>
               </WButton>
             </td>
           </tr>
@@ -140,7 +140,7 @@ export default function WButtonPage() {
                 className="square primary"
                 onClick={myFunction}
               >
-                <i className="material-icons medium">thumb_up</i>
+                <i className="material-icons medium">cake</i>
               </WButton>
             </td>
           </tr>
@@ -277,7 +277,7 @@ export default function WButtonPage() {
         <WButton
           className="ghost rounded accent hover-darken ripple-light"
           >
-          Warning
+          Accent
         </WButton>
         <WButton
           className="success rounded hover-lighten ripple-light"
@@ -376,7 +376,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                <i className="material-icons">thumb_up</i>
+                <i className="material-icons">cake</i>
               </WButton>
             </td>
           </tr>
@@ -388,7 +388,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                <i className="material-icons small">thumb_up</i>
+                <i className="material-icons small">cake</i>
               </WButton>
             </td>
           </tr>
@@ -400,7 +400,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                <i className="material-icons medium">thumb_up</i>
+                <i className="material-icons medium">cake</i>
               </WButton>
             </td>
           </tr>
@@ -412,7 +412,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                <i className="material-icons large">thumb_up</i>
+                <i className="material-icons large">cake</i>
               </WButton>
             </td>
           </tr>
@@ -424,7 +424,7 @@ export default function WButtonPage() {
                 className="primary"
                 onClick={myFunction}
               >
-                <i className="material-icons left">thumb_up</i>
+                <i className="material-icons left">cake</i>
                 Button
               </WButton>
             </td>
@@ -438,7 +438,7 @@ export default function WButtonPage() {
                 onClick={myFunction}
               >
                 Button
-                <i className="material-icons center">thumb_up</i>
+                <i className="material-icons center">cake</i>
                 Button
               </WButton>
             </td>
@@ -452,7 +452,7 @@ export default function WButtonPage() {
                 onClick={myFunction}
               >
                 Button
-                <i className="material-icons right">thumb_up</i>
+                <i className="material-icons right">cake</i>
               </WButton>
             </td>
           </tr>
@@ -460,18 +460,18 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="small circle accent hover-light ripple-light"
+          className="large circle texted accent hover-darken ripple-light"
           >
-          <i className="material-icons small">verified</i>
+          <i class="fab fa-github" style={{fontSize: "2.2rem"}}/>
         </WButton>
         <WButton
-          className="rounded success hover-ligthen ripple-light"
+          className="rounded small success hover-ligthen ripple-light"
           >
-          <i className="material-icons left">add</i>
+          <i className="material-icons left small">add</i>
           Add
         </WButton>
         <WButton
-          className="rounded colored hover-lighten ripple-light"
+          className="rounded ghost colored hover-darken ripple-dark"
           >
             Edit
             <i className="material-icons right">edit</i>
