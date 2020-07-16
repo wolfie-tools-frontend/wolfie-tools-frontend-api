@@ -58,8 +58,13 @@ td {
 }
 
 .fancy-buttons > .wbutton{
-
+  align-self: center;
   margin: 1rem;
+}
+
+.fancy-buttons {
+  display: flex;
+  justify-content: center;
 }
 
 .stacked > .wbutton {
