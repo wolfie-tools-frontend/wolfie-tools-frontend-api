@@ -1,10 +1,11 @@
 import React from "react";
 import WButton from "../components/wbutton/WButton";
 import WNavbar from "../components/wnavbar/WNavbar";
+//import WInput from "../components/winput/WInput";
 import "./example.css";
 import "../main.scss";
 
-export default function WButtonPage() {
+export default function WNavbarPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
@@ -255,7 +256,7 @@ export default function WButtonPage() {
                 alt="Logo"
               />
             </a>
-            &nbsp; &nbsp; Wolfie Tools
+            Wolfie Tools
           </li>
         </ul>
       </WNavbar>
