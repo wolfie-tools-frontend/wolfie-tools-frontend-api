@@ -7,6 +7,8 @@ $highlight-color: $primary-color;
 $width: 320px;
 $transition-time: 300ms;
 
+$rounded: 4px;
+
 $filled-color: black;
 
 .winput {
@@ -91,12 +93,12 @@ $filled-color: black;
         box-shadow: inset 0 -1px 0 rgba($filled-color,.5); //gets darker
       }
 
-      /*&:not(:placeholder-shown) {
+      &:not(:placeholder-shown) { // TEST
         ~ .label {
           color: rgba($filled-color,.5);
           transform: translate3d(0,-12px,0) scale(.75);
         }
-      }*/
+      }
 
       &:focus {
         outline: none;
@@ -105,11 +107,9 @@ $filled-color: black;
         }
         ~ .bar3 {
             box-shadow: inset 0 -2px 0 $highlight-color; // for instant bar
-            
-            //animation for shade in the back
             background: rgba($filled-color,.05); //crate dark/shade color in the back
             transform: scaleX(1);
-            transition: all .1s ease; // THE SHADE IN THE BACKGROUND
+            transition: all .1s ease;
         }
         ~ .bar:before { // left to right bar animation
           width: $width;
@@ -134,7 +134,63 @@ $filled-color: black;
 
   &.outlined {
     input {
-      background-color: blue;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      appearance: none;
+      border: 1px solid;
+      padding: 16px 12px 0 12px;
+      height: 56px; //
+      background: none;
+      color: $filled-color;
+      transition: all $transition-time ease; //.15
+    
+      &:hover {
+        
+      }
+
+      &:not(:placeholder-shown) {
+        ~ .label {
+          color: rgba($filled-color,.5);
+          transform: translate3d(0,-27px,0) scale(.75);
+        }
+      }
+
+      &:focus {
+        outline: none;
+        ~ label {
+          color: $highlight-color;
+        }
+
+        ~ .barOutlined {
+            border: 2px solid;
+            border-color: $highlight-color;
+            border-radius: 4px;
+            transform: scaleX(1);
+        }
+        ~ .bar3 {
+            box-shadow: inset 0 -2px 0 $highlight-color; // for instant bar
+            background: rgba($filled-color,.05); //create dark/shade color in the back
+            transform: scaleX(1);
+            transition: all .1s ease;
+        }
+        ~ .bar:before { // left to right bar animation
+          width: $width;
+        }
+        ~ .bar2:before, ~.bar2:after { //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
+          width: 50%;
+        }
+      }
+      &:focus ~ label, &:valid ~ label { // active state
+        transform: translate3d(0,-27px,0) scale(.75);
+      }
+    }
+
+    label {
+      left: 12px;
+      top: 20px;
+      transform-origin: 0 0;
+      transform: translate3d(0,0,0);
+      transition: all $transition-time ease; //0.3s
     }
   }
 }
@@ -190,7 +246,15 @@ $filled-color: black;
   width: 100%; //color
   height: 100%; //color
   background: rgba($filled-color, .05); // darken
-  //z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
+}
+
+.barOutlined {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
 }

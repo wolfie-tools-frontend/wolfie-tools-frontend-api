@@ -10,7 +10,7 @@ export default function WInputPage() {
       
       <WInput className="lined">
         <input type="text" id="honk" ></input>
-        <label for="honk">LABEL HORF</label>
+        <label for="honk">LABEL</label>
       </WInput>
       
       <WInput className="lined">
@@ -29,6 +29,12 @@ export default function WInputPage() {
         <input type="number" required="required"/>
         <span class="bar"></span>
         <label>Number(is always up)</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" required="required"/>
+        <span class="barOutlined"></span>
+        <label>Outlined</label>
       </WInput>
 
       <WInput className="lined">
