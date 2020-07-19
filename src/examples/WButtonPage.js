@@ -568,6 +568,36 @@ export default function WButtonPage() {
 
       </div>
       <h3>Click</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td>Ripple-dark</td>
+            <td>
+              <WButton
+                className="primary ripple-dark"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Ripple-light</td>
+            <td>
+              <WButton
+                className="primary ripple-light"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="fancy-buttons">
+
+      </div>
 
       <br></br><br></br><br></br>
 
