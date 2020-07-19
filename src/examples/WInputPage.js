@@ -52,9 +52,36 @@ export default function WInputPage() {
       <WInput className="filled">
         <input type="text" required="required"/>
         <span class="bar"></span>
-        <label>barrrrrrrrrrrrrrrrrrr</label>
+        <label>bar</label>
       </WInput>
 
+      <WInput className="filled">
+        <input type="text" required="required"/>
+        <span class="bar2"></span>
+        <label>bar2</label>
+      </WInput>
+
+      <WInput className="lined">
+        <input type="text" required="required"/>
+        <span class="bar2"></span>
+        <label>bar2</label>
+      </WInput>
+
+      <WInput className="filled">
+        <input type="text" required="required"/>
+        <span class="bar2"></span>
+        <label>bar2</label>
+      </WInput>
+
+      <WInput className="filled">
+        <input type="text" required="required"/>
+        <span class="bar"></span>
+      </WInput>
+
+      <WInput className="lined">
+        <input type="text" required="required"/>
+        <span class="bar"></span>
+      </WInput>
 
     </div>
   );

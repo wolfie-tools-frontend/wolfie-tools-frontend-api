@@ -1,7 +1,7 @@
 import React from "react";
 import "./winput.scss";
 
-const WInput = ({ children, className, type, style, min, max, value, name }) => {
+const WInput = ({ children, className, style}) => {
   return (
     <div className={`winput ${className}`} style={style}>
       {children}

@@ -76,11 +76,11 @@ export default function WButtonPage() {
           Texted
         </WButton>
         <WButton
-          className="transparent pill ripple-light"
+          className="transparent pill ripple-light hover-lighten"
           >
           Transparent
         </WButton>
-      </div>  
+      </div>
       
       <h2>Shapes</h2>
       <table>
@@ -148,19 +148,19 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="success rounded hover-lighten ripple-light"
+          className="rounded transparent hover-darken ripple-light"
           >
           Rounded
         </WButton>
         <WButton
-          className="pill accent hover-lighten ripple-light"
+          className="pill ghost accent hover-fill ripple-light"
           >
           Pill
         </WButton>
         <WButton
-          className="circle warning ripple-light"
+          className="circle ghost colored ripple-dark hover-darken"
           >
-          <i className="material-icons medium">stars</i>
+          <i className="material-icons medium">arrow_forward_ios</i>
         </WButton>
         <WButton
           className="square danger ripple-light"
@@ -479,6 +479,7 @@ export default function WButtonPage() {
       </div>
 
       <h2>Animations</h2>
+      <h3>Hovers</h3>
       <table>
         <tbody>
           <tr>
@@ -566,6 +567,7 @@ export default function WButtonPage() {
       <div className="fancy-buttons">
 
       </div>
+      <h3>Click</h3>
 
       <br></br><br></br><br></br>
 
