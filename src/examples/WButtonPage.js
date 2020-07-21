@@ -573,10 +573,7 @@ export default function WButtonPage() {
           <tr>
             <td>Ripple-dark</td>
             <td>
-              <WButton
-                className="primary ripple-dark"
-                onClick={myFunction}
-              >
+              <WButton className="primary ripple-dark">
                 Button
               </WButton>
             </td>
@@ -585,10 +582,7 @@ export default function WButtonPage() {
           <tr>
             <td>Ripple-light</td>
             <td>
-              <WButton
-                className="primary ripple-light"
-                onClick={myFunction}
-              >
+              <WButton className="primary ripple-light">
                 Button
               </WButton>
             </td>

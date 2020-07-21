@@ -8,12 +8,7 @@ export default function WInputPage() {
     <div className="WInputPage">
       <h1>WInput</h1>
       
-      <WInput className="lined">
-        <input type="text" id="honk" ></input>
-        <label for="honk">LABEL</label>
-      </WInput>
-      
-      <WInput className="lined">
+      <WInput className="lined draw">
         <input type="text" required="required"/>
         <span class="bar"></span>
         <label>Name</label>
@@ -28,7 +23,7 @@ export default function WInputPage() {
       <WInput className="lined">
         <input type="number" required="required"/>
         <span class="bar"></span>
-        <label>Number(is always up)</label>
+        <label>Number</label>
       </WInput>
 
       <WInput className="outlined">
@@ -36,6 +31,55 @@ export default function WInputPage() {
         <span class="barOutlined"></span>
         <label>Outlined</label>
       </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="label2" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedLabel2</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="label3" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedLabel3</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="color-background" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedColored</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="pill label3" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedPill</label>
+      </WInput>
+      
+      <WInput className="outlined">
+        <input type="text" className="color-background label3 shadow" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedColored Shadow</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="pill label3 hover-shadow" required="required"/>
+
+        <label>OutlinedPill HoverShadow</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="label4" required="required"/>
+        <span class="barOutlined"></span>
+        <label>OutlinedLabel4</label>
+      </WInput>
+
+      <WInput className="outlined">
+        <input type="text" className="label4 hover-border-highlight" required="required"/>
+        <label>Outlined HoverBorderHighlight</label>
+      </WInput>
+
+      
 
       <WInput className="lined">
         <input type="text" required="required"/>
@@ -52,31 +96,19 @@ export default function WInputPage() {
       <WInput className="filled">
         <input type="text" required="required"/>
         <span class="bar3"></span>
-        <label>bar3</label>
-      </WInput>
-
-      <WInput className="filled">
-        <input type="text" required="required"/>
-        <span class="bar"></span>
-        <label>bar</label>
+        <label>animation3</label>
       </WInput>
 
       <WInput className="filled">
         <input type="text" required="required"/>
         <span class="bar2"></span>
-        <label>bar2</label>
+        <label>animation2</label>
       </WInput>
 
       <WInput className="lined">
         <input type="text" required="required"/>
         <span class="bar2"></span>
-        <label>bar2</label>
-      </WInput>
-
-      <WInput className="filled">
-        <input type="text" required="required"/>
-        <span class="bar2"></span>
-        <label>bar2</label>
+        <label>animation2</label>
       </WInput>
 
       <WInput className="filled">
