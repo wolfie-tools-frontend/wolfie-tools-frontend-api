@@ -1,7 +1,7 @@
 @use '../../global/wolfie' as *;
 
 //$muted-color: gray;//mix(white, $background-color, 70%);
-$inactive-color: gray;//#333;
+$inactive-color: gray;
 $text-color: black;
 $highlight-color: $primary-color;
 $width: 320px;
@@ -149,7 +149,9 @@ $filled-color: black;
   }
 
   &.outlined {
+    
     label {
+      //margin-top: 0.3rem;
       left: 12px;
       top: 20px;
       transform-origin: 0 0;
@@ -157,13 +159,13 @@ $filled-color: black;
       transition: all $transition-time ease; //0.3s
     }
 
-    input {
+    input{
       background: none;
       color: $filled-color;
       padding: 16px 12px;
       border: 1px solid $inactive-color;
       border-radius: 4px;
-      height: 56px; //
+      height: 50px; //56
       $time: 0.05s;
       transition: all $time ease; //.15
       -webkit-appearance: none;
@@ -179,6 +181,15 @@ $filled-color: black;
           color: $highlight-color;
         }
 
+        ~ legend {
+          //padding: 0.3rem;
+          padding-left: 0.3rem;
+          padding-right: 0.3rem;
+          color: $highlight-color;
+          font-size: 0.75rem;
+          //margin-left: 
+        }
+
         ~ .barOutlined {
             border: 2px solid;
             border-color: $highlight-color;
@@ -189,6 +200,10 @@ $filled-color: black;
 
       &:focus ~ label, &:valid ~ label { // active state
         transform: translate3d(0,-27px,0) scale(.75);
+        ~ legend{
+          max-width: 100px;
+          transition: all $time ease;//change the time and test what looks most natural
+        }
       }
 
       &:not(:placeholder-shown) {
@@ -199,6 +214,29 @@ $filled-color: black;
       }
       
     }
+
+    fieldset {
+      position: relative;
+      border: 1px solid $inactive-color;
+      border-radius: 4px; //$ variable
+      padding: 0;
+      background: none;
+      
+      label{
+        //top: 1em;
+      }
+      > input{
+        border: none;
+      }
+      > legend{
+        font-size: 12px;
+        max-width: 0.01px;
+        padding: 0;
+        margin-left: 8px;
+        text-align: left;
+        visibility:hidden;
+      }
+    }  
   }
 
 }
@@ -352,4 +390,3 @@ $filled-color: black;
   height: 100%;
   transform: scaleX(0);
 }
-

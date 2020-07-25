@@ -8,7 +8,6 @@ import WNavbarPage from "./examples/WNavbarPage";
 import WInputPage from "./examples/WInputPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 
-
 export default function App() {
   return (
     <BrowserRouter>

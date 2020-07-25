@@ -16,10 +16,10 @@ export default function WButtonPage() {
       <table>
         <tbody>
           <tr>
-            <td>Default</td>
+            <td>Default Primary</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -31,7 +31,8 @@ export default function WButtonPage() {
             <td>Ghost</td>
             <td>
               <WButton
-                className="ghost primary"
+                btnType="ghost"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -43,7 +44,8 @@ export default function WButtonPage() {
             <td>Texted</td>
             <td>
               <WButton
-                className="texted primary"
+                btnType="texted"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -55,7 +57,7 @@ export default function WButtonPage() {
             <td>Transparent</td>
             <td>
               <WButton
-                className="transparent"
+                btnType="transparent"
                 onClick={myFunction}
               >
                 Button
@@ -66,17 +68,28 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="ghost accent rounded hover-fill ripple-light"
+          btnType="ghost"
+          color="accent"
+          shape="rounded"
+          hoverAnimation="fill"
+          clickAnimation="ripple-light"
           >
           Ghost
         </WButton>
         <WButton
-          className="texted accent pill hover-darken ripple-light"
+          btnType="texted"
+          color="accent"
+          shape="pill"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Texted
         </WButton>
         <WButton
-          className="transparent pill ripple-light hover-lighten"
+          btnType="transparent"
+          shape="pill"
+          hoverAnimation="lighten"
+          clickAnimation="ripple-light"
           >
           Transparent
         </WButton>
@@ -89,7 +102,7 @@ export default function WButtonPage() {
             <td>Default</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -101,7 +114,8 @@ export default function WButtonPage() {
             <td>Rounded</td>
             <td>
               <WButton
-                className="rounded primary"
+                btnType="rounded"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -113,7 +127,8 @@ export default function WButtonPage() {
             <td>Pill</td>
             <td>
               <WButton
-                className="pill primary"
+                btnType="pill"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -125,7 +140,8 @@ export default function WButtonPage() {
             <td>Circle</td>
             <td>
               <WButton
-                className="circle primary"
+                shape="circle"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons medium">cake</i>
@@ -137,7 +153,8 @@ export default function WButtonPage() {
             <td>Square</td>
             <td>
               <WButton
-                className="square primary"
+                shape="square"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons medium">cake</i>
@@ -148,24 +165,37 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="rounded transparent hover-darken ripple-light"
+          shape="rounded"
+          type="transparent"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Rounded
         </WButton>
         <WButton
-          className="pill ghost accent hover-fill ripple-light"
+          shape="pill"
+          type="ghost"
+          color="accent"
+          hoverAnimation="fill"
+          clickAnimation="ripple-light"
           >
           Pill
         </WButton>
         <WButton
-          className="circle ghost colored ripple-dark hover-darken"
-          >
-          <i className="material-icons medium">arrow_forward_ios</i>
-        </WButton>
-        <WButton
-          className="square danger ripple-light"
+          shape="square"
+          color="danger"
+          clickAnimation="ripple-light"
           >
           <i className="material-icons medium">delete</i>
+        </WButton>
+        <WButton
+          shape="circle"
+          type="ghost"
+          color="colored"
+          hoverAnimation="darken"
+          clickAnimation="ripple-dark"
+          >
+          <i className="material-icons medium">arrow_forward_ios</i>
         </WButton>
       </div>
 
@@ -176,7 +206,6 @@ export default function WButtonPage() {
             <td>Default</td>
             <td>
               <WButton
-                className=""
                 onClick={myFunction}
               >
                 Button
@@ -188,7 +217,7 @@ export default function WButtonPage() {
             <td>Primary</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -200,7 +229,7 @@ export default function WButtonPage() {
             <td>Accent</td>
             <td>
               <WButton
-                className="accent"
+                color="accent"
                 onClick={myFunction}
               >
                 Button
@@ -212,7 +241,7 @@ export default function WButtonPage() {
             <td>Colored</td>
             <td>
               <WButton
-                className="colored"
+                color="colored"
                 onClick={myFunction}
               >
                 Button
@@ -224,7 +253,7 @@ export default function WButtonPage() {
             <td>Success</td>
             <td>
               <WButton
-                className="success"
+                color="success"
                 onClick={myFunction}
               >
                 Button
@@ -236,7 +265,7 @@ export default function WButtonPage() {
             <td>Danger</td>
             <td>
               <WButton
-                className="danger"
+                color="danger"
                 onClick={myFunction}
               >
                 Button
@@ -248,7 +277,7 @@ export default function WButtonPage() {
             <td>Warning</td>
             <td>
               <WButton
-                className="warning"
+                color="warning"
                 onClick={myFunction}
               >
                 Button
@@ -259,7 +288,7 @@ export default function WButtonPage() {
             <td>Custom</td>
             <td>
               <WButton
-                className="custom-color"
+                color="custom-color"
                 onClick={myFunction}
               >
                 Button
@@ -270,27 +299,44 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="ghost rounded primary hover-darken ripple-light"
+          btnType="ghost"
+          shape="rounded"
+          color="primary"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Primary
         </WButton>
         <WButton
-          className="ghost rounded accent hover-darken ripple-light"
+          btnType="ghost"
+          shape="rounded"
+          color="accent"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Accent
         </WButton>
         <WButton
-          className="success rounded hover-lighten ripple-light"
+          color="success"
+          shape="rounded"
+          hoverAnimation="lighten"
+          clickAnimation="ripple-light"
           >
           Success
         </WButton>
         <WButton
-          className="pill danger hover-darken ripple-dark"
+          shape="pill"
+          color="danger"
+          hoverAnimation="darken"
+          clickAnimation="ripple-dark"
           >
           Danger
         </WButton>
         <WButton
-          className="pill warning hover-darken ripple-light"
+          shape="pill"
+          color="warning"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Warning
         </WButton>
@@ -303,7 +349,7 @@ export default function WButtonPage() {
             <td>Default</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -315,7 +361,8 @@ export default function WButtonPage() {
             <td>Small</td>
             <td>
               <WButton
-                className="small primary"
+                size="small"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -327,7 +374,8 @@ export default function WButtonPage() {
             <td>Medium</td>
             <td>
               <WButton
-                className="medium primary"
+                size="medium"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -339,7 +387,8 @@ export default function WButtonPage() {
             <td>Large</td>
             <td>
               <WButton
-                className="large primary"
+                size="large"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -350,17 +399,29 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="small ghost danger rounded hover-fill ripple-light"
+          size="small"
+          btnType="ghost"
+          color="danger"
+          shape="rounded"
+          hoverAnimation="fill"
+          clickAnimation="ripple-light"
           >
           Small
         </WButton>
         <WButton
-          className="rounded colored hover-lighten ripple-light"
+          shape="rounded"
+          color="colored"
+          hoverAnimation="lighten"
+          clickAnimation="ripple-light"
           >
           Medium
         </WButton>
         <WButton
-          className="accent large rounded hover-darken ripple-light"
+          size="large"
+          color="accent"
+          shape="rounded"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           Large
         </WButton>
@@ -373,7 +434,7 @@ export default function WButtonPage() {
             <td>Default</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons">cake</i>
@@ -385,7 +446,7 @@ export default function WButtonPage() {
             <td>Small</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons small">cake</i>
@@ -397,7 +458,7 @@ export default function WButtonPage() {
             <td>Medium</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons medium">cake</i>
@@ -409,7 +470,7 @@ export default function WButtonPage() {
             <td>Large</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons large">cake</i>
@@ -421,7 +482,7 @@ export default function WButtonPage() {
             <td>Left Align</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 <i className="material-icons left">cake</i>
@@ -434,7 +495,7 @@ export default function WButtonPage() {
             <td>Center Align</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -448,7 +509,7 @@ export default function WButtonPage() {
             <td>Right Align</td>
             <td>
               <WButton
-                className="primary"
+                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -460,18 +521,31 @@ export default function WButtonPage() {
       </table>
       <div className="fancy-buttons">
         <WButton
-          className="large circle texted accent hover-darken ripple-light"
+          size="large"
+          shape="circle"
+          btnType="texted"
+          color="accent"
+          hoverAnimation="darken"
+          clickAnimation="ripple-light"
           >
           <i class="fab fa-github" style={{fontSize: "2.2rem"}}/>
         </WButton>
         <WButton
-          className="rounded small success hover-ligthen ripple-light"
+          shape="rounded"
+          size="small"
+          color="success"
+          hoverAnimation="lighten"
+          clickAnimation="ripple-light"
           >
           <i className="material-icons left small">add</i>
           Add
         </WButton>
         <WButton
-          className="rounded ghost colored hover-darken ripple-dark"
+          shape="rounded"
+          btnType="ghost"
+          color="colored"
+          hoverAnimation="darken"
+          clickAnimation="ripple-dark"
           >
             Edit
             <i className="material-icons right">edit</i>
@@ -487,14 +561,17 @@ export default function WButtonPage() {
             <td>
               <div className="stacked">
                 <WButton
-                  className="primary hover-darken"
+                  color="primary"
+                  hoverAnimation="darken"
                   onClick={myFunction}
                 >
                   Button
                 </WButton>
 
                 <WButton
-                  className="primary ghost hover-darken"
+                  btnType="ghost"
+                  color="primary"
+                  hoverAnimation="darken"
                   onClick={myFunction}
                 >
                   Button
@@ -507,7 +584,8 @@ export default function WButtonPage() {
             <td>Hover-lighten</td>
             <td>
               <WButton
-                className="primary hover-lighten"
+                color="primary"
+                hoverAnimation="lighten"
                 onClick={myFunction}
               >
                 Button
@@ -519,7 +597,8 @@ export default function WButtonPage() {
             <td>Hover-fill</td>
             <td>
               <WButton
-                className="primary ghost hover-fill"
+                color="primary"
+                hoverAnimation="fill"
                 onClick={myFunction}
               >
                 Button
@@ -531,7 +610,9 @@ export default function WButtonPage() {
             <td>Hover-transparent-darken</td>
             <td>
               <WButton
-                className="primary texted hover-transparent-darken"
+                color="primary"
+                btnType="texted"
+                hoverAnimation="transparent-darken"
                 onClick={myFunction}
               >
                 Button
@@ -543,7 +624,9 @@ export default function WButtonPage() {
             <td>Hover-transparent-lighten</td>
             <td>
               <WButton
-                className="primary texted hover-transparent-lighten"
+                color="primary"
+                btnType="texted"
+                hoverAnimation="transparent-lighten"
                 onClick={myFunction}
               >
                 Button
@@ -555,7 +638,9 @@ export default function WButtonPage() {
             <td>Hover-transparent-colored</td>
             <td>
               <WButton
-                className="primary texted hover-transparent-colored"
+                color="primary"
+                btnType="texted"
+                hoverAnimation="transparent-colored"
                 onClick={myFunction}
               >
                 Button
@@ -573,7 +658,10 @@ export default function WButtonPage() {
           <tr>
             <td>Ripple-dark</td>
             <td>
-              <WButton className="primary ripple-dark">
+              <WButton 
+                color="primary"
+                clickAnimation="ripple-dark"
+              >
                 Button
               </WButton>
             </td>
@@ -582,7 +670,10 @@ export default function WButtonPage() {
           <tr>
             <td>Ripple-light</td>
             <td>
-              <WButton className="primary ripple-light">
+              <WButton 
+              color="primary"
+              clickAnimation="ripple-light"
+              >
                 Button
               </WButton>
             </td>
@@ -605,7 +696,9 @@ export default function WButtonPage() {
             <td>Primary Small Hover-darken</td>
             <td>
               <WButton
-                className="primary small hover-darken"
+                color="primary"
+                size="small"
+                hoverAnimation="darken"
                 onClick={myFunction}
               >
                 Button
@@ -616,13 +709,23 @@ export default function WButtonPage() {
           <tr>
             <td>Primary Raised Hover-lighten</td>
             <td>
-              <WButton className="raised primary hover-lighten">Button</WButton>
+              <WButton 
+                shadow="raised"
+                color="primary"
+                hoverAnimation="lighten"
+              >
+                Button</WButton>
             </td>
           </tr>
           <tr>
             <td>Large Accent Raised Hover-darken</td>
             <td>
-              <WButton className="raised large accent hover-darken">
+              <WButton 
+                shadow="raised"
+                size="large"
+                color="accent"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -630,13 +733,23 @@ export default function WButtonPage() {
           <tr>
             <td>Large Danger Raised</td>
             <td>
-              <WButton className="raised large danger">Button</WButton>
+              <WButton 
+                shadow="raised"
+                size="large"
+                color="danger"
+              >
+                Button</WButton>
             </td>
           </tr>
           <tr>
             <td>Large Success Raised Hover-lighten</td>
             <td>
-              <WButton className="raised large success hover-lighten">
+              <WButton 
+                shadow="raised"
+                size="large"
+                color="success"
+                hoverAnimation="lighten"
+              >
                 Button
               </WButton>
             </td>
@@ -644,38 +757,64 @@ export default function WButtonPage() {
           <tr>
             <td>Large Warning Raised</td>
             <td>
-              <WButton className="raised large warning">Button</WButton>
+              <WButton 
+                shadow="raised"
+                size="large"
+                color="warning"
+              >
+                Button</WButton>
             </td>
           </tr>
           <tr>
-            <td>Colored Warning Raised</td>
+            <td>Large Colored Raised</td>
             <td>
-              <WButton className="raised large colored">Button</WButton>
+              <WButton 
+                shadow="raised"
+                size="large"
+                color="colored"
+              >Button</WButton>
             </td>
           </tr>
 
           <tr>
             <td>Disabled Texted</td>
             <td>
-              <WButton className="accent texted hover-darken disabled">
+              <WButton 
+                color="accent"
+                btnType="texted"
+                hoverAnimation="darken"
+                disabled
+              >
                 <i className="material-icons">favorite</i>
               </WButton>
             </td>
           </tr>
 
           <tr>
-            <td>Ghost Primary Rounded Hover-ghost-darken Ripple-light</td>
+            <td>Ghost Primary Rounded Hover-darken Ripple-light</td>
             <td>
-              <WButton className="ghost primary rounded hover-ghost-darken ripple-light">
+              <WButton 
+                btnType="ghost"
+                color="primary"
+                shape="rounded"
+                hoverAnimation="darken"
+                clickAnimation="ripple-light"
+              >
                 <i className="material-icons medium left">thumb_up</i>
                 Like
               </WButton>
             </td>
           </tr>
           <tr>
-            <td>Ghost Danger Rounded Hover-ghost-darken Ripple-dark</td>
+            <td>Ghost Danger Rounded Hover-darken Ripple-dark</td>
             <td>
-              <WButton className="ghost danger rounded hover-ghost-darken ripple-dark">
+              <WButton 
+                btnType="ghost"
+                color="danger"
+                shape="rounded"
+                hoverAnimation="darken"
+                clickAnimation="ripple-dark"
+              >
                 <i className="material-icons medium left">favorite</i>
                 Button
                 <i className="material-icons medium right">favorite</i>
@@ -685,7 +824,12 @@ export default function WButtonPage() {
           <tr>
             <td>Success Pill Hover-lighten Ripple-light</td>
             <td>
-              <WButton className="success hover-lighten pill ripple-light">
+              <WButton 
+                color="success"
+                shape="pill"
+                hoverAnimation="lighten"
+                clickAnimation="ripple-light"
+              >
                 <i className="material-icons small">check</i>
                 <i className="material-icons large">shopping_cart</i>
               </WButton>
@@ -694,15 +838,23 @@ export default function WButtonPage() {
           <tr>
             <td>Small Icon Circle Accent Hover-darken</td>
             <td>
-              <WButton className="accent hover-darken circle">
+              <WButton 
+                color="accent"
+                shape="circle"
+                hoverAnimation="darken"
+              >
                 <i className="material-icons small">favorite</i>
               </WButton>
             </td>
           </tr>
           <tr>
-            <td>Medium Icon Circle Hover-ligthen</td>
+            <td>Medium Icon Circle Hover-lighten</td>
             <td>
-              <WButton className="accent hover-lighten circle">
+              <WButton 
+                color="accent"
+                shape="circle"
+                hoverAnimation="lighten"
+              >
                 <i className="material-icons medium">favorite</i>
               </WButton>
             </td>
@@ -710,7 +862,12 @@ export default function WButtonPage() {
           <tr>
             <td>Large Raised Icon Circle Hover-darken</td>
             <td>
-              <WButton className="accent raised hover-darken circle">
+              <WButton 
+                color="accent"
+                shadow="raised"
+                shape="circle"
+                hoverAnimation="darken"
+              >
                 <i className="material-icons large">verified</i>
               </WButton>
             </td>
@@ -718,7 +875,11 @@ export default function WButtonPage() {
           <tr>
             <td>Small Icon Raised Square Primary</td>
             <td>
-              <WButton className="primary raised square">
+              <WButton 
+                color="primary"
+                shape="square"
+                shadow="raised"
+              >
                 <i className="material-icons small">verified</i>
               </WButton>
             </td>
@@ -726,7 +887,11 @@ export default function WButtonPage() {
           <tr>
             <td>Medium Icon Square Primary Hover-lighten</td>
             <td>
-              <WButton className="primary hover-lighten square">
+              <WButton 
+                color="primary"
+                shape="square"
+                hoverAnimation="lighten"
+              >
                 <i className="material-icons medium">verified</i>
               </WButton>
             </td>
@@ -734,7 +899,11 @@ export default function WButtonPage() {
           <tr>
             <td>Large Icon Square Hover-darken</td>
             <td>
-              <WButton className="primary hover-darken square">
+              <WButton 
+                color="primary"
+                shape="square"
+                hoverAnimation="darken"
+              >
                 <i className="material-icons large">verified</i>
               </WButton>
             </td>
@@ -743,14 +912,24 @@ export default function WButtonPage() {
           <tr>
             <td>Medium Pill Colored</td>
             <td>
-              <WButton className="medium pill colored">Button</WButton>
+              <WButton 
+                color="colored"
+                shape="pill"
+                size="medium"
+              >
+                Button</WButton>
             </td>
           </tr>
 
           <tr>
             <td>Large Ghost Colored Hover-lighten</td>
             <td>
-              <WButton className="large ghost colored hover-lighten">
+              <WButton 
+                size="large"
+                btnType="ghost"
+                color="colored"
+                hoverAnimation="lighten"
+              >
                 Button
               </WButton>
             </td>
@@ -758,7 +937,12 @@ export default function WButtonPage() {
           <tr>
             <td>Large Ghost Colored Hover-darken</td>
             <td>
-              <WButton className="large ghost colored hover-darken">
+              <WButton 
+                size="large"
+                btnType="ghost"
+                color="colored"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -766,7 +950,12 @@ export default function WButtonPage() {
           <tr>
             <td>Large Primary Ghost Hover-fill</td>
             <td>
-              <WButton className="large ghost primary hover-fill">
+            <WButton 
+                size="large"
+                btnType="ghost"
+                color="primary"
+                hoverAnimation="fill"
+              >
                 Button
               </WButton>
             </td>
@@ -774,7 +963,12 @@ export default function WButtonPage() {
           <tr>
             <td>Large Ghost Warning Hover-transparent-darken</td>
             <td>
-              <WButton className="large ghost warning hover-transparent-darken">
+              <WButton 
+                size="large"
+                btnType="ghost"
+                color="warning"
+                hoverAnimation="transparent-darken"
+              >
                 Button
               </WButton>
             </td>
@@ -782,7 +976,12 @@ export default function WButtonPage() {
           <tr>
             <td>Large Ghost Warning Hover-darken</td>
             <td>
-              <WButton className="large ghost warning hover-darken">
+              <WButton 
+                size="large"
+                btnType="ghost"
+                color="warning"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -790,13 +989,24 @@ export default function WButtonPage() {
           <tr>
             <td>Accent Ghost Hover-lighten</td>
             <td>
-              <WButton className="ghost accent hover-lighten">Button</WButton>
+              <WButton 
+                btnType="ghost"
+                color="accent"
+                hoverAnimation="lighten"
+              >
+                Button</WButton>
             </td>
           </tr>
           <tr>
             <td>Medium Rounded Ghost Success Hover-darken</td>
             <td>
-              <WButton className="medium rounded ghost success hover-darken">
+              <WButton 
+                size="medium"
+                shape="rounded"
+                btnType="ghost"
+                color="success"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -804,7 +1014,13 @@ export default function WButtonPage() {
           <tr>
             <td>Small Rounded Danger Ghost Hover-fill</td>
             <td>
-              <WButton className="rounded small ghost danger hover-fill">
+              <WButton 
+                size="small"
+                shape="rounded"
+                btnType="ghost"
+                color="danger"
+                hoverAnimation="fill"
+              >
                 Button
               </WButton>
             </td>
@@ -812,14 +1028,25 @@ export default function WButtonPage() {
           <tr>
             <td>Disabled Ghost</td>
             <td>
-              <WButton className="medium accent ghost disabled">Button</WButton>
+              <WButton 
+                size="medium"
+                btnType="ghost"
+                color="accent"
+                disabled
+              >
+                Button</WButton>
             </td>
           </tr>
 
           <tr>
             <td>Transparent Pill Hover-darken</td>
             <td>
-              <WButton className="medium transparent pill hover-darken">
+              <WButton 
+                size="medium"
+                btnType="transparent"
+                shape="pill"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -827,7 +1054,12 @@ export default function WButtonPage() {
           <tr>
             <td>Transparent Pill Hover-lighten</td>
             <td>
-              <WButton className="medium transparent pill hover-lighten">
+              <WButton 
+                size="medium"
+                btnType="transparent"
+                shape="pill"
+                hoverAnimation="lighten"
+              >
                 Button
               </WButton>
             </td>
@@ -835,7 +1067,13 @@ export default function WButtonPage() {
           <tr>
             <td>Disabled Transparent Pilln</td>
             <td>
-              <WButton className="medium disabled transparent pill hover-darken">
+              <WButton 
+                size="medium"
+                btnType="transparent"
+                shape="pill"
+                hoverAnimation="darken"
+                disabled
+              >
                 Button
               </WButton>
             </td>
@@ -844,7 +1082,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Colored Hover-darken</td>
             <td>
-              <WButton className="colored medium texted hover-darken">
+              <WButton 
+                color="colored"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -852,7 +1095,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Primary Hover-darken</td>
             <td>
-              <WButton className="medium texted primary hover-darken">
+              <WButton 
+                color="primary"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -860,7 +1108,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Accent Hover-darken</td>
             <td>
-              <WButton className="medium texted accent hover-darken">
+              <WButton 
+                color="accent"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -868,7 +1121,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Danger Hover-darken</td>
             <td>
-              <WButton className="medium texted danger hover-darken">
+              <WButton 
+                color="danger"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -876,7 +1134,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Warning Hover-lighten </td>
             <td>
-              <WButton className="medium texted warning hover-lighten">
+             <WButton 
+                color="warning"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="lighten"
+              >
                 Button
               </WButton>
             </td>
@@ -884,7 +1147,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Warning Hover-transparent-lighten </td>
             <td>
-              <WButton className="medium texted warning hover-transparent-lighten">
+              <WButton 
+                color="warning"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="transparent-lighten"
+              >
                 Button
               </WButton>
             </td>
@@ -892,7 +1160,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Warning Hover-darken </td>
             <td>
-              <WButton className="medium texted warning hover-darken">
+              <WButton 
+                color="warning"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -900,7 +1173,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Success Hover-darken</td>
             <td>
-              <WButton className="medium texted success hover-darken">
+              <WButton 
+                color="success"
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+              >
                 Button
               </WButton>
             </td>
@@ -908,7 +1186,12 @@ export default function WButtonPage() {
           <tr>
             <td>Texted Disabled</td>
             <td>
-              <WButton className="medium texted disabled hover-darken">
+              <WButton 
+                size="medium"
+                btnType="texted"
+                hoverAnimation="darken"
+                disabled
+              >
                 Button
               </WButton>
             </td>
@@ -919,15 +1202,24 @@ export default function WButtonPage() {
             <td>
               <WButton
                 style={{ backgroundColor: "violet" }}
-                className="small pill ripple-light"
+                size="small"
+                shape="pill"
+                clickAnimation="ripple-light"
               >
                 B1
               </WButton>
-              <WButton className="small pill red-green ripple-light">
+              <WButton 
+                size="small"
+                shape="pill"
+                color="red-green"
+                clickAnimation="ripple-light"
+              >
                 B2
               </WButton>
               <WButton
-                className="small pill ripple-dark"
+                size="small"
+                shape="pill"
+                clickAnimation="ripple-dark"
                 style={{ color: "violet" }}
               >
                 B3
@@ -936,7 +1228,13 @@ export default function WButtonPage() {
           </tr>
         </tbody>
       </table>
-      <WButton className="large warning span ripple-dark">
+      <WButton 
+        size="large"
+        color="warning"
+        shape="pill"
+        clickAnimation="ripple-dark"
+        span
+      >
         Span Button
         <i className="material-icons right">anchor</i>
       </WButton>

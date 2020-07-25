@@ -7,17 +7,22 @@ export default function WInputPage() {
   return (
     <div className="WInputPage">
       <h1>WInput</h1>
-      
+
       <WInput className="lined draw">
         <input type="text" required="required"/>
         <span class="bar"></span>
         <label>Name</label>
       </WInput>
 
+      <WInput className="lined draw">
+        <input type="text" required="required"/>
+        <label>Name no bar</label>
+      </WInput>
+
       <WInput className="lined">
-        <input type="password" required="required"/>
-        <span class="bar"></span>
-        <label>Password</label>
+          <input type="password" required="required"/>
+          <span class="bar"></span>
+          <label>Password</label>
       </WInput>
 
       <WInput className="lined">
@@ -27,9 +32,11 @@ export default function WInputPage() {
       </WInput>
 
       <WInput className="outlined">
-        <input type="text" required="required"/>
-        <span class="barOutlined"></span>
-        <label>Outlined</label>
+        <fieldset>
+            <input type="text" required="required"/>
+            <label>Outlined</label>
+            <legend>Outlined</legend>
+        </fieldset>
       </WInput>
 
       <WInput className="outlined">
@@ -78,8 +85,6 @@ export default function WInputPage() {
         <input type="text" className="label4 hover-border-highlight" required="required"/>
         <label>Outlined HoverBorderHighlight</label>
       </WInput>
-
-      
 
       <WInput className="lined">
         <input type="text" required="required"/>
