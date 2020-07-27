@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+.WInputPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
 table {
   margin: auto;
   border-collapse: collapse;
@@ -58,10 +65,17 @@ td {
 }
 
 .fancy-buttons > .wbutton{
-
+  align-self: center;
   margin: 1rem;
 }
 
-.stacked > .wbutton {
-  display: block;
+.fancy-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }

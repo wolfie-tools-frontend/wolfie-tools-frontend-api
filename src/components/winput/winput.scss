@@ -1,0 +1,392 @@
+@use '../../global/wolfie' as *;
+
+//$muted-color: gray;//mix(white, $background-color, 70%);
+$inactive-color: gray;
+$text-color: black;
+$highlight-color: $primary-color;
+$width: 320px;
+$transition-time: 300ms;
+
+$rounded: 4px;
+
+$filled-color: black;
+
+.winput {
+  font-family: inherit;
+  position: relative;
+  width: $width;
+  margin: 1rem 0rem;
+
+  input {
+    font-size: 16px;
+    width: $width;
+    color: $text-color;
+  }
+
+  label {
+    color: $inactive-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &.lined {
+    label {
+      transition: $transition-time ease all; // label return animation
+      left: 0px;
+      top: 10px;
+    }
+    
+    input {
+      background: none;
+      padding: 8px 5px 6px 0px;
+      display: block;
+      border: none;
+      //border-radius: 0;
+      
+      border-bottom: 1px solid $inactive-color;
+      $time: 0.5s;
+      -webkit-transition: $time ease;
+      -moz-transition: $time ease;
+      -o-transition: $time ease;
+      -ms-transition: $time ease;
+      transition: $time ease;
+      
+      &:hover:not(:focus) { // border still can be seen
+        box-shadow: inset 0 -1px 0 rgba($filled-color,.9); //gets darker //.5 $ variable for color
+        //border-bottom: 2px solid blue;
+        //margin-bottom: -1px;
+      }
+      
+      &:focus {
+        outline: none;
+        //border-bottom: 2px solid $highlight-color;
+        
+        ~ label{
+          color: $highlight-color;
+        }
+        
+        // bar animation
+        ~ .bar:before {
+          width: $width;
+        }
+        ~ .bar2:before, ~.bar2:after { //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
+          width: 50%;
+        }
+      }
+    
+      // label animation        
+      &:focus ~ label{
+        color: $highlight-color;
+      }
+
+      &:focus ~ label, &:valid ~ label, &[type=number] ~ label { // active state
+        top: -14px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &.filled {
+    label {
+      left: 12px;
+      top: 20px;
+      transform-origin: 0 0;
+      transform: translate3d(0,0,0);
+      transition: all $transition-time ease; //0.3s
+    }
+
+    input {
+      background: rgba($filled-color, .05);
+      color: $filled-color;
+      padding: 16px 12px 0 12px;
+      border: none;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      box-shadow: inset 0 -1px 0 rgba($filled-color,.3);
+      height: 56px; //
+      transition: all $transition-time ease; //.15
+      -webkit-appearance: none;
+      appearance: none;
+      
+      &:hover:not(:focus) {
+        background: rgba($filled-color,.1); // needed? use with animations // 0.04 = lighter
+        box-shadow: inset 0 -1px 0 rgba($filled-color,.9); //gets darker //.5
+      }
+
+      &:not(:placeholder-shown) { // TEST
+        ~ .label {
+          color: rgba($filled-color,.5);
+          transform: translate3d(0,-12px,0) scale(.75);
+        }
+      }
+
+      &:focus {
+        outline: none;
+        ~ label {
+          color: $highlight-color;
+        }
+        ~ .bar3 {
+            box-shadow: inset 0 -2px 0 $highlight-color; // for instant bar
+            background: rgba($filled-color,.05); //crate dark/shade color in the back
+            transform: scaleX(1);
+            transition: all .1s ease;
+        }
+        ~ .bar:before { // left to right bar animation
+          width: $width;
+        }
+        ~ .bar2:before, ~.bar2:after { //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
+          width: 50%;
+        }
+      }
+
+      &:focus ~ label, &:valid ~ label { // active state
+        transform: translate3d(0,-12px,0) scale(.75);
+      }
+
+    }
+  }
+
+  &.outlined {
+    
+    label {
+      //margin-top: 0.3rem;
+      left: 12px;
+      top: 20px;
+      transform-origin: 0 0;
+      transform: translate3d(0,0,0);
+      transition: all $transition-time ease; //0.3s
+    }
+
+    input{
+      background: none;
+      color: $filled-color;
+      padding: 16px 12px;
+      border: 1px solid $inactive-color;
+      border-radius: 4px;
+      height: 50px; //56
+      $time: 0.05s;
+      transition: all $time ease; //.15
+      -webkit-appearance: none;
+      appearance: none;
+
+      &:hover:not(:focus) {
+        border-color: rgba($filled-color,.9);
+      }
+
+      &:focus {
+        outline: none;
+        ~ label {
+          color: $highlight-color;
+        }
+
+        ~ legend {
+          //padding: 0.3rem;
+          padding-left: 0.3rem;
+          padding-right: 0.3rem;
+          color: $highlight-color;
+          font-size: 0.75rem;
+          //margin-left: 
+        }
+
+        ~ .barOutlined {
+            border: 2px solid;
+            border-color: $highlight-color;
+            border-radius: 4px;
+            transform: scaleX(1);
+        }
+      }
+
+      &:focus ~ label, &:valid ~ label { // active state
+        transform: translate3d(0,-27px,0) scale(.75);
+        ~ legend{
+          max-width: 100px;
+          transition: all $time ease;//change the time and test what looks most natural
+        }
+      }
+
+      &:not(:placeholder-shown) {
+        ~ .label {
+          color: rgba($filled-color,.5);
+          transform: translate3d(0,-27px,0) scale(.75);
+        }
+      }
+      
+    }
+
+    fieldset {
+      position: relative;
+      border: 1px solid $inactive-color;
+      border-radius: 4px; //$ variable
+      padding: 0;
+      background: none;
+      
+      label{
+        //top: 1em;
+      }
+      > input{
+        border: none;
+      }
+      > legend{
+        font-size: 12px;
+        max-width: 0.01px;
+        padding: 0;
+        margin-left: 8px;
+        text-align: left;
+        visibility:hidden;
+      }
+    }  
+  }
+
+}
+
+.label2 {
+  &:focus ~ label, &:valid ~ label { // active state
+    transform: translate3d(0,-42px,0) !important;
+  }
+}
+
+.label3 {
+  &:focus ~ label, &:valid ~ label { // active state
+    transform: translate3d(0,-40px,0) scale(0.75) !important;
+  }
+}
+
+.label4 { //DEFAULT FILLED STATE
+  padding: 16px 12px 0 12px !important;
+  &:focus ~ label, &:valid ~ label { // active state
+    transform: translate3d(0,-12px,0) scale(.75) !important;
+  }
+}
+
+.color-background {
+  background-color: mix(white, $background-color, 60%) !important; //$ make variable
+}
+
+.pill {
+  border-radius: 2rem !important;
+  
+  &:focus ~.barOutlined {
+    border-radius: 2rem !important;
+  }
+}
+
+.shadow {
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+  //box-shadow: 0 0 11px rgba($inactive-color,.2);
+  box-shadow: 0 0 11px rgba($inactive-color,.4);
+  //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hover-shadow {
+  //$shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
+  $shadow: 0 0 11px rgba($inactive-color,.4);
+  &:hover:not(:focus) {
+    box-shadow: $shadow !important;
+    border-color: $inactive-color !important; // OVERWRITE OTHER THING - BAD
+  }
+  &:focus {
+    box-shadow: $shadow !important;
+    ~ label {
+      color: $inactive-color !important; // OVERWRITE OTHER THING - BAD
+    }
+  }
+}
+
+.hover-border-highlight {
+  //transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+  //box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  //TODO CREATE SMOOTH TRANSITION
+  &:hover:not(:focus) {
+    border-color: $inactive-color !important; // OVERWRITE OTHER THING - BAD
+  }
+  &:focus {
+    border-color: $highlight-color !important; // has to overwrite default
+    box-shadow: 0 0 0 3px rgb($highlight-color,0.3); //$3px, $0.3 transparency $ variables border highlight thickness
+  }
+}
+
+.label5 { // always up
+  //position for outlined
+
+  //position for lined
+
+  //position for filled
+
+}
+
+.dense {
+  //padding for outlined //padding 10px 12px bootstrap
+
+  //padding for lined
+
+  //padding for filled
+}
+
+
+
+*, :before, :after { //for active line color animation
+  box-sizing: border-box;
+}
+  
+.bar {
+  //position: relative;
+  //display: block;
+  //width: $width;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px; // 0
+    position: absolute;
+    background: $highlight-color;
+    transition: $transition-time ease all;
+    left: 0%;
+  }
+}
+
+.bar2 {
+  position: relative;
+  display: block;
+  width: $width; 
+
+  &:before, &:after {
+    content:'';
+    height: 2px; 
+    width: 0;
+    bottom: 0px; //1px
+    position:absolute;
+    background: $highlight-color; 
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+  }
+  &:before {
+    left:50%;
+  }
+  &:after {
+    right:50%; 
+  }
+}
+
+.bar3 {
+  position: absolute;
+  top: 0; //color
+  left: 0; //color
+  width: 100%; //color
+  height: 100%; //color
+  background: rgba($filled-color, .05); // darken
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.barOutlined {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+}

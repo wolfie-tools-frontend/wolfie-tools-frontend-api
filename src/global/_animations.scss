@@ -77,13 +77,11 @@
   }
 }
 
-// combined mixin
-@mixin hover-ghost-darken($background-color, $t-value: "") {
+@mixin hover-ghost-darken($background-color, $t-value: "") { // combined mixin
   &.hover-ghost-darken {
     border-color: color.scale($background-color, $alpha: -50%);
     &:hover {
       border-color: $background-color;
-      //@include hover-transparent-darken($t-value: ""); 
       @if $t-value == "" {
         background-color: color.scale($background-color, $alpha: $transparent-value);
       } @else {

@@ -15,7 +15,7 @@ $navbar-element-padding: 0rem 1rem;
   color: $navbar-text-color;
   background-color: rgb(224, 224, 224);
   
-  &.primary {
+  &.primary { // need to be called because default navbar is given a color
     background-color: $primary-color;
   }
 

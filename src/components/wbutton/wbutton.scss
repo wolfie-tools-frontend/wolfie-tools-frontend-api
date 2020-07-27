@@ -79,6 +79,7 @@ are called from the animations.scss mixins*/
   }
   
   /* Button Colors */
+  //color with global classes
   &.primary, &.accent, &.colored {
     color: $button-text-color;
   }
