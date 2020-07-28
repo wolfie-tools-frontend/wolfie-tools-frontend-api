@@ -56,10 +56,10 @@ export default function WNavbarPage() {
           <li className="hover-transparent-lighten">
             <a href="#">Sass</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Components</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">JavaScript</a>
           </li>
         </ul>
@@ -67,16 +67,16 @@ export default function WNavbarPage() {
 
       <WNavbar style={{ backgroundColor: "#142850" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Logo</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Documentation</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Examples</a>
           </li>
         </ul>
@@ -95,16 +95,16 @@ export default function WNavbarPage() {
 
       <WNavbar style={{ backgroundColor: "#142850" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Logo</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Documentation</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Examples</a>
           </li>
         </ul>
@@ -120,7 +120,7 @@ export default function WNavbarPage() {
               <i class="fab fa-slack fa-lg" />
             </a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Download</a>
           </li>
         </ul>
@@ -247,22 +247,22 @@ export default function WNavbarPage() {
 
       <WNavbar style={{ backgroundColor: "gray" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Teaching</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Research</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">CV</a>
           </li>
-          <li className="hover-transparent-lighten ripple-light">
+          <li className="hover-transparent-lighten click-ripple-light">
             <a href="#">Games</a>
           </li>
-          <li className="ripple-light hover-text-primary">
+          <li className="click-ripple-light hover-text-primary">
             <a href="#">Mosaic</a>
           </li>
         </ul>

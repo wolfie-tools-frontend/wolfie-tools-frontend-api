@@ -597,6 +597,15 @@ export default function WButtonPage() {
             <td>Hover-fill</td>
             <td>
               <WButton
+                btnType="ghost"
+                hoverAnimation="fill"
+                onClick={myFunction}
+              >
+                Button
+              </WButton>
+            </td>
+            <td>
+              <WButton
                 color="primary"
                 hoverAnimation="fill"
                 onClick={myFunction}

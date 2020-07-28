@@ -30,8 +30,8 @@ are called from the animations.scss mixins*/
   color: $text-color;
   @include hover-darken(rgb(239, 239, 239));
   @include hover-lighten(rgb(239, 239, 239));
-  @include ripple-light;
-  @include ripple-dark;
+  @include click-ripple-light;
+  @include click-ripple-dark;
 
   i {
     &.left {

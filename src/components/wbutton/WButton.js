@@ -11,8 +11,8 @@ const WButton = ({ children, className, onClick, style, btnType, shape, color, s
     shape, 
     size, 
     {"span":span}, 
-    {["hover-"+hoverAnimation]:hoverAnimation}, 
-    clickAnimation, 
+    {["hover-"+hoverAnimation]:hoverAnimation},
+    {["click-"+clickAnimation]:clickAnimation}, 
     {"disabled":disabled}, 
     shadow 
   );

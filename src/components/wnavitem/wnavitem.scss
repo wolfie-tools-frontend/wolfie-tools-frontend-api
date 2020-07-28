@@ -6,8 +6,8 @@
     @include hover-darken(rgb(239, 239, 239));
     @include hover-lighten(rgb(239, 239, 239));
     //click
-    @include ripple-light;
-    @include ripple-dark;
+    @include click-ripple-light;
+    @include click-ripple-dark;
 
     //color with global classes
 }

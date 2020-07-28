@@ -183,14 +183,14 @@
   }
 }
 
-@mixin ripple-light() {
-  &.ripple-light {
+@mixin click-ripple-light() {
+  &.click-ripple-light {
     @include ripple(white);
   }
 }
 
-@mixin ripple-dark() {
-  &.ripple-dark {
+@mixin click-ripple-dark() {
+  &.click-ripple-dark {
     @include ripple(black);
   }
 }
@@ -205,8 +205,8 @@
   @include hover-transparent-colored($primary-color);
   @include hover-border-darken($primary-color);
   @include hover-ghost-darken($primary-color);
-  @include ripple-light();
-  @include ripple-dark();
+  @include click-ripple-light();
+  @include click-ripple-dark();
   @include hover-text-lighten($text-color);
   @include hover-text-darken($text-color);
   @include hover-text-transparent();

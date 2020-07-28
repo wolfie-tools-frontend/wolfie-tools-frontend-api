@@ -7,7 +7,7 @@ const WNavItem = ({ children, className, onClick, style, color, hoverAnimation, 
     className, 
     color,
     {["hover-"+hoverAnimation]:hoverAnimation}, 
-    clickAnimation
+    {["click-"+clickAnimation]:clickAnimation}
   );
 
   return (
