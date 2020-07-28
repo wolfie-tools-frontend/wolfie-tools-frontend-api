@@ -11,9 +11,9 @@ const WNavItem = ({ children, className, onClick, style, color, hoverAnimation, 
   );
 
   return (
-    <nav onClick={onClick} className={`wnavitem ${classes}`} style={style}>
+    <li onClick={onClick} className={`wnavitem ${classes}`} style={style}>
       {children}
-    </nav>
+    </li>
   );
 };
 

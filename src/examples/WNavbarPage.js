@@ -1,6 +1,7 @@
 import React from "react";
 import WButton from "../components/wbutton/WButton";
 import WNavbar from "../components/wnavbar/WNavbar";
+import WNavItem from "../components/wnavitem/WNavItem";
 //import WInput from "../components/winput/WInput";
 import "./example.css";
 import "../main.scss";
@@ -25,6 +26,25 @@ export default function WNavbarPage() {
           <li className="hover-transparent-darken ripple-dark">
             <a href="#">Contact</a>
           </li>
+        </ul>
+      </WNavbar>
+
+      <WNavbar className="warning">
+        <ul>
+          <WNavItem className="hover-transparent-darken">
+            <a href="https://lypzl.csb.app/">Logo</a>
+          </WNavItem>
+        </ul>
+        <ul>
+          <WNavItem className="hover-transparent-darken">
+            <a href="#">About Me</a>
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken ripple-dark">
+            <a href="#">Resume</a>
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken ripple-dark">
+            <a href="#">Contact</a>
+          </WNavItem>
         </ul>
       </WNavbar>
 
