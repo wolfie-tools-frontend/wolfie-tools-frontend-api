@@ -6,20 +6,24 @@
 $rounded-radius: 0.25rem;
 
 $icon-font-size: 1.5rem;
-$icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
+$icon-sizes: (
+  "small": 1.25rem,
+  "medium": 1.5rem,
+  "large": 2.2rem,
+) !default;
 
 // Icons
 .material-icons {
   font-size: $icon-font-size;
-  
-  &.small{
+
+  &.small {
     font-size: map.get($icon-sizes, small);
   }
   &.medium {
     font-size: map.get($icon-sizes, medium);
   }
   &.large {
-   font-size: map.get($icon-sizes, large);
+    font-size: map.get($icon-sizes, large);
   }
   &.disabled {
     color: $disabled-color;
@@ -43,7 +47,7 @@ $icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
   @include hover-darken($primary-color-light);
   @include hover-lighten($primary-color-light);
 }
-  
+
 .accent {
   background-color: $accent-color;
   @include hover-darken($accent-color);
@@ -61,39 +65,39 @@ $icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
   @include hover-darken($accent-color-light);
   @include hover-lighten($accent-color-light);
 }
-  
+
 .success {
   background-color: $success-color;
   color: $text-color-light;
   @include hover-darken($success-color);
   @include hover-lighten($success-color);
 }
-  
+
 .warning {
   background-color: $warning-color;
   color: $text-color-light;
   @include hover-darken($warning-color);
   @include hover-lighten($warning-color);
 }
-  
+
 .danger {
   background-color: $danger-color;
   color: $text-color-light;
   @include hover-darken($danger-color);
   @include hover-lighten($danger-color);
 }
-  
+
 .transparent-dark-color {
   background-color: $transparent-dark-color;
 }
-  
+
 .disabled {
   background-color: $disabled-background-color !important;
   color: $disabled-color !important;
   border-color: $disabled-color !important;
   cursor: default !important;
 }
-  
+
 .transparent {
   background-color: transparentize(black, 0.75);
   color: white;
@@ -102,11 +106,10 @@ $icon-sizes: ("small": 1.25rem, "medium": 1.5rem, "large": 2.2rem) !default;
   }
   &.hover-lighten:hover {
     background-color: transparentize(white, 0.8);
-  }  
+  }
 }
-  
+
 .raised {
-  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
-              0px 2px 2px 0px rgba(0,0,0,0.14), 
-              0px 1px 5px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }

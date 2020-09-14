@@ -10,7 +10,11 @@ $button-padding: 0.6em 1.2em;
 $button-margin: 0px 0px 5px 0px;
 /// @type Number
 $button-radius: $rounded-radius !default;
-$button-sizes: ("small": 0.8rem, "medium": 1rem, "large": 1.1rem) !default;
+$button-sizes: (
+  "small": 0.8rem,
+  "medium": 1rem,
+  "large": 1.1rem,
+) !default;
 
 /* Button hover effect and click effects & animations 
 are called from the animations.scss mixins*/
@@ -64,7 +68,8 @@ are called from the animations.scss mixins*/
     //overflow: visible;
     border-radius: 50%;
 
-    & i { // left
+    & i {
+      // left
       margin: 0;
     }
   }
@@ -72,15 +77,18 @@ are called from the animations.scss mixins*/
   &.square {
     padding: 0.75rem;
     display: inline-flex;
-  
-    & i { // left
+
+    & i {
+      // left
       margin: 0;
     }
   }
-  
+
   /* Button Colors */
   //color with global classes
-  &.primary, &.accent, &.colored {
+  &.primary,
+  &.accent,
+  &.colored {
     color: $button-text-color;
   }
 
@@ -98,19 +106,19 @@ are called from the animations.scss mixins*/
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    @include hover-fill($button-background-color,$background-color);
+    @include hover-fill($button-background-color, $background-color);
     @include hover-transparent-darken();
     @include hover-transparent-lighten(-80%);
     @include hover-transparent-colored($button-background-color);
     @include hover-ghost-darken(black);
-  
+
     &.hover-darken:hover {
       background-color: color.scale(black, $alpha: $transparent-value);
     }
     &.hover-lighten:hover {
       background-color: color.scale(white, $alpha: -80%);
-    }  
-  
+    }
+
     @mixin ghost-color($color) {
       background-color: transparent;
       color: $color;
@@ -118,13 +126,12 @@ are called from the animations.scss mixins*/
       @include hover-fill($color, $background-color);
       @include hover-transparent-colored($color);
       @include hover-ghost-darken($color);
-  
-      &.hover-darken:hover{
+
+      &.hover-darken:hover {
         background-color: color.scale($color, $alpha: $transparent-value);
       }
-      
     }
-    
+
     &.primary {
       @include ghost-color($primary-color);
       @include hover-ghost-darken($primary-color);
@@ -161,24 +168,24 @@ are called from the animations.scss mixins*/
     @include hover-transparent-darken();
     @include hover-transparent-lighten(-80%);
     @include hover-transparent-colored($button-background-color);
-    
+
     &.hover-darken:hover {
       background-color: color.scale(black, $alpha: $transparent-value);
     }
     &.hover-lighten:hover {
       background-color: color.scale(white, $alpha: -80%);
     }
-  
+
     @mixin texted-color($color) {
       background-color: transparent;
       color: $color;
       @include hover-transparent-colored($color);
-  
+
       &.hover-darken:hover {
         background-color: color.scale($color, $alpha: $transparent-value);
       }
     }
-    
+
     &.primary {
       @include texted-color($primary-color);
     }
@@ -206,19 +213,18 @@ are called from the animations.scss mixins*/
   &.transparent {
     background-color: color.scale(black, $alpha: -75%);
     color: white;
-  
+
     &.hover-darken:hover {
       background-color: color.scale(black, $alpha: -60%);
     }
     &.hover-lighten:hover {
       background-color: color.scale(white, $alpha: -80%);
-    }  
+    }
   }
 
   &.raised {
-    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
-                0px 2px 2px 0px rgba(0,0,0,0.14), 
-                0px 1px 5px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
   /* Button Sizes */

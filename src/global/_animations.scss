@@ -11,7 +11,7 @@
 @mixin hover-darken($background-color, $d-value: "") {
   &.hover-darken:hover {
     @if $d-value == "" {
-      @include hover-effect(color.scale($background-color,  $lightness: $darken-value));
+      @include hover-effect(color.scale($background-color, $lightness: $darken-value));
     } @else {
       @include hover-effect(color.scale($background-color, $lightness: $d-value));
     }
@@ -25,7 +25,7 @@
     } @else {
       @include hover-effect(color.scale($background-color, $lightness: $l-value));
     }
-  }  
+  }
 }
 
 @mixin hover-fill($background-color, $t-color) {
@@ -77,7 +77,8 @@
   }
 }
 
-@mixin hover-ghost-darken($background-color, $t-value: "") { // combined mixin
+@mixin hover-ghost-darken($background-color, $t-value: "") {
+  // combined mixin
   &.hover-ghost-darken {
     border-color: color.scale($background-color, $alpha: -50%);
     &:hover {
@@ -96,7 +97,7 @@
     @if $t-value == "" {
       color: color.scale($text-color, $lightness: $transparent-value);
     } @else {
-      color: color.scale($text-color, $lightness: $t-value); 
+      color: color.scale($text-color, $lightness: $t-value);
     }
   }
 }
@@ -173,12 +174,12 @@
     background-position: 50%;
     transform: scale(10, 10);
     opacity: 0;
-    transition: transform .5s, opacity 1s;
+    transition: transform 0.5s, opacity 1s;
   }
 
   &:active:after {
     transform: scale(0, 0);
-    opacity: .3;
+    opacity: 0.3;
     transition: 0s;
   }
 }

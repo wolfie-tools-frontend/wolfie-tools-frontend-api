@@ -2,14 +2,14 @@ import React from "react";
 import clsx from "clsx";
 import "./wnavbar.scss";
 
-const WNavbar = ({ children, className, onClick, style, color }) => {
+const WNavbar = ({ children, className, onClick, style, color, ...other }) => {
   let classes = clsx(
-    className, 
+    className,
     color
   );
 
   return (
-    <nav onClick={onClick} className={`wnavbar ${classes}`} style={style}>
+    <nav onClick={onClick} className={`wnavbar ${classes}`} style={style} {...other}>
       {children}
     </nav>
   );

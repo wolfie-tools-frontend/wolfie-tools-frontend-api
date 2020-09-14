@@ -2,26 +2,27 @@ import React from "react";
 import clsx from "clsx";
 import "./wbutton.scss";
 
-const WButton = ({ children, className, onClick, style, btnType, shape, color, size, span, hoverAnimation, clickAnimation, value, disabled, shadow}) => {
+const WButton = ({ children, className, onClick, style, wType, shape, color, size, span, hoverAnimation, clickAnimation, value, disabled, shadow, ...other }) => {
   //will only add classname if these values aren't empty/undefined
   let classes = clsx(
-    className, 
-    btnType, 
-    color, 
-    shape, 
-    size, 
-    {"span":span}, 
-    {["hover-"+hoverAnimation]:hoverAnimation},
-    {["click-"+clickAnimation]:clickAnimation}, 
-    {"disabled":disabled}, 
-    shadow 
+    className,
+    wType,
+    color,
+    shape,
+    size,
+    { "span": span },
+    { ["hover-" + hoverAnimation]: hoverAnimation },
+    { ["click-" + clickAnimation]: clickAnimation },
+    { "disabled": disabled },
+    shadow
   );
 
   return (
-    <button onClick={onClick} 
-            className={`wbutton ${classes}`}
-            style={style} value={value}
-            disabled={disabled}>
+    <button onClick={onClick}
+      className={`wbutton ${classes}`}
+      style={style} value={value}
+      disabled={disabled}
+      {...other}>
       {children}
     </button>
   );

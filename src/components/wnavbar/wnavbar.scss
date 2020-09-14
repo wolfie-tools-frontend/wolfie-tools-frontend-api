@@ -14,8 +14,9 @@ $navbar-element-padding: 0rem 1rem;
   margin-bottom: 10px;
   color: $navbar-text-color;
   background-color: rgb(224, 224, 224);
-  
-  &.primary { // need to be called because default navbar is given a color
+
+  &.primary {
+    // need to be called because default navbar is given a color
     background-color: $primary-color;
   }
 
@@ -37,34 +38,39 @@ nav * {
 }
 
 li {
-  float:left;
+  float: left;
   padding: 0;
 }
 
-a { //NavLink
+a {
+  //NavLink
   text-decoration: none;
-  height:inherit;
-  display:flex;
+  height: inherit;
+  display: flex;
   align-items: center;
   padding: $navbar-element-padding;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
 }
 
-ul, ol, li{
+ul,
+ol,
+li {
   list-style-type: none;
   margin: 0;
   //padding: 0;
   overflow: hidden;
-  display:flex;
+  display: flex;
   align-items: center;
-  height:inherit;
+  height: inherit;
 }
 
 li {

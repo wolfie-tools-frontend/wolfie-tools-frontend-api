@@ -2,16 +2,16 @@ import React from "react";
 import clsx from "clsx";
 import "./wnavitem.scss";
 
-const WNavItem = ({ children, className, onClick, style, color, hoverAnimation, clickAnimation }) => {
+const WNavItem = ({ children, className, onClick, style, color, hoverAnimation, clickAnimation, ...other }) => {
   let classes = clsx(
-    className, 
+    className,
     color,
-    {["hover-"+hoverAnimation]:hoverAnimation}, 
-    {["click-"+clickAnimation]:clickAnimation}
+    { ["hover-" + hoverAnimation]: hoverAnimation },
+    { ["click-" + clickAnimation]: clickAnimation }
   );
 
   return (
-    <li onClick={onClick} className={`wnavitem ${classes}`} style={style}>
+    <li onClick={onClick} className={`wnavitem ${classes}`} style={style} {...other}>
       {children}
     </li>
   );
