@@ -1,0 +1,88 @@
+@use '../../global/wolfie' as *;
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// WRow
+.wrow {
+  display: flex;
+  //flex: 0 1 auto;
+  //flex-direction: row;
+  flex-wrap: wrap;
+  //width: 100%;
+}
+
+//WCol
+.wcol {
+  flex: 1 0 0%;
+  padding: 0.5rem;
+  *{
+    background-color: $primary-color; // :(
+    padding:inherit;
+  }
+}
+
+.wcol-1 {
+  flex: 0 0 auto;
+  width: 8.333333%;
+}
+
+.wcol-2 {
+  flex: 0 0 auto;
+  width: 16.666667%;
+}
+
+.wcol-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.wcol-4 {
+  flex: 0 0 auto;
+  width: 33.333333%;
+}
+
+.wcol-5 {
+  flex: 0 0 auto;
+  width: 41.666667%;
+}
+
+.wcol-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.wcol-7 {
+  flex: 0 0 auto;
+  width: 58.333333%;
+}
+
+.wcol-8 {
+  flex: 0 0 auto;
+  width: 66.666667%;
+}
+
+.wcol-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.wcol-10 {
+  flex: 0 0 auto;
+  width: 83.333333%;
+}
+
+.wcol-11 {
+  flex: 0 0 auto;
+  width: 91.666667%;
+}
+
+.wcol-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}

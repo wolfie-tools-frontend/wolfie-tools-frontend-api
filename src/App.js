@@ -6,6 +6,7 @@ import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
 import WButtonPage from "./examples/WButtonPage";
 import WNavbarPage from "./examples/WNavbarPage";
 import WInputPage from "./examples/WInputPage";
+import WGridPage from "./examples/WGridPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 
 export default function App() {
@@ -28,17 +29,22 @@ export default function App() {
             <li className={"hover-darken"}>
               <NavLink to="/wbutton" id="wbutton" activeClassName="primary-dark">
                 WButton
-                </NavLink>
+              </NavLink>
             </li>
             <li className={"hover-darken"}>
               <NavLink to="/wnavbar" id="wnavbar" activeClassName="primary-dark">
                 WNavbar
-                </NavLink>
+              </NavLink>
             </li>
             <li className={"hover-darken"}>
               <NavLink to="/winput" id="winput" activeClassName="primary-dark">
                 WInput
-                </NavLink>
+              </NavLink>
+            </li>
+            <li className={"hover-darken"}>
+              <NavLink to="/wgrid" id="winput" activeClassName="primary-dark">
+                WGrid
+              </NavLink>
             </li>
           </ol>
         </WNavbar>
@@ -46,6 +52,7 @@ export default function App() {
           <Route path="/wbutton" component={WButtonPage} />
           <Route path="/wnavbar" component={WNavbarPage} />
           <Route path="/winput" component={WInputPage} />
+          <Route path="/wgrid" component={WGridPage} />
         </Switch>
       </div>
     </BrowserRouter>
