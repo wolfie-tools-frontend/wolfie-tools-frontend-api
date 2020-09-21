@@ -10,8 +10,8 @@ export default function WGridPage() {
         <div className="WGridPage">
             <h1>WGrid</h1>
             <WRow>
-                <WCol size="3">3 matey</WCol>
-                <WCol size="9">9 argh</WCol>
+                <WCol size="3">size 3</WCol>
+                <WCol size="9">size 9</WCol>
             </WRow>
             <WRow>
                 <WCol size="3">size 3</WCol>
@@ -31,7 +31,7 @@ export default function WGridPage() {
                 <WCol size="2">size 2</WCol>
             </WRow>
             <WRow>
-                <WCol size="0">size ?</WCol>
+                <WCol size="0">default size (12)</WCol>
             </WRow>
         </div>
     );
