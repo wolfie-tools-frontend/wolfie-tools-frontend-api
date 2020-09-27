@@ -87,9 +87,9 @@ align-items | - | center
 
 The style prop values are:
 <table>
-    <td><b>Prop</b></td>
-    <td><b>Value</b></td>
-    <td><b>Description</b></td>
+    <td text-align="center"><b>Prop</b></td>
+    <td text-align="center"><b>Value</b></td>
+    <td text-align="center"><b>Description</b></td>
   </tr>
   <tr>
     <td rowspan="4">wType</td>
