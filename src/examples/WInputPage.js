@@ -1,6 +1,6 @@
 import React from "react";
 import WInput from "../components/winput/WInput";
-import "./example.css";
+import "./example.scss";
 import "../main.scss";
 
 export default function WInputPage() {

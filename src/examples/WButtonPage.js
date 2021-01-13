@@ -1,6 +1,6 @@
 import React from "react";
 import WButton from "../components/wbutton/WButton";
-import "./example.css";
+import "./example.scss";
 import "../main.scss";
 
 export default function WButtonPage() {

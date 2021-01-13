@@ -1,7 +1,21 @@
+@use '..//global/wolfie' as *;
+
+body{
+  margin:0;
+}
+
 .WButtonPage,
 .WNavbarPage,
 .WGridPage {
   text-align: center;
+}
+
+.WGridPage{
+  .wrow{
+    .wcol{
+      border: dashed 1px;
+    }
+  }
 }
 
 .WInputPage {
@@ -32,6 +46,15 @@ tr:last-child {
 
 td {
   padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  
 }
 
 .red-green {

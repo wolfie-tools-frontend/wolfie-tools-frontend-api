@@ -1,7 +1,7 @@
 import React from "react";
 import WRow from "../components/wgrid/WRow";
 import WCol from "../components/wgrid/WCol";
-import "./example.css";
+import "./example.scss";
 import "../main.scss";
 
 export default function WGridPage() {
@@ -9,32 +9,60 @@ export default function WGridPage() {
     return (
         <div className="WGridPage">
             <h1>WGrid</h1>
+            <h2>12 column grid</h2>
+            <WRow>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+                <WCol size="1">size 1</WCol>
+            </WRow>
+
+            <WRow>
+                <WCol size="2">size 2</WCol>
+                <WCol size="8">size 8</WCol>
+                <WCol size="2">size 2</WCol>
+            </WRow>
+
+            <WRow>
+                <WCol size="0">default size</WCol>
+            </WRow>
+
+            <br/>
+            <h2>Nested Grid</h2>
             <WRow>
                 <WCol size="3">
                     <WRow>
-                        <WCol size="3" style={{border:"1px dashed"}}>size 3</WCol>
-                        <WCol size="9" style={{border:"1px dashed"}}>size 9</WCol>
+                        <WCol size="3" className="content">size 3</WCol>
+                        <WCol size="9" className="content">size 9</WCol>
                     </WRow>
                 </WCol>
                 <WCol size="9">size 9</WCol>
             </WRow>
-            <WRow>
-                <WCol size="3">size 3</WCol>
-                <WCol size="3">size 3</WCol>
-            </WRow>
-            <div className="container">
-                <WRow>
-                    <WCol size="2">size 2</WCol>
-                    <WCol size="8">size 8</WCol>
-                    <WCol size="2">size 2</WCol>
+
+            <br/>
+            <h2>Example Card Layout</h2>
+            <div style={{height:'200px', width: '400px', backgroundColor:'aliceblue', marginLeft:'auto', marginRight: 'auto'}}>
+                <WRow style={{height:'100%', columnGap:'0'}}>
+                    <WCol size='4' style={{margin:'0'}}>image</WCol>
+                    <WCol size='8' style={{margin:'0'}}>
+                        <WRow style={{height:'100px'}}>
+                            <WCol size='12' style={{margin:'0'}}>text block</WCol>
+                        </WRow>
+                        <WRow style={{height:'100px'}}>
+                            <WCol size='12' style={{margin:'0'}}>text block</WCol>
+                        </WRow>
+                    </WCol>
                 </WRow>
             </div>
-            <WRow>
-                <WCol size="2">size 2</WCol>
-            </WRow>
-            <WRow>
-                <WCol size="0">default size (12)</WCol>
-            </WRow>
+            
         </div>
     );
 }

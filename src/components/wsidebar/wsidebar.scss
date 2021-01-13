@@ -1,0 +1,87 @@
+@use "sass:color";
+@use '../../global/wolfie' as *;
+
+$navbar-element-padding: 1rem 1rem;
+
+/*
+.wrow {
+  column-gap: 0;
+}
+.wcol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+*/
+
+.wsidebar {
+  //display: flex;
+  //justify-content: space-between;
+  //align-items: center;
+  height: 100%; // ??
+  //margin: 0; // set col style in js
+  //padding-left: 0.7rem;
+  //padding-right: 0.7rem;
+  color: $navbar-text-color;
+  background-color: rgb(224, 224, 224); // defualt
+
+  &.primary {
+    // need to be called because default navbar is given a color
+    background-color: $primary-color;
+  }
+
+  &.accent {
+    background-color: $accent-color;
+  }
+
+  &.colored {
+    background-color: $navbar-background-color;
+  }
+
+  &.transparent-dark-color {
+    background-color: $transparent-dark-color;
+    color: $text-color;
+  }
+
+  a {
+    //NavLink
+    text-decoration: none;
+    height: inherit;
+    display: inline-block;
+    width: inherit;
+    //text-align: center;
+    padding: $navbar-element-padding;
+  }
+  
+  a,
+  a:visited {
+    color: inherit;
+  }
+  
+  ul,
+  ol {
+    padding: 0;
+  }
+  
+  ul,
+  ol,
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    //padding: 0;
+    //overflow: hidden;
+    //height: inherit;
+  }
+  
+  /*
+  .left {
+  
+  }
+  
+  .right {
+    
+  }
+  */
+
+}

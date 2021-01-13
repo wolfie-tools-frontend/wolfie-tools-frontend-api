@@ -10,7 +10,7 @@ const WCol = ({ children, className, size, ...other }) => {
   return (
      <div className={`wcol ${classes}`}
       {...other}>
-      <div>{children}</div>
+      {children}
     </div>
   );
 };

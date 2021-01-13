@@ -7,11 +7,11 @@ $navbar-element-padding: 0rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  //position: sticky;
   height: 4rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
   color: $navbar-text-color;
   background-color: rgb(224, 224, 224);
 
@@ -31,59 +31,60 @@ $navbar-element-padding: 0rem 1rem;
   &.transparent-dark-color {
     background-color: $transparent-dark-color;
   }
-}
 
-nav * {
-  padding: $navbar-element-padding;
-}
-
-li {
-  float: left;
-  padding: 0;
-}
-
-a {
-  //NavLink
-  text-decoration: none;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  padding: $navbar-element-padding;
-}
-
-a,
-a:visited {
-  color: inherit;
-}
-
-ul,
-ol {
-  padding: 0;
-}
-
-ul,
-ol,
-li {
-  list-style-type: none;
-  margin: 0;
-  //padding: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  height: inherit;
-}
-
-li {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/*
-.left {
-
-}
-
-.right {
+  nav * {
+    padding: $navbar-element-padding;
+  }
   
+  li {
+    float: left;
+    padding: 0;
+  }
+  
+  a {
+    //NavLink
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: $navbar-element-padding;
+  }
+  
+  a,
+  a:visited {
+    color: inherit;
+  }
+  
+  ul,
+  ol {
+    padding: 0;
+  }
+  
+  ul,
+  ol,
+  li {
+    list-style-type: none;
+    margin: 0;
+    //padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+  
+  li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  /*
+  .left {
+  
+  }
+  
+  .right {
+    
+  }
+  */
+
 }
-*/

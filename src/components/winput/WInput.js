@@ -18,7 +18,7 @@ const WInput = ({ children, className, style, inputType, wType, labelText, place
     shadow
   );
 
-  if (className.match(/\blined\b/) || className.match(/\bfilled\b/)) {
+  if (className.match(/\blined\b/) || className.match(/\bfilled\b/)) { //do we still need these checks?
     return (
       <div className={`winput line-animation ${className}`} style={style}>
         {children}

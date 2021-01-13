@@ -3,7 +3,8 @@ import WButton from "../components/wbutton/WButton";
 import WNavbar from "../components/wnavbar/WNavbar";
 import WNavItem from "../components/wnavitem/WNavItem";
 //import WInput from "../components/winput/WInput";
-import "./example.css";
+import WAccordion from "../components/waccordion/WAccordion";
+import "./example.scss";
 import "../main.scss";
 
 export default function WNavbarPage() {
@@ -280,6 +281,10 @@ export default function WNavbarPage() {
           </li>
         </ul>
       </WNavbar>
+
+      <WAccordion header="Accordion #1"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut urna non leo faucibus pretium nec eget purus. Nam ornare libero nec mi ultrices, at pretium orci auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In aliquet dapibus cursus. Praesent sed nisi eget mi tempus finibus a vel dui. Donec tempus elit vestibulum, luctus ex at, ullamcorper justo. Sed aliquet, metus id cursus convallis, sapien erat congue ante, non malesuada urna sapien ut turpis. In hac habitasse platea dictumst. Morbi maximus elementum felis, et semper erat tempor a. Nulla facilisi. Proin lacinia turpis lectus, at convallis purus malesuada vel. Curabitur ut suscipit dolor.">
+      </WAccordion>
     </div>
   );
 }
