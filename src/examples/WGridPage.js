@@ -35,7 +35,7 @@ export default function WGridPage() {
                 <WCol size="0">default size</WCol>
             </WRow>
 
-            <br/>
+            <br />
             <h2>Nested Grid</h2>
             <WRow>
                 <WCol size="3">
@@ -47,22 +47,22 @@ export default function WGridPage() {
                 <WCol size="9">size 9</WCol>
             </WRow>
 
-            <br/>
+            <br />
             <h2>Example Card Layout</h2>
-            <div style={{height:'200px', width: '400px', backgroundColor:'aliceblue', marginLeft:'auto', marginRight: 'auto'}}>
-                <WRow style={{height:'100%', columnGap:'0'}}>
-                    <WCol size='4' style={{margin:'0'}}>image</WCol>
-                    <WCol size='8' style={{margin:'0'}}>
-                        <WRow style={{height:'100px'}}>
-                            <WCol size='12' style={{margin:'0'}}>text block</WCol>
+            <div style={{ height: '200px', width: '400px', backgroundColor: 'aliceblue', marginLeft: 'auto', marginRight: 'auto' }}>
+                <WRow style={{ height: '100%', columnGap: '0' }}>
+                    <WCol size='4' style={{ margin: '0' }}>image</WCol>
+                    <WCol size='8' style={{ margin: '0' }}>
+                        <WRow style={{ height: '100px' }}>
+                            <WCol size='12' style={{ margin: '0' }}>text block</WCol>
                         </WRow>
-                        <WRow style={{height:'100px'}}>
-                            <WCol size='12' style={{margin:'0'}}>text block</WCol>
+                        <WRow style={{ height: '100px' }}>
+                            <WCol size='12' style={{ margin: '0' }}>text block</WCol>
                         </WRow>
                     </WCol>
                 </WRow>
             </div>
-            
+
         </div>
     );
 }

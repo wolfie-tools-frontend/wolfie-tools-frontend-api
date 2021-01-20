@@ -1,7 +1,7 @@
 @use '..//global/wolfie' as *;
 
-body{
-  margin:0;
+body {
+  margin: 0;
 }
 
 .WButtonPage,
@@ -10,9 +10,9 @@ body{
   text-align: center;
 }
 
-.WGridPage{
-  .wrow{
-    .wcol{
+.WGridPage {
+  .wrow {
+    .wcol {
       border: dashed 1px;
     }
   }
@@ -54,7 +54,6 @@ td {
   padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
-  
 }
 
 .red-green {

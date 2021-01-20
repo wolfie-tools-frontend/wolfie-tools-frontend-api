@@ -34,7 +34,7 @@ export default function App() {
 
           <ol>
             <WNavItem>
-                vAlpha
+              vAlpha
             </WNavItem>
             <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
               <a href="https://www.npmjs.com/package/wolfie-tools-front-end-api" target="_blank">npm</a>
@@ -45,13 +45,13 @@ export default function App() {
               </NavLink>
             </WNavItem>
             <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
-              <a href="https://github.com/Cynthia-Lee/wolfie-tools-front-end-api" target="_blank"><i class="fab fa-github" style={{ fontSize: "1.5rem" }}/></a>
+              <a href="https://github.com/Cynthia-Lee/wolfie-tools-front-end-api" target="_blank"><i class="fab fa-github" style={{ fontSize: "1.5rem" }} /></a>
             </WNavItem>
           </ol>
         </WNavbar>
 
-        <WRow style={{columnGap: '0'}}>
-          <WCol size='2' style={{margin:'0'}}>
+        <WRow style={{ columnGap: '0' }}>
+          <WCol size='2' style={{ margin: '0' }}>
             <WSidebar color="transparent-dark-color">
               <ol>
                 <WNavItem hoverAnimation="transparent-darken">
@@ -90,9 +90,9 @@ export default function App() {
           </WCol>
 
         </WRow>
-        
+
       </div>
-      
+
     </BrowserRouter>
   );
 }

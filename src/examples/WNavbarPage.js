@@ -11,7 +11,7 @@ export default function WNavbarPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
-      <WNavbar className="accent">
+      <WNavbar color="accent">
         <ul>
           <li className="hover-transparent-darken">
             <a href="https://lypzl.csb.app/">Logo</a>
@@ -32,18 +32,18 @@ export default function WNavbarPage() {
 
       <WNavbar className="warning">
         <ul>
-          <WNavItem className="hover-transparent-darken">
+          <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="https://lypzl.csb.app/">Logo</a>
           </WNavItem>
         </ul>
         <ul>
-          <WNavItem className="hover-transparent-darken">
+          <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="#">About Me</a>
           </WNavItem>
-          <WNavItem className="hover-transparent-darken ripple-dark">
+          <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="#">Resume</a>
           </WNavItem>
-          <WNavItem className="hover-transparent-darken ripple-dark">
+          <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="#">Contact</a>
           </WNavItem>
         </ul>

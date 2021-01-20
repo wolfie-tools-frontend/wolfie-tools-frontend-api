@@ -126,6 +126,20 @@ export default function WInputPage() {
         <span class="bar"></span>
       </WInput>
 
+      <div>testing props</div>
+      
+      <WInput
+        wType="lined"
+        labelText="test">
+      </WInput>
+
+      <WInput
+        wType="outlined"
+        labelText="test">
+      </WInput>
+
+
+
     </div>
   );
 }

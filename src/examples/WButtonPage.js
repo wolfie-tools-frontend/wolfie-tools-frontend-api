@@ -1249,14 +1249,14 @@ export default function WButtonPage() {
         Large Pill Span Button
         <i className="material-icons right">anchor</i>
       </WButton>
-      <WButton 
-  wType="ghost"
-  color="accent"
-  shape="rounded"
-  hoverAnimation="fill"
-  clickAnimation="ripple-light"
->
-  Button Text
+      <WButton
+        wType="ghost"
+        color="accent"
+        shape="rounded"
+        hoverAnimation="fill"
+        clickAnimation="ripple-light"
+      >
+        Button Text
 </WButton>
     </div>
   );

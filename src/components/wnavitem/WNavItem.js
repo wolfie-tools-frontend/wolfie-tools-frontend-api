@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import "./wnavitem.scss";
 
-const WNavItem = ({ children, className, onClick, style, color, hoverAnimation, clickAnimation, ...other }) => {
+function WNavItem({ children, className, onClick, style, color, hoverAnimation, clickAnimation, ...other }) {
   let classes = clsx(
     className,
     color,

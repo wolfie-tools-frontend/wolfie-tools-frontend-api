@@ -1,7 +1,7 @@
 @use '../../global/wolfie' as *;
 
 $col-gutter-size: 0rem;
-$row-gutter-size: 0rem; //TODO set as props from WRow
+$row-gutter-size: 0rem; // TODO set as props from WRow
 
 // WRow
 .wrow {
@@ -95,7 +95,6 @@ $row-gutter-size: 0rem; //TODO set as props from WRow
   //width: 100%;
   grid-column: span 12;
 }
-
 
 //TODO offset
 

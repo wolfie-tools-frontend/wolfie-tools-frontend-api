@@ -2,13 +2,14 @@ import React from "react";
 import clsx from "clsx";
 import "./wgrid.scss";
 
-const WCol = ({ children, className, size, ...other }) => {
+function WCol({ children, className, size, ...other }) {
   let classes = clsx(
     className,
     { ["wcol-" + size]: size },
   );
+
   return (
-     <div className={`wcol ${classes}`}
+    <div className={`wcol ${classes}`}
       {...other}>
       {children}
     </div>
@@ -16,4 +17,4 @@ const WCol = ({ children, className, size, ...other }) => {
 };
 
 export default WCol;
-//size prop 1-12
+// size prop 1-12
