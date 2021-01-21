@@ -8,29 +8,6 @@ export default function WInputPage() {
     <div className="WInputPage">
       <h1>WInput</h1>
 
-      <WInput className="lined">
-        <input type="text" required="required" />
-        <span class="bar"></span>
-        <label>Name lined B</label>
-      </WInput>
-
-      <WInput className="lined">
-        <input type="text" required="required" />
-        <label>Name lined no bar</label>
-      </WInput>
-
-      <WInput className="lined">
-        <input type="password" required="required" />
-        <span class="bar"></span>
-        <label>Password lined B</label>
-      </WInput>
-
-      <WInput className="lined">
-        <input type="number" required="required" />
-        <span class="bar"></span>
-        <label>Number lined B</label>
-      </WInput>
-
       <WInput className="outlined">
         <fieldset>
           <input type="text" required="required" />
@@ -87,58 +64,92 @@ export default function WInputPage() {
       </WInput>
 
       <WInput className="lined">
-        <input type="text" required="required" />
-        <span class="bar"></span>
-        <label>Lined B</label>
+        <span class="bar-left-to-right"></span>
+        <label>Lined</label>
       </WInput>
 
       <WInput className="filled">
-        <input type="text" required="required" />
-        <span class="bar"></span>
-        <label>Filled B</label>
+        <span class="bar-left-to-right"></span>
+        <label>Filled</label>
       </WInput>
 
       <WInput className="filled">
-        <input type="text" required="required" />
         <span class="bar3"></span>
         <label>animation3 filled B3</label>
       </WInput>
 
       <WInput className="filled">
-        <input type="text" required="required" />
-        <span class="bar2"></span>
-        <label>animation2 filled B2</label>
+        <span class="bar-center-out"></span>
+        <label>Filled center-out</label>
       </WInput>
 
       <WInput className="lined">
-        <input type="text" required="required" />
-        <span class="bar2"></span>
-        <label>animation2 lined B2</label>
+        <span class="bar-center-out"></span>
+        <label>Lined center-out</label>
       </WInput>
 
-      <WInput className="filled">
-        <input type="text" required="required" />
-        <span class="bar"></span>
+      <WInput
+        inputType="number">
       </WInput>
-
-      <WInput className="lined">
-        <input type="text" required="required" />
-        <span class="bar"></span>
-      </WInput>
-
-      <div>testing props</div>
       
       <WInput
         wType="lined"
+        barAnimation="center-out"
+        labelText="test">
+          <label>test</label>
+      </WInput>
+
+      <WInput
+        wType="filled"
+        inputType="password"
         labelText="test">
       </WInput>
 
       <WInput
         wType="outlined"
+        inputType="number"
         labelText="test">
       </WInput>
 
+      <WInput className="lined">
+        <span class="bar-center-out"></span>
+        <label class="label-shrink">Lined label-shrink</label>
+      </WInput>
 
+      <WInput className="lined">
+        <span class="bar-center-out"></span>
+        <label class="label-up">Lined label-up</label>
+      </WInput>
+
+      <WInput className="lined">
+        <span class="bar-center-out"></span>
+        <label class="label-fixed">Lined label-fixed</label>
+      </WInput>
+
+      <WInput className="lined">
+        <span class="bar-center-out"></span>
+        <label class="label-fixed-shrink">Lined label-fixed-shrink</label>
+      </WInput>
+
+      <WInput className="filled">
+        <span class="bar-center-out"></span>
+        <label class="label-shrink">Filled label-shrink</label>
+      </WInput>
+
+      <WInput className="filled">
+        <span class="bar-center-out"></span>
+        <label class="label-up">Filled label-up</label>
+      </WInput>
+
+      <WInput className="filled">
+        <span class="bar-center-out"></span>
+        <label class="label-fixed">Filled label-fixed</label>
+      </WInput>
+
+      <WInput className="filled">
+        <span class="bar-center-out"></span>
+        <label class="label-fixed-shrink">Filled label-fixed-shrink</label>
+      </WInput>
 
     </div>
   );

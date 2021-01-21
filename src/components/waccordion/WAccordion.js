@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import "./waccordion.scss";
 
-function WAccordion(props) {
+function WAccordion({header, body, ...other}) {
   const [active, setActive] = useState(false);
 
   /*
@@ -17,8 +17,8 @@ function WAccordion(props) {
 
   return (
     <div className="waccordion" onClick={toggleAccordion}>
-      <div className="waccordion-header">{props.header}</div>
-      <div className={active ? "waccordion-body active" : "waccordion-body"}>{props.body}</div>
+      <div className="waccordion-header">{header}</div>
+      <div className={active ? "waccordion-body active" : "waccordion-body"}>{body}</div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ function WButton({ children, className, onClick, style, wType, shape, color, siz
 
 export default WButton;
 
-// btnType: (default), ghost, texted, transparent
+// wType: (default), ghost, texted, transparent
 // color: (default), primary, accent, colored, success, danger, warning
 // shape: (default), rounded, pill, circle, square
 // size: (default), small, medium, large

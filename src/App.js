@@ -7,6 +7,7 @@ import WButtonPage from "./examples/WButtonPage";
 import WNavbarPage from "./examples/WNavbarPage";
 import WInputPage from "./examples/WInputPage";
 import WGridPage from "./examples/WGridPage";
+import WAccordionPage from "./examples/WAccordionPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 import WRow from "./components/wgrid/WRow";
 import WCol from "./components/wgrid/WCol";
@@ -40,7 +41,7 @@ export default function App() {
               <a href="https://www.npmjs.com/package/wolfie-tools-front-end-api" target="_blank">npm</a>
             </WNavItem>
             <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
-              <NavLink to="/" id="about">
+              <NavLink to="/about" id="about" activeClassName="transparent">
                 About
               </NavLink>
             </WNavItem>
@@ -54,6 +55,11 @@ export default function App() {
           <WCol size='2' style={{ margin: '0' }}>
             <WSidebar color="transparent-dark-color">
               <ol>
+                <WNavItem hoverAnimation="transparent-darken">
+                  <NavLink to="/waccordion" id="waccordion" activeClassName="transparent">
+                    WAccordion
+                  </NavLink>
+                </WNavItem>
                 <WNavItem hoverAnimation="transparent-darken">
                   <NavLink to="/wbutton" id="wbutton" activeClassName="transparent">
                     WButton
@@ -74,6 +80,7 @@ export default function App() {
                     WNavbar
                   </NavLink>
                 </WNavItem>
+
               </ol>
             </WSidebar>
           </WCol>
@@ -85,6 +92,7 @@ export default function App() {
                 <Route path="/wnavbar" component={WNavbarPage} />
                 <Route path="/winput" component={WInputPage} />
                 <Route path="/wgrid" component={WGridPage} />
+                <Route path="/waccordion" component={WAccordionPage} />
               </Switch>
             </div>
           </WCol>

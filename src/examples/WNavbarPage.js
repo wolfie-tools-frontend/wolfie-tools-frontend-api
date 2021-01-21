@@ -3,7 +3,6 @@ import WButton from "../components/wbutton/WButton";
 import WNavbar from "../components/wnavbar/WNavbar";
 import WNavItem from "../components/wnavitem/WNavItem";
 //import WInput from "../components/winput/WInput";
-import WAccordion from "../components/waccordion/WAccordion";
 import "./example.scss";
 import "../main.scss";
 
@@ -11,12 +10,14 @@ export default function WNavbarPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
+      <p>Without WNavItem</p>
       <WNavbar color="accent">
         <ul>
           <li className="hover-transparent-darken">
             <a href="https://lypzl.csb.app/">Logo</a>
           </li>
         </ul>
+
         <ul id="nav-mobile" className="hide-on-med-and-down">
           <li className="hover-transparent-darken">
             <a href="#">About Me</a>
@@ -29,13 +30,14 @@ export default function WNavbarPage() {
           </li>
         </ul>
       </WNavbar>
-
+      <p>With WNavItem</p>
       <WNavbar className="warning">
         <ul>
           <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="https://lypzl.csb.app/">Logo</a>
           </WNavItem>
         </ul>
+        
         <ul>
           <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="#">About Me</a>
@@ -51,38 +53,38 @@ export default function WNavbarPage() {
 
       <WNavbar className="colored">
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten">
+          <WNavItem className="hover-transparent-lighten">
             <a href="#">Logo</a>
-          </li>
-          <li className="hover-transparent-lighten">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten">
             <a href="#">Sass</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Components</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">JavaScript</a>
-          </li>
+          </WNavItem>
         </ul>
       </WNavbar>
 
       <WNavbar style={{ backgroundColor: "#142850" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten click-ripple-light">
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Logo</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Documentation</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Examples</a>
-          </li>
+          </WNavItem>
         </ul>
         <ul>
-          <li>
+          <WNavItem>
             <input
               type="text"
               id="name"
@@ -90,27 +92,27 @@ export default function WNavbarPage() {
               size="20"
               placeholder="Search"
             />
-          </li>
+          </WNavItem>
         </ul>
       </WNavbar>
 
       <WNavbar style={{ backgroundColor: "#142850" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten click-ripple-light">
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Logo</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Documentation</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Examples</a>
-          </li>
+          </WNavItem>
         </ul>
         <ul>
-          <li>
+          <WNavItem>
             <a href="#">
               <i class="fab fa-github fa-lg" />
             </a>
@@ -120,42 +122,42 @@ export default function WNavbarPage() {
             <a href="#">
               <i class="fab fa-slack fa-lg" />
             </a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Download</a>
-          </li>
+          </WNavItem>
         </ul>
       </WNavbar>
 
       <WNavbar className="transparent-dark-color">
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-darken">
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Hot</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">New</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Rising</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Controversial</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Top</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Wiki</a>
-          </li>
-          <li className="hover-transparent-darken">
+          </WNavItem>
+          <WNavItem className="hover-transparent-darken">
             <a href="#">Show Images</a>
-          </li>
+          </WNavItem>
         </ul>
       </WNavbar>
 
       <WNavbar style={{ backgroundColor: "#660000" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down mckilla-nav">
-          <li>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/index.html"
               target="_blank"
@@ -164,8 +166,8 @@ export default function WNavbarPage() {
             >
               Home
             </a>
-          </li>
-          <li>
+          </WNavItem>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/teaching.html"
               target="_blank"
@@ -174,8 +176,8 @@ export default function WNavbarPage() {
             >
               Teaching
             </a>
-          </li>
-          <li>
+          </WNavItem>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/research.html"
               target="_blank"
@@ -184,8 +186,8 @@ export default function WNavbarPage() {
             >
               Research
             </a>
-          </li>
-          <li>
+          </WNavItem>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/cv.html"
               target="_blank"
@@ -194,8 +196,8 @@ export default function WNavbarPage() {
             >
               CV
             </a>
-          </li>
-          <li>
+          </WNavItem>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/games.html"
               target="_blank"
@@ -204,8 +206,8 @@ export default function WNavbarPage() {
             >
               Games
             </a>
-          </li>
-          <li>
+          </WNavItem>
+          <WNavItem>
             <a
               href="https://www3.cs.stonybrook.edu/~richard/mosaic.html"
               target="_blank"
@@ -214,10 +216,10 @@ export default function WNavbarPage() {
             >
               Mosaic
             </a>
-          </li>
+          </WNavItem>
         </ul>
         <ul>
-          <li>
+          <WNavItem>
             <a
               href="https://www.stonybrook.edu/"
               target="_blank"
@@ -231,7 +233,7 @@ export default function WNavbarPage() {
                 alt="Logo"
               />
             </a>
-            <li>
+            <WNavItem>
               <a
                 href="https://www.stonybrook.edu/"
                 target="_blank"
@@ -241,34 +243,34 @@ export default function WNavbarPage() {
               >
                 Richard McKenna
               </a>
-            </li>
-          </li>
+            </WNavItem>
+          </WNavItem>
         </ul>
       </WNavbar>
 
       <WNavbar style={{ backgroundColor: "gray" }}>
         <ul id="nav-mobile" className="hide-on-med-and-down">
-          <li className="hover-transparent-lighten click-ripple-light">
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Home</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Teaching</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Research</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">CV</a>
-          </li>
-          <li className="hover-transparent-lighten click-ripple-light">
+          </WNavItem>
+          <WNavItem className="hover-transparent-lighten click-ripple-light">
             <a href="#">Games</a>
-          </li>
-          <li className="click-ripple-light hover-text-primary">
+          </WNavItem>
+          <WNavItem className="click-ripple-light hover-text-primary">
             <a href="#">Mosaic</a>
-          </li>
+          </WNavItem>
         </ul>
         <ul>
-          <li>
+          <WNavItem>
             <a href="/">
               <img
                 src="wolfie-tools-logo.png"
@@ -278,13 +280,11 @@ export default function WNavbarPage() {
               />
             </a>
             Wolfie Tools
-          </li>
+          </WNavItem>
         </ul>
       </WNavbar>
 
-      <WAccordion header="Accordion #1"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut urna non leo faucibus pretium nec eget purus. Nam ornare libero nec mi ultrices, at pretium orci auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In aliquet dapibus cursus. Praesent sed nisi eget mi tempus finibus a vel dui. Donec tempus elit vestibulum, luctus ex at, ullamcorper justo. Sed aliquet, metus id cursus convallis, sapien erat congue ante, non malesuada urna sapien ut turpis. In hac habitasse platea dictumst. Morbi maximus elementum felis, et semper erat tempor a. Nulla facilisi. Proin lacinia turpis lectus, at convallis purus malesuada vel. Curabitur ut suscipit dolor.">
-      </WAccordion>
+     
     </div>
   );
 }

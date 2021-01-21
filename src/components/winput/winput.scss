@@ -8,36 +8,33 @@ $width: 320px;
 $transition-time: 300ms;
 
 $rounded: 4px;
-
 $filled-color: black;
+$shrink-label-font-size: 12px;
+$input-font-size: 16px;
+$label-font-size: $input-font-size;
+$hover-color: rgba($filled-color, 0.9);
+
 
 .winput {
   font-family: inherit;
   position: relative;
   width: $width;
-  margin: 1rem 0rem;
 
   input {
-    font-size: 16px;
+    font-size: $input-font-size;
     width: $width;
     color: $text-color;
   }
 
   label {
     color: $inactive-color;
-    font-size: 16px;
+    font-size: $label-font-size;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
   }
 
   &.lined {
-    label {
-      transition: $transition-time ease all; // label return animation
-      left: 0px;
-      top: 10px;
-    }
-
     input {
       background: none;
       padding: 8px 5px 6px 0px;
@@ -53,44 +50,71 @@ $filled-color: black;
       -ms-transition: $time ease;
       transition: $time ease;
 
-      &:hover:not(:focus) {
-        // border still can be seen
-        box-shadow: inset 0 -1px 0 rgba($filled-color, 0.9); //gets darker //.5 $ variable for color
+      &.hover-solid{
+        &:hover:not(:focus) {
+        box-shadow: inset 0 -1px 0 $hover-color; // border still can be seen
         //border-bottom: 2px solid blue;
         //margin-bottom: -1px;
+        }
       }
 
       &:focus {
         outline: none;
-        //border-bottom: 2px solid $highlight-color;
 
-        ~ label {
+        /*~ label {
           color: $highlight-color;
-        }
+        }*/
 
         // bar animation
-        ~ .bar:before {
+        ~ .bar-left-to-right:before {
           width: $width;
         }
-        ~ .bar2:before,
-        ~ .bar2:after {
+        ~ .bar-center-out:before,
+        ~ .bar-center-out:after {
           //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
           width: 50%;
         }
       }
+      
+      // label
+      ~ .label-fixed,
+      ~ .label-fixed-shrink {
+        top: -1em;
+      }
+
+      ~ .label-fixed-shrink {
+        font-size: $shrink-label-font-size;
+      }
 
       // label animation
-      &:focus ~ label {
+      &:focus ~ .label-shrink,
+      &:focus ~ .label-up,
+      &:focus ~ .label-fixed,
+      &:focus ~ .label-fixed-shrink {
         color: $highlight-color;
       }
 
-      &:focus ~ label,
-      &:valid ~ label,
-      &[type="number"] ~ label {
-        // active state
-        top: -14px;
-        font-size: 12px;
+      ~ .label-shrink,
+      ~ .label-up {
+        transition: $transition-time ease all; // label return animation
+        left: 0px;
+        top: 10px;
       }
+
+      &:focus ~ .label-shrink,
+      &:valid ~ .label-shrink,
+      &:focus ~ .label-up,
+      &:valid ~ .label-up {
+        // active state
+        top: -1em;
+      }
+
+      &:focus ~ .label-shrink,
+      &:valid ~ .label-shrink {
+        font-size: $shrink-label-font-size;
+      }
+      /*&[type="number"] ~ label {
+      }*/
     }
   }
 
@@ -116,9 +140,11 @@ $filled-color: black;
       -webkit-appearance: none;
       appearance: none;
 
-      &:hover:not(:focus) {
-        background: rgba($filled-color, 0.1); // needed? use with animations // 0.04 = lighter
-        box-shadow: inset 0 -1px 0 rgba($filled-color, 0.9); //gets darker //.5
+      &.hover-solid{
+        &:hover:not(:focus) {
+          background: rgba($filled-color, 0.1); // needed? use with animations // 0.04 = lighter
+          box-shadow: inset 0 -1px 0 rgba($filled-color, 0.9); //gets darker //.5
+        }
       }
 
       &:not(:placeholder-shown) {
@@ -140,12 +166,12 @@ $filled-color: black;
           transform: scaleX(1);
           transition: all 0.1s ease;
         }
-        ~ .bar:before {
+        ~ .bar-left-to-right:before {
           // left to right bar animation
           width: $width;
         }
-        ~ .bar2:before,
-        ~ .bar2:after {
+        ~ .bar-center-out:before,
+        ~ .bar-center-out:after {
           //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
           width: 50%;
         }
@@ -181,8 +207,10 @@ $filled-color: black;
       -webkit-appearance: none;
       appearance: none;
 
-      &:hover:not(:focus) {
-        border-color: rgba($filled-color, 0.9);
+      &.hover-solid{
+        &:hover:not(:focus) {
+          border-color: rgba($filled-color, 0.9);
+        }
       }
 
       &:focus {
@@ -338,8 +366,12 @@ $filled-color: black;
   //position for outlined
 
   //position for lined
+  transform: translate3d(0, -12pt, 0)  !important;
+
 
   //position for filled
+
+
 }
 
 .dense {
@@ -357,7 +389,7 @@ $filled-color: black;
   box-sizing: border-box;
 }
 
-.bar {
+.bar-left-to-right {
   //position: relative;
   //display: block;
   //width: $width;
@@ -373,7 +405,7 @@ $filled-color: black;
   }
 }
 
-.bar2 {
+.bar-center-out {
   position: relative;
   display: block;
   width: $width;
