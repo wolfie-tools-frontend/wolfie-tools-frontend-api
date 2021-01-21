@@ -2,129 +2,72 @@ import React from "react";
 import clsx from "clsx";
 import "./winput.scss";
 
-function WInput({ children, className, style, inputType, wType, labelText, placeholderText, fillColor, hoverAnimation, labelAnimation, barAnimation, disabled, shadow, ...other }) {
+function WInput({ children, className, style, inputType, wType, labelText, placeholderText, fillColor, hoverAnimation, labelAnimation, barAnimation, required, disabled, shadow, ...other }) {
   let classes = clsx(
     className,
-    inputType,
+    // inputType, // inside input div
     wType,
-    labelText,
-    placeholderText,
-    fillColor,
-    { ["hover-" + hoverAnimation]: hoverAnimation },
-    { ["bar-" + barAnimation]: barAnimation },
-    { ["label-" + labelAnimation]: labelAnimation },
-    { "disabled": disabled },
-    shadow
+    // labelText, // inside label div
+    // placeholderText, // inside input div
+    // fillColor, // TODO inside input div
+    // { ["hover-" + hoverAnimation]: hoverAnimation }, // inside input div
+    // { ["bar-" + barAnimation]: barAnimation }, // inside span div
+    // { ["label-" + labelAnimation]: labelAnimation }, // inside label div
+    { "disabled": disabled }, // TODO
+    // required, // inside input div
+    // shadow // TODO inside input div
   );
 
-  let input = null;
+  let input = null; 
+  if (labelAnimation === "shrink" || labelAnimation==="up") {
+    input = (<input type={inputType} required className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
 
-  if (barAnimation == null) {
-    input = (
-      <input type={inputType} required="required" />
-    );
-  } else if (barAnimation) {
-    input = (
-      <input type={inputType} required="required" className={"???"}/>
-    );
+  } else {
+    input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
   }
-  
+
+  let span = (
+    <span className={["bar-" + barAnimation]} ></span>
+  );
+
+  let label = (
+    <label className={["label-" + labelAnimation]}>{labelText}</label>
+  );
+
   if (wType === "lined" || wType === "filled") {
-
-    if (inputType) {
-      if (barAnimation) {
-        return (
-          <div className={`winput ${classes}`}
-            disabled={disabled}
-            {...other}>
-            <input type={inputType} required="required" />
-            <span class={["bar-" + barAnimation]}></span>
-            {children}
-          </div>
-        );
-      }
-
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type={inputType}  required="required" />
-          <span class="bar-left-to-right"></span>
-          {children}
-        </div>
-      );
-
-    } else { // no input type default = text
-
-      if (barAnimation) {
-        return (
-          <div className={`winput ${classes}`}
-            disabled={disabled}
-            {...other}>
-            <input type={inputType} className="hover-solid" required="required" />
-            <span class={["bar-" + barAnimation]}></span>
-            {children}
-          </div>
-        );
-      }
-
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type="text" required="required" />
-          <span class="bar-left-to-right"></span>
-          {children}
-        </div>
-      );
-    }
-
+    return (
+      <div className={`winput ${classes}`} disabled={disabled} {...other}>
+        {input}
+        {span}
+        {label}
+        {children}
+      </div>
+    );
   }
 
   else if (wType === "outlined") { //outlined - field set & legend
-    if (inputType) {
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type={inputType} required="required" />
-          {children}
-        </div>
-      );
-    } else { // no input type default = text
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type="text" required="required" />
-          {children}
-        </div>
-      );
-    }
-  }
 
+    return (
+      <div className={`winput ${classes}`}
+        disabled={disabled}
+        {...other}>
+        {children}
+      </div>
+    );
+
+  }
 
   else { // default
-    if (inputType) {
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type={inputType} required="required" />
-          {children}
-        </div>
-      );
-    } else { // no input type default = text
-      return (
-        <div className={`winput ${classes}`}
-          disabled={disabled}
-          {...other}>
-          <input type="text" required="required" />
-          {children}
-        </div>
-      );
-    }
+
+    return (
+      <div className={`winput ${classes}`}
+        disabled={disabled}
+        {...other}>
+        {children}
+      </div>
+    );
   }
+
 };
 
 // add required as prop //
@@ -134,8 +77,9 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 // wType-outlined, lined, filled
 
 // span bar-animation = left-right, center-out
-//bar3(Filled:left-right bar + left-right background)
-// barOutlined(Outlined: -not default as that uses fieldset&legend)
+//bar-shade(Filled:left-right bar + left-right background)
+//barOutlined(Outlined: -not default as that uses fieldset&legend)
+
 
 // label type-default = label moves up + shrink
 // outline label type-(default, label moves up into outlined box + shrink) uses feildset & legend, **outline should be highlighted in color

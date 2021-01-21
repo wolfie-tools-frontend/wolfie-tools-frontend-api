@@ -10,7 +10,7 @@ export default function WNavbarPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
-      <p>Without WNavItem</p>
+      <h2>Without WNavItem</h2>
       <WNavbar color="accent">
         <ul>
           <li className="hover-transparent-darken">
@@ -30,7 +30,8 @@ export default function WNavbarPage() {
           </li>
         </ul>
       </WNavbar>
-      <p>With WNavItem</p>
+
+      <h2>With WNavItem</h2>
       <WNavbar className="warning">
         <ul>
           <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
