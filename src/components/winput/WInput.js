@@ -70,35 +70,23 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
 };
 
-// add required as prop //
-
 // props
-// inputType-text,password,number*
-// wType-outlined, lined, filled
+// inputType: text,password,number
+// wType: outlined, lined, filled
 
-// span bar-animation = left-right, center-out
+// barAnimation: left-right, center-out
 //bar-shade(Filled:left-right bar + left-right background)
-//barOutlined(Outlined: -not default as that uses fieldset&legend)
+//bar-solid(Outlined: -not default as that uses fieldset&legend)
 
-
-// label type-default = label moves up + shrink
 // outline label type-(default, label moves up into outlined box + shrink) uses feildset & legend, **outline should be highlighted in color
 //label2(Outlined:label moves up above outlined box, no shrink),
 //label3(Outlined:label moves up above outlined box + shirnk),
 //label4,(Outlined:label moves up but stays within outlined box + shrink)
-//label5(always above)
 
-// label text- label of da input
-// placeholder text- (placeholder text for labels that are up)
-
-//filled - T/F
 //fill color-
 //Outlined:default = none(transparent)
 //Filled:default = gray/theme color
 //Lined:NA
-
-// hoverAnimation - T/F
-// barAnimation
 
 // implement later :
 // shadow-raised,
