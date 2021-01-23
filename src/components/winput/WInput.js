@@ -21,15 +21,15 @@ function WInput({ children, className, style, inputType, wType, labelText, place
   let input = null;
   if (labelText && labelAnimation) {
     if (labelAnimation === "shrink" || labelAnimation === "up") {
-      if (wType === "filled" || wType === "outlined") {
+      if (wType === "outlined") { // feildset has hover and bar animation
+        input = (<input type={inputType} required className="input-label" placeholder={placeholderText} />);
+      } else { // filled & lined (lined does not need to have input label)
         input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
-      } else {
-        input = (<input type={inputType} required className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
       }
-    } else {
+    } else { // fixed label animations - do not need required
       input = (<input type={inputType} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
     }
-  } else {
+  } else { // no label
     input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
   }
 
@@ -57,7 +57,7 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     if (labelText && labelAnimation) {
       return (
         <div className={`winput ${classes}`} disabled={disabled} {...other}>
-          <fieldset>
+          <fieldset className={["hover-" + hoverAnimation]}>
             {input}
             {span}
             {label}

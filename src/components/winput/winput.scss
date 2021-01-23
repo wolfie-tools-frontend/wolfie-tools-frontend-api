@@ -343,21 +343,17 @@ $border-thickness: 1px;
       padding: 0;
       background: none;
 
-      /*:hover{
-        border-color: $hover-color;
-      }*/
+      &.hover-solid {
+        &:hover {
+          border-color: $hover-color;
+        }
+      }
       :focus-within {
         //border: 4px solid $hover-color;
       }
 
       > input {
         border: none;
-        &.hover-solid {
-          &:hover {
-            border-radius: #{$border-thickness}-1px;
-            box-shadow: 0 0 0 $border-thickness $hover-color;
-          }
-        }
       }
       > legend {
         max-width: 0.01px;
