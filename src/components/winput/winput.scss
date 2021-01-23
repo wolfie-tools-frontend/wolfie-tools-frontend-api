@@ -270,7 +270,7 @@ $border-thickness: 1px;
       ~ .label-shrink,
       ~ .label-up {
         left: 12px;
-        top: 1em;
+        top: 1.1em;
         transform-origin: 0 0;
         transform: translate3d(0, 0, 0);
         transition: all $transition-time ease; //0.3s
@@ -286,11 +286,29 @@ $border-thickness: 1px;
       &:focus ~ .label-up,
       &:valid ~ .label-up {
         ~ legend {
-          max-width: $width;
+          max-width: calc(#{$width} - 16px);
           padding-left: 0.3rem;
           padding-right: 0.3rem;
-          //font-size: 0.75rem;
           transition: all $transition-time ease;
+        }
+      }
+
+      &:focus ~ .label-fixed,
+      &:valid ~ .label-fixed,
+      &:focus ~ .label-up,
+      &:valid ~ .label-up {
+        top: 0.9em;
+        ~ legend {
+          font-size: $label-font-size;
+        }
+      }
+
+      &:focus ~ .label-fixed-shrink,
+      &:valid ~ .label-fixed-shrink,
+      &:focus ~ .label-shrink,
+      &:valid ~ .label-shrink {
+        ~ legend {
+          font-size: $label-font-size*0.75;
         }
       }
 
@@ -328,7 +346,7 @@ $border-thickness: 1px;
         border: none;
       }
       > legend {
-        font-size: $label-font-size;
+        //font-size: $label-font-size;
         max-width: 0.01px;
         max-height: 0.01px;
         padding: 0;
