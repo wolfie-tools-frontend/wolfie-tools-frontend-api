@@ -159,6 +159,12 @@ export default function WInputPage() {
         hoverAnimation="solid"
       >
       </WInput>
+      <WInput wType="outlined"
+        placeholderText="Outlined"
+        barAnimation="border-highlight"
+        hoverAnimation="solid"
+      >
+      </WInput>
 
       <h3>barAnimation</h3>
       <WInput wType="outlined"
@@ -168,8 +174,12 @@ export default function WInputPage() {
       >
       </WInput>
       <WInput wType="outlined"
-        labelText="barAnimation: border-highlight"
-        labelAnimation="shrink"
+        placeholderText="barAnimation: solid"
+        barAnimation="solid"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        placeholderText="barAnimation: border-highlight"
         barAnimation="border-highlight"
       >
       </WInput>
@@ -201,6 +211,7 @@ export default function WInputPage() {
         labelText="hoverAnimation: solid"
         hoverAnimation="solid"
         labelAnimation="shrink"
+        barAnimation="solid"
       >
       </WInput>
 
@@ -227,19 +238,19 @@ export default function WInputPage() {
 
       <h2>Color</h2>
       <WInput className="outlined">
-        <input type="text" className="color-background"/>
+        <input type="text" className="color-background" />
         <label>input color-baground</label>
       </WInput>
 
       <h2>Shape</h2>
       <WInput className="outlined">
-        <input type="text" className="pill"/>
+        <input type="text" className="pill" />
         <label>input pill</label>
       </WInput>
 
       <h2>Shadow</h2>
       <WInput className="outlined">
-        <input type="text" className="shadow"/>
+        <input type="text" className="shadow" />
         <label>input shadow</label>
       </WInput>
 

@@ -57,9 +57,8 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     if (labelText && labelAnimation) {
       return (
         <div className={`winput ${classes}`} disabled={disabled} {...other}>
-          <fieldset className={["hover-" + hoverAnimation]}>
+          <fieldset className={["hover-" + hoverAnimation] + " " + ["bar-f-" + barAnimation]}>
             {input}
-            {span}
             {label}
             <legend>{labelText}</legend>
             {children}
