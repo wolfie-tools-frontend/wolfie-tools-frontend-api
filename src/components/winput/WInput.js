@@ -25,7 +25,8 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     }
     if (labelAnimation === "shrink" || labelAnimation === "up") {
       input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
-  
+    } else {
+      input = (<input type={inputType} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
     }
   } else {
     input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);

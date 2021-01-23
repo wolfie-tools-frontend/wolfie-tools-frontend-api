@@ -6,7 +6,7 @@ $text-color: black;
 $highlight-color: $primary-color;
 $width: 320px;
 $transition-time: 300ms;
-$input-height: 2.5rem;
+$input-height: 2.4rem;
 $label-input-height: 3.5rem;
 
 $rounded: 4px;
@@ -317,7 +317,7 @@ $border-thickness: 1px;
     }
 
 
-    fieldset {
+    > fieldset {
       position: relative;
       margin: 0;
       border: $border-thickness solid $inactive-color;
@@ -338,8 +338,6 @@ $border-thickness: 1px;
       }
     }
   }
-
-
 }
 
 
