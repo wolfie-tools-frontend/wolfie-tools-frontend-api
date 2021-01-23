@@ -54,7 +54,7 @@ $border-thickness: 1px;
       transition: $time ease;
 
       &.hover-solid {
-        &:hover:not(:focus) {
+        &:hover {
           box-shadow: inset 0 -#{$border-thickness} 0 $hover-color;
           border-bottom: $border-thickness solid $hover-color;
         }
@@ -145,7 +145,7 @@ $border-thickness: 1px;
       appearance: none;
 
       &.hover-solid {
-        &:hover:not(:focus) {
+        &:hover {
           background: rgba($filled-color, 0.1); // needed? use with animations // 0.04 = lighter
           box-shadow: inset 0 -#{$border-thickness} 0 rgba($filled-color, 0.9); //gets darker //.5
         }
@@ -228,7 +228,7 @@ $border-thickness: 1px;
       padding: 0 12px;
       height: $label-input-height;
     }
-    
+
     input {
       background: none;
       color: $filled-color;
@@ -259,7 +259,8 @@ $border-thickness: 1px;
         }
         ~ .bar-border-highlight {
           border-radius: calc(#{$rounded} - #{$border-thickness});
-          box-shadow: 0 0 0 $border-thickness $highlight-color, 0 0 0 $border-highligt-thickness rgb($highlight-color, 0.3);
+          box-shadow: 0 0 0 $border-thickness $highlight-color,
+            0 0 0 $border-highligt-thickness rgb($highlight-color, 0.3);
           transform: scaleX(1);
         }
       }
@@ -308,7 +309,7 @@ $border-thickness: 1px;
       &:focus ~ .label-shrink,
       &:valid ~ .label-shrink {
         ~ legend {
-          font-size: $label-font-size*0.75;
+          font-size: $label-font-size * 0.75;
         }
       }
 
@@ -318,7 +319,7 @@ $border-thickness: 1px;
       &:focus ~ .label-up {
         color: $highlight-color;
       }
-      
+
       &:focus ~ .label-fixed,
       &:valid ~ .label-fixed,
       &:focus ~ .label-up,
@@ -334,7 +335,6 @@ $border-thickness: 1px;
       }
     }
 
-
     > fieldset {
       position: relative;
       margin: 0;
@@ -342,11 +342,24 @@ $border-thickness: 1px;
       border-radius: $rounded;
       padding: 0;
       background: none;
+
+      /*:hover{
+        border-color: $hover-color;
+      }*/
+      :focus-within {
+        //border: 4px solid $hover-color;
+      }
+
       > input {
         border: none;
+        &.hover-solid {
+          &:hover {
+            border-radius: #{$border-thickness}-1px;
+            box-shadow: 0 0 0 $border-thickness $hover-color;
+          }
+        }
       }
       > legend {
-        //font-size: $label-font-size;
         max-width: 0.01px;
         max-height: 0.01px;
         padding: 0;
@@ -357,7 +370,6 @@ $border-thickness: 1px;
     }
   }
 }
-
 
 .color-background {
   background-color: mix(teal, $background-color, 60%) !important; //$ make variable
@@ -393,7 +405,6 @@ $border-thickness: 1px;
     }
   }
 }
-
 
 *,
 :before,

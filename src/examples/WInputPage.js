@@ -155,8 +155,8 @@ export default function WInputPage() {
       <WInput wType="outlined"
         labelText="Outlined"
         labelAnimation="shrink"
-        //barAnimation="solid"
-        hoverAnimation="solid" // BROKEN
+        barAnimation="solid"
+        hoverAnimation="solid"
       >
       </WInput>
 
