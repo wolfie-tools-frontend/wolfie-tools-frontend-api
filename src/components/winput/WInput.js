@@ -18,8 +18,8 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     // shadow // TODO inside input div
   );
 
-  let input = null; 
-  if (labelAnimation === "shrink" || labelAnimation==="up") {
+  let input = null;
+  if (labelAnimation === "shrink" || labelAnimation === "up") {
     input = (<input type={inputType} required className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
 
   } else {
@@ -47,10 +47,25 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
   else if (wType === "outlined") { //outlined - field set & legend
 
+    if (labelText && labelAnimation) {
+      return (
+        <div className={`winput ${classes}`} disabled={disabled} {...other}>
+          <fieldset>
+            {input}
+            {span}
+            {label}
+            <legend>{labelText}</legend>
+            {children}
+          </fieldset>
+        </div>
+      );
+    }
+
     return (
-      <div className={`winput ${classes}`}
-        disabled={disabled}
-        {...other}>
+      <div className={`winput ${classes}`} disabled={disabled} {...other}>
+        {input}
+        {span}
+        {label}
         {children}
       </div>
     );
@@ -74,22 +89,8 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 // inputType: text,password,number
 // wType: outlined, lined, filled
 
-// barAnimation: left-right, center-out
-//bar-shade(Filled:left-right bar + left-right background)
-//bar-solid(Outlined: -not default as that uses fieldset&legend)
-
-// outline label type-(default, label moves up into outlined box + shrink) uses feildset & legend, **outline should be highlighted in color
-//label2(Outlined:label moves up above outlined box, no shrink),
-//label3(Outlined:label moves up above outlined box + shirnk),
-//label4,(Outlined:label moves up but stays within outlined box + shrink)
-
-//fill color-
-//Outlined:default = none(transparent)
-//Filled:default = gray/theme color
-//Lined:NA
-
 // implement later :
-// shadow-raised,
-// disabled-
+// shadow
+// disabled
 
 export default WInput;
