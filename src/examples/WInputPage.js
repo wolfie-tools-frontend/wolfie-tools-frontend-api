@@ -176,8 +176,13 @@ export default function WInputPage() {
 
       <h3>labelAnimation</h3>
       <WInput wType="outlined"
-        labelText="labelAnimation: fixed-shrink"
-        labelAnimation="fixed-shrink"
+        labelText="labelAnimation: shrink"
+        labelAnimation="shrink"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        labelText="labelAnimation: up"
+        labelAnimation="up"
       >
       </WInput>
       <WInput wType="outlined"
@@ -186,13 +191,8 @@ export default function WInputPage() {
       >
       </WInput>
       <WInput wType="outlined"
-        labelText="labelAnimation: shrink"
-        labelAnimation="shrink"
-      >
-      </WInput>
-      <WInput wType="outlined"
-        labelText="labelAnimation: up"
-        labelAnimation="up"
+        labelText="labelAnimation: fixed-shrink"
+        labelAnimation="fixed-shrink"
       >
       </WInput>
 
@@ -239,8 +239,8 @@ export default function WInputPage() {
 
       <h2>Shadow</h2>
       <WInput className="outlined">
-        <input type="text" className="color-background shadow"/>
-        <label>input color-background shadow</label>
+        <input type="text" className="shadow"/>
+        <label>input shadow</label>
       </WInput>
 
       <div>end</div>

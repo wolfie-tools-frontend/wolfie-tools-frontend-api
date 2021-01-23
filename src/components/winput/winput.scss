@@ -342,11 +342,7 @@ $border-thickness: 1px;
 
 
 .color-background {
-  background-color: mix(white, $background-color, 60%) !important; //$ make variable
-  &:focus ~ label,
-  &:valid ~ label {
-    transform: translate3d(0, -40px, 0) scale(0.75) !important;
-  }
+  background-color: mix(teal, $background-color, 60%) !important; //$ make variable
 }
 
 .pill {
