@@ -152,13 +152,12 @@ export default function WInputPage() {
       <h3>Default</h3>
       <WInput wType="outlined"></WInput>
       <h3>Example</h3>
-      <WInput className="outlined">
-        <fieldset>
-          <input type="text" required="required" className="hover-solid" />
-          <span class="bar-solid"></span>
-          <label className="label-shrink">Outlined Fieldset</label>
-          <legend>Outlined Fieldset</legend>
-        </fieldset>
+      <WInput wType="outlined"
+        labelText="Outlined"
+        labelAnimation="shrink"
+        //barAnimation="solid"
+        hoverAnimation="solid" // BROKEN
+      >
       </WInput>
 
       <h3>barAnimation</h3>
@@ -228,23 +227,20 @@ export default function WInputPage() {
 
       <h2>Color</h2>
       <WInput className="outlined">
-        <input type="text" className="color-background" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedColored BO</label>
+        <input type="text" className="color-background"/>
+        <label>input color-baground</label>
       </WInput>
 
       <h2>Shape</h2>
       <WInput className="outlined">
-        <input type="text" className="pill label3" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedPill L3 BO</label>
+        <input type="text" className="pill"/>
+        <label>input pill</label>
       </WInput>
 
       <h2>Shadow</h2>
       <WInput className="outlined">
-        <input type="text" className="color-background label3 shadow" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedColored Shadow L3 BO</label>
+        <input type="text" className="color-background shadow"/>
+        <label>input color-background shadow</label>
       </WInput>
 
       <div>end</div>

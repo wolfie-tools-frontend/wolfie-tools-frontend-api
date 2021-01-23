@@ -19,9 +19,14 @@ function WInput({ children, className, style, inputType, wType, labelText, place
   );
 
   let input = null;
-  if (labelAnimation === "shrink" || labelAnimation === "up") {
-    input = (<input type={inputType} required className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
-
+  if(labelText && labelAnimation) {
+    if(wType === "filled" || wType ==="outlined" ) {
+      input = (<input type={inputType} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
+    }
+    if (labelAnimation === "shrink" || labelAnimation === "up") {
+      input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
+  
+    }
   } else {
     input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
   }
