@@ -250,7 +250,7 @@ export default function WInputPage() {
 
       <h2>Shadow</h2>
       <WInput className="outlined">
-        <input type="text" className="shadow" />
+        <input type="text" className="pill shadow" />
         <label>input shadow</label>
       </WInput>
 

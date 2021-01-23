@@ -16,6 +16,7 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     { "disabled": disabled }, // TODO
     // required, // inside input div
     // shadow // TODO inside input div
+    // shape // TODO inside input div
   );
 
   let input = null;

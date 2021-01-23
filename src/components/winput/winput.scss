@@ -8,13 +8,14 @@ $width: 320px;
 $transition-time: 300ms;
 $input-height: 2.4rem;
 $label-input-height: 3.4rem;
+$border-color: black;
 
 $border-radius: 4px;
-$filled-color: black;
+$filled-color: $border-color;
 $shrink-label-font-size: 12px;
 $input-font-size: 16px;
 $label-font-size: $input-font-size;
-$hover-color: rgba($filled-color, 0.9);
+$hover-color: rgba($border-color, 0.9);
 $border-highligt-thickness: 3px;
 $border-thickness: 1px;
 
@@ -133,7 +134,7 @@ $border-thickness: 1px;
 
     input {
       background: rgba($filled-color, 0.05);
-      color: $filled-color;
+      color: $text-color;
       padding: 0 12px;
       border: none;
       border-top-left-radius: $border-radius;
@@ -231,7 +232,7 @@ $border-thickness: 1px;
 
     input {
       background: none;
-      color: $filled-color;
+      color: $text-color;
       padding: 0 12px;
       border: $border-thickness solid $inactive-color;
       border-radius: $border-radius;
@@ -243,7 +244,7 @@ $border-thickness: 1px;
 
       &.hover-solid {
         &:hover:not(:focus) {
-          border-color: rgba($filled-color, 0.9);
+          border-color: $border-color;
         }
       }
 
@@ -369,10 +370,6 @@ $border-thickness: 1px;
       }
     }
   }
-}
-
-.color-background {
-  background-color: mix(teal, $background-color, 60%) !important; //$ make variable
 }
 
 .pill {
