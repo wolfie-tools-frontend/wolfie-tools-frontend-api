@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import "./winput.scss";
 
-function WInput({ children, className, style, inputType, wType, labelText, placeholderText, fillColor, hoverAnimation, labelAnimation, barAnimation, required, disabled, shadow, ...other }) {
+function WInput({ children, className, style, inputType, wType, labelText, placeholderText, hoverAnimation, labelAnimation, barAnimation, required, disabled, ...other }) {
   let classes = clsx(
     className,
     // inputType, // inside input div
@@ -28,7 +28,7 @@ function WInput({ children, className, style, inputType, wType, labelText, place
         input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
       }
     } else { // fixed label animations - do not need required
-      input = (<input type={inputType} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
+      input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
     }
   } else { // no label
     input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
@@ -81,10 +81,22 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
   else { // default
 
+    if(barAnimation) {
+      return (
+        <div className={`winput outlined ${classes}`} disabled={disabled} {...other}>
+          {input}
+          {span}
+          {label}
+          {children}
+        </div>
+      );
+    }
+
     return (
-      <div className={`winput ${classes}`}
-        disabled={disabled}
-        {...other}>
+      <div className={`winput outlined ${classes}`} disabled={disabled} {...other}>
+        {input}
+        <span className="bar-border-highlight" ></span>
+        {label}
         {children}
       </div>
     );
@@ -95,9 +107,5 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 // props
 // inputType: text,password,number
 // wType: outlined, lined, filled
-
-// implement later :
-// shadow
-// disabled
 
 export default WInput;

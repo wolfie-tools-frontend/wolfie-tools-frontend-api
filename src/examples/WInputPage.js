@@ -7,7 +7,6 @@ export default function WInputPage() {
   return (
     <div className="WInputPage">
       <h1>WInput</h1>
-
       <h2>Default</h2>
       <WInput></WInput>
 
@@ -235,26 +234,7 @@ export default function WInputPage() {
       >
       </WInput>
 
-
-      <h2>Color</h2>
-      <WInput className="outlined">
-        <input type="text" className="color-background" />
-        <label>input color-baground</label>
-      </WInput>
-
-      <h2>Shape</h2>
-      <WInput className="outlined">
-        <input type="text" className="pill" />
-        <label>input pill</label>
-      </WInput>
-
-      <h2>Shadow</h2>
-      <WInput className="outlined">
-        <input type="text" className="pill shadow" />
-        <label>input shadow</label>
-      </WInput>
-
-      <div>end</div>
+      <br/>
 
     </div>
   );
