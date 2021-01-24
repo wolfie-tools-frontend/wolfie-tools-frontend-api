@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import "./wgrid.scss";
+//import "./wgrid.scss";
 
 function WCol({ children, className, size, ...other }) {
   let classes = clsx(

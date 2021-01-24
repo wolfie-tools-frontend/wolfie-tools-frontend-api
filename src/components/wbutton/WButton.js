@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import "./wbutton.scss";
+//import "./wbutton.scss";
 
 function WButton({ children, className, onClick, style, wType, shape, color, size, span, hoverAnimation, clickAnimation, value, disabled, shadow, ...other }){
   // will only add classname if these values aren't empty/undefined

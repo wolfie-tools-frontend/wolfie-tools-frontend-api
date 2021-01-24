@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var del = require("del");
 var sass = require("gulp-dart-sass");
 
 var babel = require("gulp-babel");
@@ -10,6 +11,11 @@ var babel = require("gulp-babel");
 //        .pipe(sass())
 //        .pipe(gulp.dest('build/'))
 //});
+
+//Removes the build folder for a fresh build
+gulp.task('clean', function(){
+    return del('build/**', {force:true});
+});
 
 //Copies all Sass files over to the build
 gulp.task('sass', function () {
@@ -36,4 +42,4 @@ gulp.task('exports', function (){
 })
 
 //Builds the whole folder(./build) for the npm package
-gulp.task('default', gulp.series('sass', 'react', 'exports'));
+gulp.task('default', gulp.series('clean','sass', 'react', 'exports'));

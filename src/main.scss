@@ -1,4 +1,10 @@
+//@use './global/theme' with (
+//  $primary-color: blue
+//);
+
 @use './global/wolfie';
+
+@use './global/components';
 
 body {
   font-family: wolfie.$font-family;

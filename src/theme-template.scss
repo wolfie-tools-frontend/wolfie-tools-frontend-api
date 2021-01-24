@@ -1,0 +1,8 @@
+@use './global/theme' with (
+  $primary-color: blue
+  //other variable changes here
+);
+
+@use './global/wolfie';
+
+@use './global/components';

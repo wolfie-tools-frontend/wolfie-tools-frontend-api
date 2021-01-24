@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import "./wnavbar.scss";
+//import "./wnavbar.scss";
 
 function WNavbar({ children, className, onClick, style, color, ...other }) {
   let classes = clsx(

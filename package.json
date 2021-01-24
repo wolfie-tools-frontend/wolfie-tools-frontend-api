@@ -13,6 +13,12 @@
     "react-scripts": "3.4.1",
     "sass": "^1.27.0"
   },
+  "files": [
+    "index.js",
+    "build/*",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
