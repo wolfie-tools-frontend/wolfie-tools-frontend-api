@@ -6,6 +6,7 @@ $text-color: black;
 $highlight-color: $primary-color;
 $width: 320px;
 $transition-time: 300ms;
+
 $input-height: 2.4rem;
 $label-input-height: 3.4rem;
 $border-color: black;
@@ -402,7 +403,6 @@ $border-thickness: 1px;
     }
   }
 }
-
 *,
 :before,
 :after {
@@ -458,7 +458,6 @@ $border-thickness: 1px;
   transform: scaleX(0);
   transform-origin: left;
 }
-
 .bar-solid,
 .bar-border-highlight {
   position: absolute;
