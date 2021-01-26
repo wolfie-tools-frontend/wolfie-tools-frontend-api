@@ -1,10 +1,8 @@
 ## Set Up
 
-Note: We will be using npm
-
 1. In the terminal, navigate to the directory of the React web app you are creating
 
-2. Then type, `npm install wt-frontend`
+2. Then type `npm install wt-frontend`
 
 3. Change your .css files to .scss and put the following code at the top of the .scss file:
 
