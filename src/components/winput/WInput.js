@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import "./winput.scss";
+//import "./winput.scss";
 
 function WInput({ children, className, style, inputType, wType, labelText, placeholderText, hoverAnimation, labelAnimation, barAnimation, required, disabled, ...other }) {
   let classes = clsx(

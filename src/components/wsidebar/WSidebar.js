@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import "./wsidebar.scss";
+//import "./wsidebar.scss";
 
 // import WCol from "../wgrid/WCol";
 // import WRow from "../wgrid/WRow";

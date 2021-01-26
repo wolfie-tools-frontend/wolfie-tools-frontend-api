@@ -1,7 +1,7 @@
 @use "sass:color";
 @use '../../global/wolfie' as *;
 
-$navbar-element-padding: 1rem 1rem;
+$sidebar-element-padding: 1rem 1rem;
 
 /*
 .wrow {
@@ -49,7 +49,7 @@ $navbar-element-padding: 1rem 1rem;
     display: inline-block;
     width: inherit;
     //text-align: center;
-    padding: $navbar-element-padding;
+    padding: $sidebar-element-padding;
   }
   
   a,
