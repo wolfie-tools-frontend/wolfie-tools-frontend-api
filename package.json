@@ -13,8 +13,8 @@
     "react-scripts": "3.4.1",
     "sass": "^1.27.0"
   },
+  "main": "build/index.js",
   "files": [
-    "index.js",
     "build/*",
     "package.json",
     "README.md"

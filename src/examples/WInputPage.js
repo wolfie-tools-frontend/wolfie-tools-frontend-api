@@ -7,8 +7,12 @@ export default function WInputPage() {
   return (
     <div className="WInputPage">
       <h1>WInput</h1>
-      <h2>Lined</h2>
+      <h2>Default</h2>
+      <WInput></WInput>
 
+      <h2>Lined</h2>
+      <h3>Default</h3>
+      <WInput wType="lined"></WInput>
       <h3>Example</h3>
       <WInput wType="lined"
         barAnimation="center-out"
@@ -18,7 +22,6 @@ export default function WInputPage() {
         inputType="text"
       >
       </WInput>
-
       <h3>barAnimation</h3>
       <WInput wType="lined"
         barAnimation="center-out"
@@ -38,7 +41,6 @@ export default function WInputPage() {
         labelAnimation="shrink"
       >
       </WInput>
-
       <h3>labelAnimation</h3>
       <WInput wType="lined"
         barAnimation="center-out"
@@ -64,7 +66,6 @@ export default function WInputPage() {
         labelAnimation="fixed-shrink"
       >
       </WInput>
-
       <h3>hoverAnimation</h3>
       <WInput wType="lined"
         barAnimation="center-out"
@@ -76,14 +77,16 @@ export default function WInputPage() {
 
 
       <h2>Filled</h2>
+      <h3>Default</h3>
+      <WInput wType="filled"></WInput>
       <h3>Example</h3>
       <WInput wType="filled"
         barAnimation="center-out"
+        hoverAnimation="solid"
         labelText="Filled"
         labelAnimation="shrink"
       >
       </WInput>
-
       <h3>barAnimation</h3>
       <WInput wType="filled"
         barAnimation="center-out"
@@ -103,7 +106,12 @@ export default function WInputPage() {
         labelAnimation="shrink"
       >
       </WInput>
-
+      <WInput wType="filled"
+        barAnimation="solid"
+        labelText="barAnimation: solid"
+        labelAnimation="shrink"
+      >
+      </WInput>
       <h3>labelAnimation</h3>
       <WInput wType="filled"
         barAnimation="center-out"
@@ -129,7 +137,6 @@ export default function WInputPage() {
         labelAnimation="fixed-shrink"
       >
       </WInput>
-
       <h3>hoverAnimation</h3>
       <WInput wType="filled"
         barAnimation="center-out"
@@ -141,49 +148,70 @@ export default function WInputPage() {
 
 
       <h2>Outlined</h2>
+      <h3>Default</h3>
+      <WInput wType="outlined"></WInput>
       <h3>Example</h3>
-      <WInput className="outlined">
-        <fieldset>
-          <input type="text" required="required" className="hover-solid"/>
-          <span class="bar-solid"></span>
-          <label>Outlined</label>
-          <legend>Outlined</legend>
-        </fieldset>
+      <WInput wType="outlined"
+        labelText="Outlined"
+        labelAnimation="shrink"
+        barAnimation="solid"
+        hoverAnimation="solid"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        placeholderText="Outlined"
+        barAnimation="border-highlight"
+        hoverAnimation="solid"
+      >
       </WInput>
 
-      <h3>hoverAnimation</h3>
-      <WInput className="outlined">
-        <input type="text" className="pill label3 hover-solid" required="required" />
-        <label>OutlinedPill HoverSolid L3</label>
+      <h3>barAnimation</h3>
+      <WInput wType="outlined"
+        labelText="barAnimation: solid"
+        labelAnimation="shrink"
+        barAnimation="solid"
+      >
       </WInput>
-
-      <WInput className="outlined">
-        <input type="text" className="pill label3 hover-shadow" required="required" />
-        <label>OutlinedPill HoverShadow L3</label>
+      <WInput wType="outlined"
+        placeholderText="barAnimation: solid"
+        barAnimation="solid"
+      >
       </WInput>
-
-      <WInput className="outlined">
-        <input type="text" className="label4 hover-border-highlight" required="required" />
-        <label>HoverBorderHighlight but doesnt hover L4</label>
+      <WInput wType="outlined"
+        placeholderText="barAnimation: border-highlight"
+        barAnimation="border-highlight"
+      >
       </WInput>
 
       <h3>labelAnimation</h3>
-      <WInput className="outlined">
-        <input type="text" className="label2" required="required" />
-        <span class="bar-solid"></span>
-        <label>Outlined L2 B0</label>
+      <WInput wType="outlined"
+        labelText="labelAnimation: shrink"
+        labelAnimation="shrink"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        labelText="labelAnimation: up"
+        labelAnimation="up"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        labelText="labelAnimation: fixed"
+        labelAnimation="fixed"
+      >
+      </WInput>
+      <WInput wType="outlined"
+        labelText="labelAnimation: fixed-shrink"
+        labelAnimation="fixed-shrink"
+      >
       </WInput>
 
-      <WInput className="outlined">
-        <input type="text" className="label3" required="required" />
-        <span class="bar-solid"></span>
-        <label>Outlined L3 BO</label>
-      </WInput>
-
-      <WInput className="outlined">
-        <input type="text" className="label4" required="required" />
-        <span class="bar-solid"></span>
-        <label>Outlined L4 BO</label>
+      <h3>hoverAnimation</h3>
+      <WInput wType="outlined"
+        labelText="hoverAnimation: solid"
+        hoverAnimation="solid"
+        labelAnimation="shrink"
+        barAnimation="solid"
+      >
       </WInput>
 
 
@@ -206,36 +234,7 @@ export default function WInputPage() {
       >
       </WInput>
 
-      <WInput wType="lined">
-      </WInput>
-      <WInput wType="filled">
-      </WInput>
-      <WInput wType="outlined">
-      </WInput>
-
-
-      <h2>Color</h2>
-      <WInput className="outlined">
-        <input type="text" className="color-background" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedColored BO</label>
-      </WInput>
-
-      <h2>Shape</h2>
-      <WInput className="outlined">
-        <input type="text" className="pill label3" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedPill L3 BO</label>
-      </WInput>
-
-      <h2>Shadow</h2>
-      <WInput className="outlined">
-        <input type="text" className="color-background label3 shadow" required="required" />
-        <span class="barOutlined"></span>
-        <label>OutlinedColored Shadow L3 BO</label>
-      </WInput>
-
-      <div>end</div>
+      <br/>
 
     </div>
   );

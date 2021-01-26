@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 //import "./winput.scss";
 
-function WInput({ children, className, style, inputType, wType, labelText, placeholderText, fillColor, hoverAnimation, labelAnimation, barAnimation, required, disabled, shadow, ...other }) {
+function WInput({ children, className, style, inputType, wType, labelText, placeholderText, hoverAnimation, labelAnimation, barAnimation, required, disabled, ...other }) {
   let classes = clsx(
     className,
     // inputType, // inside input div
@@ -16,13 +16,21 @@ function WInput({ children, className, style, inputType, wType, labelText, place
     { "disabled": disabled }, // TODO
     // required, // inside input div
     // shadow // TODO inside input div
+    // shape // TODO inside input div
   );
 
-  let input = null; 
-  if (labelAnimation === "shrink" || labelAnimation==="up") {
-    input = (<input type={inputType} required className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
-
-  } else {
+  let input = null;
+  if (labelText && labelAnimation) {
+    if (labelAnimation === "shrink" || labelAnimation === "up") {
+      if (wType === "outlined") { // feildset has hover and bar animation
+        input = (<input type={inputType} required className="input-label" placeholder={placeholderText} />);
+      } else { // filled & lined (lined does not need to have input label)
+        input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
+      }
+    } else { // fixed label animations - do not need required
+      input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} />);
+    }
+  } else { // no label
     input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} />);
   }
 
@@ -47,10 +55,24 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
   else if (wType === "outlined") { //outlined - field set & legend
 
+    if (labelText && labelAnimation) {
+      return (
+        <div className={`winput ${classes}`} disabled={disabled} {...other}>
+          <fieldset className={["hover-" + hoverAnimation] + " " + ["bar-f-" + barAnimation]}>
+            {input}
+            {label}
+            <legend>{labelText}</legend>
+            {children}
+          </fieldset>
+        </div>
+      );
+    }
+
     return (
-      <div className={`winput ${classes}`}
-        disabled={disabled}
-        {...other}>
+      <div className={`winput ${classes}`} disabled={disabled} {...other}>
+        {input}
+        {span}
+        {label}
         {children}
       </div>
     );
@@ -59,10 +81,22 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
   else { // default
 
+    if(barAnimation) {
+      return (
+        <div className={`winput outlined ${classes}`} disabled={disabled} {...other}>
+          {input}
+          {span}
+          {label}
+          {children}
+        </div>
+      );
+    }
+
     return (
-      <div className={`winput ${classes}`}
-        disabled={disabled}
-        {...other}>
+      <div className={`winput outlined ${classes}`} disabled={disabled} {...other}>
+        {input}
+        <span className="bar-border-highlight" ></span>
+        {label}
         {children}
       </div>
     );
@@ -73,23 +107,5 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 // props
 // inputType: text,password,number
 // wType: outlined, lined, filled
-
-// barAnimation: left-right, center-out
-//bar-shade(Filled:left-right bar + left-right background)
-//bar-solid(Outlined: -not default as that uses fieldset&legend)
-
-// outline label type-(default, label moves up into outlined box + shrink) uses feildset & legend, **outline should be highlighted in color
-//label2(Outlined:label moves up above outlined box, no shrink),
-//label3(Outlined:label moves up above outlined box + shirnk),
-//label4,(Outlined:label moves up but stays within outlined box + shrink)
-
-//fill color-
-//Outlined:default = none(transparent)
-//Filled:default = gray/theme color
-//Lined:NA
-
-// implement later :
-// shadow-raised,
-// disabled-
 
 export default WInput;
