@@ -1,33 +1,21 @@
-## How to Set Up (temporary until npm)
+## Set Up
 
-1. Navigate to the directory of the site you are creating.
+Note: We will be using npm
 
-  * For VIP, this would be the client/src folder of the backend team’s template.
+1. In the terminal, navigate to the directory of the React web app you are creating
 
-2. From our Github, copy the “src” folder into the directory (see [Note](#ex-note)).
-  
-3. In the terminal, you need to then `npm install clsx` and `npm install node-sass npm:sass@^1.26.10`.
+2. Then type, `npm install wt-frontend`
 
-* Double check the package.json file that the dependencies lists `"node-sass": "npm:sass@^1.26.10"` and not `"sass": "npm:sass@^1.26.10"`.
+3. Change your .css files to .scss and put the following code at the top of the .scss file:
 
-* If you see just “sass”, manually replace it with “node-sass”, delete package-lock.json and node-modules and do `npm install`.
+`@use 'node_modules/wt-frontend/build/global/wolfie';`
 
-4. If you want to use any of our built-in styling with your css, you need to change it to a “.scss” file and then put this at the top of the file (or whatever other location you placed our global folder): 
-
-    ```css
-    @use "./wt-frontend/global/wolfie.scss";
-    ```
-
-5. In the js file you want our components in, import the component you want. For example, if you wanted a button, you would put: 
-
-    ```javascript
-    import WButton from './src/components/wbutton/WButton';
-    ```
+`@use 'node_modules/wt-frontend/build/global/components';`
 
 <br/>
 
 <a name="ex-note"></a>
-Note: If you want to look at our example pages, copy in our entire directory. You can open the example pages by navigating to our directory, running `npm install` in the terminal, then `npm start`.
+Note: If you want to look at our example pages, copy in our entire directory. Open the example pages by navigating to our directory, running `npm install` in the terminal, then `npm start`.
 
 ---
 
