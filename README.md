@@ -8,9 +8,11 @@ Note: We will be using npm
 
 3. Change your .css files to .scss and put the following code at the top of the .scss file:
 
-  `@use 'node_modules/wt-frontend/build/global/wolfie';`
+  ```css
+  @use 'node_modules/wt-frontend/build/global/wolfie';
 
-  `@use 'node_modules/wt-frontend/build/global/components';`
+  @use 'node_modules/wt-frontend/build/global/components';
+  ```
 
 <br/>
 
