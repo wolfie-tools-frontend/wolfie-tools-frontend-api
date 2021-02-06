@@ -32,7 +32,7 @@ export default function WNavbarPage() {
       </WNavbar>
 
       <h2>With WNavItem</h2>
-      <WNavbar className="warning">
+      <WNavbar color="warning">
         <ul>
           <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
             <a href="https://lypzl.csb.app/">Logo</a>
@@ -52,7 +52,7 @@ export default function WNavbarPage() {
         </ul>
       </WNavbar>
 
-      <WNavbar className="colored">
+      <WNavbar color="colored">
         <ul id="nav-mobile" className="hide-on-med-and-down">
           <WNavItem className="hover-transparent-lighten">
             <a href="#">Logo</a>
@@ -130,7 +130,7 @@ export default function WNavbarPage() {
         </ul>
       </WNavbar>
 
-      <WNavbar className="transparent-dark-color">
+      <WNavbar color="transparent">
         <ul id="nav-mobile" className="hide-on-med-and-down">
           <WNavItem className="hover-transparent-darken">
             <a href="#">Hot</a>

@@ -1,31 +1,21 @@
 @use "sass:color";
 @use '../../global/wolfie' as *;
 
-$sidebar-element-padding: 1rem 1rem;
-
-/*
-.wrow {
-  column-gap: 0;
-}
-.wcol {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-*/
+$sidebar-element-height: 2rem;
+$sidebar-element-padding: 0rem 0rem 0rem 1rem;
+$sidebar-background-color: $background-color; //rgb(224, 224, 224);
+$text-color: black;
+$font-size: 14px;
+$letter-spacing: 0px;
+$sidebar-transparent: $transparent-dark-color;
 
 .wsidebar {
-  //display: flex;
-  //justify-content: space-between;
-  //align-items: center;
   height: 100%; // ??
-  //margin: 0; // set col style in js
-  //padding-left: 0.7rem;
-  //padding-right: 0.7rem;
-  color: $navbar-text-color;
-  background-color: rgb(224, 224, 224); // defualt
+  color: $text-color;
+  background-color: $sidebar-background-color;
+  display:table-row;
 
   &.primary {
-    // need to be called because default navbar is given a color
     background-color: $primary-color;
   }
 
@@ -34,24 +24,32 @@ $sidebar-element-padding: 1rem 1rem;
   }
 
   &.colored {
-    background-color: $navbar-background-color;
+    background-color: $sidebar-background-color;
+    color: $navbar-text-color;
   }
 
-  &.transparent-dark-color {
-    background-color: $transparent-dark-color;
-    color: $text-color;
+  &.transparent {
+    background-color: $sidebar-transparent;
+  }
+
+  &.clear {
+    background-color: $background-color;
+    $color: $text-color;
   }
 
   a {
-    //NavLink
     text-decoration: none;
-    height: inherit;
+    height: $sidebar-element-height;
     display: inline-block;
     width: inherit;
     //text-align: center;
     padding: $sidebar-element-padding;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
   }
-  
+
   a,
   a:visited {
     color: inherit;
@@ -69,9 +67,6 @@ $sidebar-element-padding: 1rem 1rem;
     list-style-type: none;
     margin: 0;
     width: 100%;
-    //padding: 0;
-    //overflow: hidden;
-    //height: inherit;
   }
   
   /*

@@ -8,6 +8,7 @@ import WNavbarPage from "./examples/WNavbarPage";
 import WInputPage from "./examples/WInputPage";
 import WGridPage from "./examples/WGridPage";
 import WAccordionPage from "./examples/WAccordionPage";
+import WSidebarPage from "./examples/WSidebarPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 import WRow from "./components/wgrid/WRow";
 import WCol from "./components/wgrid/WCol";
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <div>
-        <WNavbar className={"primary"}>
+        <WNavbar color="colored">
           <ol>
             <li>
               <NavLink to="/">
@@ -30,20 +31,20 @@ export default function App() {
                 />
               </NavLink>
             </li>
-            <li>Wolfie Tools</li>
+            <li className="logo-text">Wolfie Tools</li>
           </ol>
 
           <ol>
             <WNavItem>
-              vAlpha
-            </WNavItem>
-            <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
-              <a href="https://www.npmjs.com/package/wolfie-tools-front-end-api" target="_blank">npm</a>
+              <a>vAlpha</a>
             </WNavItem>
             <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
               <NavLink to="/about" id="about" activeClassName="transparent">
                 About
               </NavLink>
+            </WNavItem>
+            <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
+              <a href="https://www.npmjs.com/package/wt-frontend" target="_blank">npm</a>
             </WNavItem>
             <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
               <a href="https://github.com/Cynthia-Lee/wolfie-tools-front-end-api" target="_blank"><i class="fab fa-github" style={{ fontSize: "1.5rem" }} /></a>
@@ -53,7 +54,7 @@ export default function App() {
 
         <WRow style={{ columnGap: '0' }}>
           <WCol size='2' style={{ margin: '0' }}>
-            <WSidebar color="transparent-dark-color">
+            <WSidebar color="clear">
               <ol>
                 <WNavItem hoverAnimation="transparent-darken">
                   <NavLink to="/waccordion" id="waccordion" activeClassName="transparent">
@@ -80,6 +81,11 @@ export default function App() {
                     WNavbar
                   </NavLink>
                 </WNavItem>
+                <WNavItem hoverAnimation="transparent-darken">
+                  <NavLink to="/wsidebar" id="wsidebar" activeClassName="transparent">
+                    WSidebar
+                  </NavLink>
+                </WNavItem>
 
               </ol>
             </WSidebar>
@@ -93,6 +99,7 @@ export default function App() {
                 <Route path="/winput" component={WInputPage} />
                 <Route path="/wgrid" component={WGridPage} />
                 <Route path="/waccordion" component={WAccordionPage} />
+                <Route path="/wsidebar" component={WSidebarPage} />
               </Switch>
             </div>
           </WCol>
