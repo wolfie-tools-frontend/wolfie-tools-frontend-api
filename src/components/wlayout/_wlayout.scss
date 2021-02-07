@@ -8,7 +8,7 @@ $sidebar-width: 272px;
     min-height: 100vh;
 }
 
-.header-layout {
+.wLheaderayout {
     display: grid;
     grid-template-areas: 'header' 'main';
     grid-template-rows: $header-height calc(100% - #{$header-height});
@@ -53,18 +53,18 @@ $sidebar-width: 272px;
     grid-template-rows: calc(100vh - #{$footer-height}) $footer-height;
 }
 
-.header-l {
+.wLheader {
     grid-area: header;
 }
 
-.main-l {
+.wLmain {
     grid-area: main;
 }
 
-.sidebar-l {
+.wLsidebar {
     grid-area: sidebar;
 }
 
-.footer-l {
+.wLfooter {
     grid-area: footer;
 }

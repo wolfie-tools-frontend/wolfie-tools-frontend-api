@@ -21,7 +21,7 @@ export default function App() {
     <BrowserRouter>
       <WLayout wLayout="header-sidebar-layout">
 
-        <div className="header-l">
+        <div className="wLheader">
           <WNavbar color="colored">
             <ol>
               <li>
@@ -56,7 +56,7 @@ export default function App() {
           </WNavbar>
         </div>
 
-        <div className="sidebar-l">
+        <div className="wLsidebar">
           <WSidebar color="clear">
             <ol>
               <WNavItem hoverAnimation="transparent-darken">
@@ -101,7 +101,7 @@ export default function App() {
           </WSidebar>
         </div>
 
-        <div className="main-l">
+        <div className="wLmain">
           <Switch>
             <Route path="/wbutton" component={WButtonPage} />
             <Route path="/wnavbar" component={WNavbarPage} />
