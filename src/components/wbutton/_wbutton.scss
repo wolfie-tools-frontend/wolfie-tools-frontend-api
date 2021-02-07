@@ -172,7 +172,7 @@ are called from the animations.scss mixins*/
     border-style: none;
     @include hover-transparent-darken($transparent-value-light);
     @include hover-transparent-lighten($transparent-value-dark);
-    @include hover-transparent-colored($button-background-color);
+    @include hover-transparent-colored($primary-color);
 
     @mixin texted-color($color) {
       background-color: transparent;

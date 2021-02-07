@@ -17,7 +17,7 @@ function WButton({ children, className, onClick, style, wType, shape, color, siz
     { "raised": raised }
   );
 
-  if ((wType === "ghost" || wType ==="texted") && (hoverAnimation === "lighten" || hoverAnimation === "darken")) {
+  if ((wType === "ghost" || wType ==="texted") && (hoverAnimation === "lighten" || hoverAnimation === "darken" || hoverAnimation === "colored")) {
     classes = clsx(
       className,
       wType,

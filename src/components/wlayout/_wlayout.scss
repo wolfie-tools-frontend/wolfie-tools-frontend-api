@@ -53,18 +53,18 @@ $sidebar-width: 272px;
     grid-template-rows: calc(100vh - #{$footer-height}) $footer-height;
 }
 
-.header {
+.header-l {
     grid-area: header;
 }
 
-.main {
+.main-l {
     grid-area: main;
 }
 
-.sidebar {
+.sidebar-l {
     grid-area: sidebar;
 }
 
-.footer {
+.footer-l {
     grid-area: footer;
 }

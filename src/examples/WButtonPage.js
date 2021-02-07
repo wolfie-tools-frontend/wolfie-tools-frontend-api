@@ -68,60 +68,167 @@ export default function WButtonPage() {
           <tr>
             <td>Default</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Rounded</td>
             <td>
-              <WButton
-                wType="rounded"
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  shape="rounded"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  shape="rounded"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  shape="rounded"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  shape="rounded"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Pill</td>
             <td>
-              <WButton
-                wType="pill"
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  shape="pill"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  shape="pill"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  shape="pill"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  shape="pill"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Circle</td>
             <td>
-              <WButton
-                shape="circle"
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons medium">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  shape="circle"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  shape="circle"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  shape="circle"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  shape="circle"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Square</td>
             <td>
-              <WButton
-                shape="square"
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons medium">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  shape="square"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  shape="square"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  shape="square"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  shape="square"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -133,88 +240,221 @@ export default function WButtonPage() {
           <tr>
             <td>Default</td>
             <td>
-              <WButton
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Primary</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="primary"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="primary"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="primary"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Accent</td>
             <td>
-              <WButton
-                color="accent"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="accent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="accent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="accent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Colored</td>
             <td>
-              <WButton
-                color="colored"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="colored"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="colored"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="colored"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Success</td>
             <td>
-              <WButton
-                color="success"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="success"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="success"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="success"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Danger</td>
             <td>
-              <WButton
-                color="danger"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="danger"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="danger"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="danger"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Warning</td>
             <td>
-              <WButton
-                color="warning"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="warning"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="warning"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="warning"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Custom</td>
             <td>
-              <WButton
-                color="custom-color"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  color="custom-color"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  color="custom-color"
+                  style={{ borderColor: "salmon" }}
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  color="custom-color"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -226,48 +466,133 @@ export default function WButtonPage() {
           <tr>
             <td>Default</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Small</td>
             <td>
-              <WButton
-                size="small"
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  size="small"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  size="small"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  size="small"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  size="small"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Medium</td>
             <td>
-              <WButton
-                size="medium"
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  size="medium"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  size="medium"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  size="medium"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  size="medium"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Large</td>
             <td>
-              <WButton
-                size="large"
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  size="large"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  size="large"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  size="large"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  size="large"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -279,82 +604,227 @@ export default function WButtonPage() {
           <tr>
             <td>Default</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  <i className="material-icons">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Small</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons small">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  <i className="material-icons small">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons small">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons small">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons small">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Medium</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons medium">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons medium">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Large</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons large">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  <i className="material-icons large">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons large">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons large">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons large">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Left Align</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                <i className="material-icons left">notifications</i>
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  <i className="material-icons left">notifications</i>
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons left">notifications</i>
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons left">notifications</i>
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  <i className="material-icons left">notifications</i>
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Center Align</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-                <i className="material-icons center">notifications</i>
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  R
+                  <i className="material-icons center">notifications</i>
+                  L
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  R
+                  <i className="material-icons center">notifications</i>
+                  L
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  R
+                  <i className="material-icons center">notifications</i>
+                  L
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  R
+                  <i className="material-icons center">notifications</i>
+                  L
+                </WButton>
+              </div>
             </td>
           </tr>
           <tr>
             <td>Right Align</td>
             <td>
-              <WButton
-                color="primary"
-                onClick={myFunction}
-              >
-                Button
-                <i className="material-icons right">notifications</i>
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  onClick={myFunction}
+                >
+                  Button
+                  <i className="material-icons right">notifications</i>
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  onClick={myFunction}
+                >
+                  Button
+                  <i className="material-icons right">notifications</i>
+                </WButton>
+                <WButton
+                  wType="texted"
+                  onClick={myFunction}
+                >
+                  Button
+                  <i className="material-icons right">notifications</i>
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  onClick={myFunction}
+                >
+                  Button
+                  <i className="material-icons right">notifications</i>
+                </WButton>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -369,25 +839,25 @@ export default function WButtonPage() {
             <td>
               <div className="side-by-side">
                 <WButton
-                  color="primary"
                   hoverAnimation="darken"
-                  onClick={myFunction}
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
-                  color="primary"
                   hoverAnimation="darken"
-                  onClick={myFunction}
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
-                  color="primary"
                   hoverAnimation="darken"
-                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  hoverAnimation="darken"
                 >
                   Button
                 </WButton>
@@ -399,25 +869,25 @@ export default function WButtonPage() {
             <td>
               <div className="side-by-side">
                 <WButton
-                  color="primary"
                   hoverAnimation="lighten"
-                  onClick={myFunction}
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
-                  color="primary"
                   hoverAnimation="lighten"
-                  onClick={myFunction}
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
-                  color="primary"
                   hoverAnimation="lighten"
-                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  hoverAnimation="lighten"
                 >
                   Button
                 </WButton>
@@ -430,7 +900,6 @@ export default function WButtonPage() {
               <WButton
                 wType="ghost"
                 hoverAnimation="fill"
-                onClick={myFunction}
               >
                 Button
               </WButton>
@@ -441,18 +910,14 @@ export default function WButtonPage() {
             <td>
               <div className="side-by-side">
                 <WButton
-                  color="primary"
                   wType="ghost"
-                  hoverAnimation="transparent-colored"
-                  onClick={myFunction}
+                  hoverAnimation="colored"
                 >
                   Button
               </WButton>
                 <WButton
-                  color="primary"
                   wType="texted"
-                  hoverAnimation="transparent-colored"
-                  onClick={myFunction}
+                  hoverAnimation="colored"
                 >
                   Button
               </WButton>
@@ -469,24 +934,62 @@ export default function WButtonPage() {
           <tr>
             <td>Ripple-dark</td>
             <td>
-              <WButton
-                color="primary"
-                clickAnimation="ripple-dark"
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  clickAnimation="ripple-dark"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  clickAnimation="ripple-dark"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  clickAnimation="ripple-dark"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  clickAnimation="ripple-dark"
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
 
           <tr>
             <td>Ripple-light</td>
             <td>
-              <WButton
-                color="primary"
-                clickAnimation="ripple-light"
-              >
-                Button
-              </WButton>
+              <div className="side-by-side">
+                <WButton
+                  clickAnimation="ripple-light"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="ghost"
+                  clickAnimation="ripple-light"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="texted"
+                  clickAnimation="ripple-light"
+                >
+                  Button
+                </WButton>
+                <WButton
+                  wType="transparent"
+                  clickAnimation="ripple-light"
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -552,6 +1055,6 @@ export default function WButtonPage() {
 
       <br></br>
 
-    </div>
+    </div >
   );
 }
