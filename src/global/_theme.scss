@@ -11,13 +11,13 @@ $roboto: "Roboto", sans-serif !default;
 @import url("https://use.fontawesome.com/releases/v5.13.1/css/all.css");
 
 $font-family: $roboto;
+
+/* Theme Color Palette */
 $background-color: white !default;//#e5e5e5 !default;
 $primary-color: #01bfa5 !default;
 $accent-color: #fd5523 !default;
 $text-color: black !default;
 $text-color-light: white !default;
-
-/* Theme Color Palette */
 // Background color: base, dark, light
 // Primary: base, dark, light
 $primary-color-dark: color.scale($primary-color, $lightness: $darken-value);
@@ -26,9 +26,73 @@ $primary-color-light: color.scale($primary-color, $lightness: $lighten-value);
 $accent-color-dark: color.scale($accent-color, $lightness: $darken-value);
 $accent-color-light: color.scale($accent-color, $lightness: $lighten-value);
 
-/* Component Colors */
+/* Button */
+$rounded-radius: 0.25rem;
 $button-background-color: #354856 !default;
 $button-text-color: $text-color-light !default;
+$button-font-family: inherit;
+$button-font-weight: null;
+/// @type Number
+$button-padding: 0.6em 1.2em;
+/// @type Number
+$button-margin: 0px 0px 5px 0px;
+/// @type Number
+$button-radius: $rounded-radius !default;
+$button-sizes: (
+  "small": 0.8rem,
+  "medium": 1rem,
+  "large": 1.1rem,
+) !default;
+$transparent-value: -80%;
+$transparent-value-dark: -90%;
+$transparent-value-light: $transparent-value-dark;
+//$darken-value: -4%;//-10%;
+//$lighten-value: 3%;
 
+/* Grid */
+$col-gutter-size: 0rem;
+$row-gutter-size: 0rem;
+
+/* Input */
+$inactive-color: gray;
+$text-color: black;
+$highlight-color: $primary-color;
+$width: 320px;
+$transition-time: 300ms;
+
+$input-height: 2.4rem;
+$label-input-height: 3.4rem;
+$border-color: black;
+
+$border-radius: 4px;
+$filled-color: $border-color;
+$shrink-label-font-size: 12px;
+$input-font-size: 16px;
+$label-font-size: $input-font-size;
+$hover-color: rgba($border-color, 0.9);
+$border-highlight-thickness: 3px;
+$border-thickness: 1px;
+
+/* Layout */
+$header-height: 64px;
+$footer-height: 64px;
+$lside-width: 272px;
+$rside-width: $lside-width;
+
+/* Navbar */
 $navbar-background-color: $primary-color !default;
 $navbar-text-color: $text-color-light !default;
+$navbar-element-padding: 0rem 1rem;
+$navbar-padding: 1rem 1rem;
+$navbar-height: 64px;
+$navbar-text-color: $text-color-light;
+$navbar-background-color: $primary-color;
+
+/* Sidebar */
+$sidebar-element-height: 2.5rem;
+$sidebar-element-padding: 0rem 0rem 0rem 2rem;
+$sidebar-background-color: $background-color; //rgb(224, 224, 224);
+$text-color: black;
+$font-size: 14px;
+$letter-spacing: 0.5px;
+$sidebar-transparent: $transparent-dark-color;

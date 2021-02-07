@@ -1,25 +1,5 @@
 @use '../../global/wolfie' as *;
 
-//$muted-color: gray;//mix(white, $background-color, 70%);
-$inactive-color: gray;
-$text-color: black;
-$highlight-color: $primary-color;
-$width: 320px;
-$transition-time: 300ms;
-
-$input-height: 2.4rem;
-$label-input-height: 3.4rem;
-$border-color: black;
-
-$border-radius: 4px;
-$filled-color: $border-color;
-$shrink-label-font-size: 12px;
-$input-font-size: 16px;
-$label-font-size: $input-font-size;
-$hover-color: rgba($border-color, 0.9);
-$border-highligt-thickness: 3px;
-$border-thickness: 1px;
-
 .winput {
   font-family: inherit;
   position: relative;
@@ -45,7 +25,6 @@ $border-thickness: 1px;
       padding: 8px 5px 6px 0px;
       display: block;
       border: none;
-      //border-radius: 0;
 
       border-bottom: $border-thickness solid $inactive-color;
       $time: 0.5s;
@@ -65,17 +44,12 @@ $border-thickness: 1px;
       &:focus {
         outline: none;
 
-        /*~ label {
-          color: $highlight-color;
-        }*/
-
         // bar animation
         ~ .bar-left-to-right:before {
           width: $width;
         }
         ~ .bar-center-out:before,
         ~ .bar-center-out:after {
-          //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
           width: 50%;
         }
         ~ .bar-solid {
@@ -168,7 +142,6 @@ $border-thickness: 1px;
         }
         ~ .bar-center-out:before,
         ~ .bar-center-out:after {
-          //input:focus ~ .bar:before, input:focus ~ .bar:after {width:50%;}
           width: 50%;
         }
         ~ .bar-solid {
@@ -259,7 +232,7 @@ $border-thickness: 1px;
         }
         ~ .bar-border-highlight {
           border-radius: #{$border-radius};
-          box-shadow: 0 0 0 $border-thickness $highlight-color inset, 0 0 0 $border-highligt-thickness rgb($highlight-color, 0.3);
+          box-shadow: 0 0 0 $border-thickness $highlight-color inset, 0 0 0 $border-highlight-thickness rgb($highlight-color, 0.3);
           transform: scaleX(1);
         }
       }
@@ -351,10 +324,6 @@ $border-thickness: 1px;
       &.bar-f-solid {
         &:focus-within {
           border: 1px solid $highlight-color;
-          transform: scaleX(1);
-          //box-shadow: 0 -2px 0 1px red inset;
-          //border-color: $highlight-color;
-          //border-width: 2px; 
         }
       }
 

@@ -9,6 +9,9 @@ export default function WGridPage() {
     return (
         <div className="WGridPage">
             <h1>WGrid</h1>
+            <div className="definition">Organize the view.</div>
+            <p>WGrid is split into 2 components: WRow and WCol. WRow and WCol utilizes CSS Grids.You should use CSS Grid properties with WRow and WCol.</p>
+
             <h2>12 column grid</h2>
             <WRow>
                 <WCol size="1">size 1</WCol>

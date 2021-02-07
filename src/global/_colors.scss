@@ -3,8 +3,6 @@
 /* Modifiers */
 $darken-value: -4%;
 $lighten-value: 3%;
-$transparent-value: -95%;
-
 
 /* Colors */
 /// @type Color
@@ -14,7 +12,7 @@ $danger-color: #d32f2f !default;
 /// @type Color
 $warning-color: #f9a825 !default;
 /// @type Color
-$transparent-dark-color: color.scale(black, $alpha: $transparent-value);
+$transparent-dark-color: color.scale(black, $alpha: -95%);
 /// @type Color
 $disabled-background-color: color.scale(lightgrey, $alpha: -20%) !default;
 /// @type Color

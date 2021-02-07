@@ -4,7 +4,7 @@ import clsx from "clsx";
 function WLayout({ children, className, style, wLayout, ...other }) {
     let classes = clsx(
         className,
-        {[wLayout+"-layout"]:wLayout}
+        { [wLayout + "-layout"]: wLayout }
     );
 
     let layout = (

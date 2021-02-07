@@ -3,8 +3,9 @@
 
 .navitem {
     //hover
-    @include hover-darken(rgb(239, 239, 239));
-    @include hover-lighten(rgb(239, 239, 239));
+    @include hover-transparent-darken($transparent-value-dark);
+    @include hover-transparent-lighten($transparent-value-light);
+
     //click
     @include click-ripple-light;
     @include click-ripple-dark;

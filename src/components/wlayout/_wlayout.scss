@@ -1,10 +1,5 @@
 @use '../../global/wolfie' as *;
 
-$header-height: 64px;
-$footer-height: 64px;
-$lside-width: 272px;
-$rside-width: $lside-width;
-
 .wlayout{
     min-height: 100vh;
     .wlayout{

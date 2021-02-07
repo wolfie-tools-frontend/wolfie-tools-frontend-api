@@ -2,25 +2,6 @@
 @use "sass:map";
 @use '../../global/wolfie' as *;
 
-$button-font-family: inherit;
-$button-font-weight: null;
-/// @type Number
-$button-padding: 0.6em 1.2em;
-/// @type Number
-$button-margin: 0px 0px 5px 0px;
-/// @type Number
-$button-radius: $rounded-radius !default;
-$button-sizes: (
-  "small": 0.8rem,
-  "medium": 1rem,
-  "large": 1.1rem,
-) !default;
-$transparent-value: -80%;
-$transparent-value-dark: -90%;
-$transparent-value-light: $transparent-value-dark;
-$darken-value: -10%;
-$lighten-value: 3%;
-
 /* Button hover effect and click effects & animations 
 are called from the animations.scss mixins*/
 
@@ -127,8 +108,8 @@ are called from the animations.scss mixins*/
     border-style: solid;
     border-width: 1px;
     @include hover-fill($primary-color, $background-color);
-    @include hover-transparent-darken($transparent-value-light);
-    @include hover-transparent-lighten($transparent-value-dark);
+    @include hover-transparent-darken($transparent-value-dark);
+    @include hover-transparent-lighten($transparent-value-light);
     @include hover-transparent-colored($primary-color);
     //@include hover-ghost-darken($primary-color);
 
@@ -137,8 +118,8 @@ are called from the animations.scss mixins*/
       color: $color;
       border-color: $color;
       @include hover-fill($color, $background-color);
-      @include hover-transparent-darken($transparent-value-light);
-      @include hover-transparent-lighten($transparent-value-dark);
+      @include hover-transparent-darken($transparent-value-dark);
+      @include hover-transparent-lighten($transparent-value-light);
       @include hover-transparent-colored($color);
       //@include hover-ghost-darken($color);
     }

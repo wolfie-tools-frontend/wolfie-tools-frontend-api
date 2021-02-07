@@ -14,6 +14,7 @@ import WAccordionPage from "./examples/WAccordionPage";
 import WSidebarPage from "./examples/WSidebarPage";
 import WLayoutPage from "./examples/WLayoutPage";
 import WCardPage from "./examples/WCardPage";
+import WModalPage from "./examples/WModalPage";
 
 import WNavbar from "./components/wnavbar/WNavbar";
 import WSidebar from "./components/wsidebar/WSidebar";
@@ -51,15 +52,15 @@ export default function App() {
               <WNavItem>
                 <a>vAlpha</a>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
+              <WNavItem hoverAnimation="darken" clickAnimation="ripple-light">
                 <NavLink to="/about" id="about" activeClassName="transparent">
                   About
               </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
+              <WNavItem hoverAnimation="darken" clickAnimation="ripple-light">
                 <a href="https://www.npmjs.com/package/wt-frontend" target="_blank">npm</a>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken" clickAnimation="ripple-light">
+              <WNavItem hoverAnimation="darken" clickAnimation="ripple-light">
                 <a href="https://github.com/Cynthia-Lee/wolfie-tools-front-end-api" target="_blank"><i class="fab fa-github" style={{ fontSize: "1.5rem" }} /></a>
               </WNavItem>
             </ol>
@@ -69,42 +70,47 @@ export default function App() {
         <WLSide side="left">
           <WSidebar color="clear">
             <ol>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/waccordion" id="waccordion" activeClassName="active-text">
                   WAccordion
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/wbutton" id="wbutton" activeClassName="active-text">
                   WButton
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
-                <NavLink to="/wcard" id="wbutton" activeClassName="active-text">
+              <WNavItem hoverAnimation="darken">
+                <NavLink to="/wcard" id="wcard" activeClassName="active-text">
                   WCard
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
-                <NavLink to="/wgrid" id="winput" activeClassName="active-text">
+              <WNavItem hoverAnimation="darken">
+                <NavLink to="/wgrid" id="wgrid" activeClassName="active-text">
                   WGrid
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/winput" id="winput" activeClassName="active-text">
                   WInput
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/wlayout" id="wlayout" activeClassName="active-text">
                   WLayout
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
+                <NavLink to="/wmodal" id="wmodal" activeClassName="active-text">
+                  WModal
+                  </NavLink>
+              </WNavItem>
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/wnavbar" id="wnavbar" activeClassName="active-text">
                   WNavbar
                   </NavLink>
               </WNavItem>
-              <WNavItem hoverAnimation="transparent-darken">
+              <WNavItem hoverAnimation="darken">
                 <NavLink to="/wsidebar" id="wsidebar" activeClassName="active-text">
                   WSidebar
                   </NavLink>
@@ -128,6 +134,7 @@ export default function App() {
             <Route path="/wsidebar" component={WSidebarPage} />
             <Route path="/wlayout" component={WLayoutPage} />
             <Route path="/wcard" component={WCardPage} />
+            <Route path="/wmodal" component={WModalPage} />
           </Switch>
         </WLMain>
 

@@ -1,14 +1,6 @@
 @use "sass:color";
 @use '../../global/wolfie' as *;
 
-$sidebar-element-height: 2.5rem;
-$sidebar-element-padding: 0rem 0rem 0rem 2rem;
-$sidebar-background-color: $background-color; //rgb(224, 224, 224);
-$text-color: black;
-$font-size: 14px;
-$letter-spacing: 0.5px;
-$sidebar-transparent: $transparent-dark-color;
-
 .wsidebar {
   color: $text-color;
   background-color: $sidebar-background-color;
@@ -17,6 +9,13 @@ $sidebar-transparent: $transparent-dark-color;
   position: sticky;
   top: 0;
   overflow-y: auto;
+
+  @include hover-text-transparent();
+  @include hover-text-primary();
+  @include hover-text-accent();
+  @include hover-text-danger();
+  @include hover-text-success();
+  @include hover-text-warning();
 
   &.primary {
     background-color: $primary-color;

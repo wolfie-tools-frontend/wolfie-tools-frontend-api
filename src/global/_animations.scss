@@ -37,7 +37,7 @@
 @mixin hover-transparent-darken($t-value: "") {
   &.hover-transparent-darken:hover {
     @if $t-value == "" {
-      background-color: color.scale(black, $alpha: $transparent-value);
+      background-color: color.scale(black, $alpha: $transparent-value-dark);
     } @else {
       background-color: color.scale(black, $alpha: $t-value);
     }
@@ -47,7 +47,7 @@
 @mixin hover-transparent-lighten($t-value: "") {
   &.hover-transparent-lighten:hover {
     @if $t-value == "" {
-      background-color: color.scale(white, $alpha: $transparent-value);
+      background-color: color.scale(white, $alpha: $transparent-value-light);
     } @else {
       background-color: color.scale(white, $alpha: $t-value);
     }
@@ -118,7 +118,7 @@
 }
 
 @mixin hover-text-transparent() {
-  &.hover-text-transparent:hover {
+  &.hover-text-transparent{
     @include hover-text-color($background-color);
   }
 }
@@ -130,7 +130,7 @@
 }
 
 @mixin hover-text-accent() {
-  &.hover-text-primary {
+  &.hover-text-accent {
     @include hover-text-color($accent-color);
   }
 }
@@ -194,6 +194,8 @@
     @include ripple(black);
   }
 }
+
+
 
 /* Allow animations to be called by any element */
 * {

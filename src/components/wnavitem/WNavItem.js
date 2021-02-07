@@ -10,6 +10,15 @@ function WNavItem({ children, className, onClick, style, color, hoverAnimation, 
     { ["click-" + clickAnimation]: clickAnimation }
   );
 
+  if (hoverAnimation === "lighten" || hoverAnimation === "darken") {
+    classes = clsx(
+      className,
+      color,
+      { ["hover-transparent-" + hoverAnimation]: hoverAnimation },
+      { ["click-" + clickAnimation]: clickAnimation }
+    );
+  }
+
   return (
     <li onClick={onClick} className={`wnavitem ${classes}`} style={style} {...other}>
       {children}
