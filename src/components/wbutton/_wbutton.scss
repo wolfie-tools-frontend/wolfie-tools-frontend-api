@@ -92,8 +92,8 @@ are called from the animations.scss mixins*/
   @mixin wbutton-color($color, $text-color) {
     background-color: $color;
     color: $text-color;
-    @include hover-darken($primary-color);
-    @include hover-lighten($primary-color);
+    @include hover-darken($color);
+    @include hover-lighten($color);
   }
   /* Button Colors */
   &.primary {
@@ -129,23 +129,18 @@ are called from the animations.scss mixins*/
     @include hover-fill($primary-color, $background-color);
     @include hover-transparent-darken($transparent-value-light);
     @include hover-transparent-lighten($transparent-value-dark);
-    @include hover-transparent-colored($button-background-color);
-    //@include hover-transparent-colored($primary-color);
+    @include hover-transparent-colored($primary-color);
     //@include hover-ghost-darken($primary-color);
-    &.hover-darken:hover {
-      background-color: color.scale($primary-color, $alpha: $transparent-value);
-    }
 
     @mixin ghost-color($color) {
       background-color: transparent;
       color: $color;
       border-color: $color;
       @include hover-fill($color, $background-color);
-      //@include hover-transparent-colored($color);
+      @include hover-transparent-darken($transparent-value-light);
+      @include hover-transparent-lighten($transparent-value-dark);
+      @include hover-transparent-colored($color);
       //@include hover-ghost-darken($color);
-      &.hover-darken:hover {
-        background-color: color.scale($color, $alpha: 0%);
-      }
     }
     /* Button Colors */
     &.primary {
@@ -171,37 +166,22 @@ are called from the animations.scss mixins*/
     }
   }
 
-
-
-
-
-
-
   &.texted {
     background-color: transparent;
-    color: black;
+    color: $primary-color;
     border-style: none;
     @include hover-transparent-darken($transparent-value-light);
     @include hover-transparent-lighten($transparent-value-dark);
     @include hover-transparent-colored($button-background-color);
 
-    &.hover-darken:hover {
-      background-color: color.scale(black, $alpha: $transparent-value);
-    }
-    &.hover-lighten:hover {
-      background-color: color.scale(white, $alpha: $transparent-value);
-    }
-
     @mixin texted-color($color) {
       background-color: transparent;
       color: $color;
+      @include hover-transparent-darken($transparent-value-light);
+      @include hover-transparent-lighten($transparent-value-dark);
       @include hover-transparent-colored($color);
-
-      &.hover-darken:hover {
-        background-color: color.scale($color, $alpha: $transparent-value);
-      }
     }
-
+    /* Button Colors */
     &.primary {
       @include texted-color($primary-color);
     }
@@ -227,7 +207,7 @@ are called from the animations.scss mixins*/
   }
 
   &.transparent {
-    background-color: color.scale(black, $alpha: -75%);
+    background-color: color.scale(black, $alpha: $transparent-value-dark);
     color: white;
 
     &.hover-darken:hover {
@@ -235,6 +215,11 @@ are called from the animations.scss mixins*/
     }
     &.hover-lighten:hover {
       background-color: color.scale(white, $alpha: -80%);
+    }
+
+    &.disabled {
+      background-color: $disabled-background-color;
+      color: $disabled-color;
     }
   }
 

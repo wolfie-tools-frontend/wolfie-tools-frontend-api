@@ -11,9 +11,6 @@ import WAccordionPage from "./examples/WAccordionPage";
 import WSidebarPage from "./examples/WSidebarPage";
 import WLayoutPage from "./examples/WLayoutPage";
 
-import WCol from "./components/wgrid/WCol";
-import WRow from "./components/wgrid/WRow";
-
 import WNavbar from "./components/wnavbar/WNavbar";
 import WSidebar from "./components/wsidebar/WSidebar";
 import WNavItem from "./components/wnavitem/WNavItem";
