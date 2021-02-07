@@ -12,6 +12,10 @@ $icon-sizes: (
   "large": 2.2rem,
 ) !default;
 
+body, #root{
+  min-height: 100vh;
+}
+
 // Icons
 .material-icons {
   font-size: $icon-font-size;

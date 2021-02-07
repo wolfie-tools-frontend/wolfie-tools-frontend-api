@@ -12,9 +12,10 @@ $sidebar-transparent: $transparent-dark-color;
 .wsidebar {
   color: $text-color;
   background-color: $sidebar-background-color;
-  //width: 100%;
-  min-height: 100vh; // change for layouts
-  height: 100vh; // change for layouts
+  max-height: 100vh;
+  height: 100%;
+  position: sticky;
+  top: 0;
   overflow-y: auto;
 
   &.primary {

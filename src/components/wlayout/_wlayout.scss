@@ -1,25 +1,31 @@
 @use '../../global/wolfie' as *;
 
-$header-height: 56px;
-$footer-height: 56px;
+$header-height: 64px;
+$footer-height: 64px;
 $sidebar-width: 272px;
+
+.wlayout{
+    min-height: 100vh;
+}
 
 .header-layout {
     display: grid;
     grid-template-areas: 'header' 'main';
-    grid-template-rows: $header-height calc(100vh - #{$header-height});
+    grid-template-rows: $header-height calc(100% - #{$header-height});
 }
 
 .header-sidebar-layout {
     display: grid;
     grid-template-areas: 'header header' 'sidebar main';
-    grid-template-rows: $header-height calc(100vh - #{$header-height});
+    grid-template-rows: $header-height calc(100% - #{$header-height});
+    grid-template-columns: $sidebar-width calc(100% - #{$sidebar-width});
 }
 
 .header-sidebar-footer-layout {
     display: grid;
     grid-template-areas: 'header header' 'sidebar main' 'footer footer';
     grid-template-rows: $header-height calc(100vh - (#{$header-height}+#{$footer-height})) $footer-height;
+    grid-template-columns: $sidebar-width calc(100% - #{$sidebar-width});
 }
 
 .header-footer-layout {
@@ -31,12 +37,14 @@ $sidebar-width: 272px;
 .sidebar-layout {
     display: grid;
     grid-template-areas: 'sidebar main';
+    grid-template-columns: $sidebar-width calc(100% - #{$sidebar-width});
 }
 
 .sidebar-footer-layout {
     display: grid;
     grid-template-areas: 'sidebar main' 'footer footer';
     grid-template-rows: calc(100vh - #{$footer-height}) $footer-height;
+    grid-template-columns: $sidebar-width calc(100% - #{$sidebar-width});
 }
 
 .footer-layout {
