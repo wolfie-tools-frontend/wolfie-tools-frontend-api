@@ -3,6 +3,9 @@ import "./examples/example.scss";
 import "./main.scss";
 
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+import AboutPage from "./examples/AboutPage";
+import HomePage from "./examples/HomePage";
+
 import WButtonPage from "./examples/WButtonPage";
 import WNavbarPage from "./examples/WNavbarPage";
 import WInputPage from "./examples/WInputPage";
@@ -10,18 +13,25 @@ import WGridPage from "./examples/WGridPage";
 import WAccordionPage from "./examples/WAccordionPage";
 import WSidebarPage from "./examples/WSidebarPage";
 import WLayoutPage from "./examples/WLayoutPage";
+import WCardPage from "./examples/WCardPage";
 
 import WNavbar from "./components/wnavbar/WNavbar";
 import WSidebar from "./components/wsidebar/WSidebar";
 import WNavItem from "./components/wnavitem/WNavItem";
+import WCard from "./components/wcard/WCard";
+
 import WLayout from "./components/wlayout/WLayout";
+import WLHeader from "./components/wlayout/WLHeader";
+import WLMain from "./components/wlayout/WLMain";
+import WLSide from "./components/wlayout/WLSide";
+import WLFooter from "./components/wlayout/WLFooter";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <WLayout wLayout="header-sidebar-layout">
+      <WLayout wLayout="header-lside">
 
-        <div className="wLheader">
+      <WLHeader>
           <WNavbar color="colored">
             <ol>
               <li>
@@ -54,9 +64,9 @@ export default function App() {
               </WNavItem>
             </ol>
           </WNavbar>
-        </div>
+        </WLHeader>
 
-        <div className="wLsidebar">
+        <WLSide side="left">
           <WSidebar color="clear">
             <ol>
               <WNavItem hoverAnimation="transparent-darken">
@@ -67,6 +77,11 @@ export default function App() {
               <WNavItem hoverAnimation="transparent-darken">
                 <NavLink to="/wbutton" id="wbutton" activeClassName="active-text">
                   WButton
+                  </NavLink>
+              </WNavItem>
+              <WNavItem hoverAnimation="transparent-darken">
+                <NavLink to="/wcard" id="wbutton" activeClassName="active-text">
+                  WCard
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="transparent-darken">
@@ -99,10 +114,12 @@ export default function App() {
 
             </ol>
           </WSidebar>
-        </div>
+        </WLSide>
 
-        <div className="wLmain">
+        <WLMain>
           <Switch>
+            <Route exact path ="/" component={HomePage} />
+            <Route path ="/about" component={AboutPage} />
             <Route path="/wbutton" component={WButtonPage} />
             <Route path="/wnavbar" component={WNavbarPage} />
             <Route path="/winput" component={WInputPage} />
@@ -110,8 +127,9 @@ export default function App() {
             <Route path="/waccordion" component={WAccordionPage} />
             <Route path="/wsidebar" component={WSidebarPage} />
             <Route path="/wlayout" component={WLayoutPage} />
+            <Route path="/wcard" component={WCardPage} />
           </Switch>
-        </div>
+        </WLMain>
 
       </WLayout>
 

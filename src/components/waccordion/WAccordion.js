@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import clsx from "clsx";
+//import clsx from "clsx";
 //import "./waccordion.scss";
 
 function WAccordion({header, body, ...other}) {
