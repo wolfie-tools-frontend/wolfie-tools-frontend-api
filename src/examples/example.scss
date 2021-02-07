@@ -4,16 +4,6 @@ body {
   margin: 0;
 }
 
-.WButtonPage,
-.WNavbarPage,
-.WGridPage,
-.WAccordionPage,
-.WSidebarPage,
-.WInputPage,
-.WNavbarPage {
-  text-align: left;
-}
-
 .WGridPage {
   .wrow {
     .wcol {
@@ -25,7 +15,6 @@ body {
 .WInputPage {
   display: flex;
   flex-direction: column;
-  align-items: center;
   grid-gap: 2.5rem;
 }
 

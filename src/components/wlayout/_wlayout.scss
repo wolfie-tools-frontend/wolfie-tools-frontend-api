@@ -1,0 +1,62 @@
+@use '../../global/wolfie' as *;
+
+$header-height: 56px;
+$footer-height: 56px;
+$sidebar-width: 272px;
+
+.header-layout {
+    display: grid;
+    grid-template-areas: 'header' 'main';
+    grid-template-rows: $header-height calc(100vh - #{$header-height});
+}
+
+.header-sidebar-layout {
+    display: grid;
+    grid-template-areas: 'header header' 'sidebar main';
+    grid-template-rows: $header-height calc(100vh - #{$header-height});
+}
+
+.header-sidebar-footer-layout {
+    display: grid;
+    grid-template-areas: 'header header' 'sidebar main' 'footer footer';
+    grid-template-rows: $header-height calc(100vh - (#{$header-height}+#{$footer-height})) $footer-height;
+}
+
+.header-footer-layout {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-rows: $header-height calc(100vh - (#{$header-height}+#{$footer-height})) $footer-height;
+}
+
+.sidebar-layout {
+    display: grid;
+    grid-template-areas: 'sidebar main';
+}
+
+.sidebar-footer-layout {
+    display: grid;
+    grid-template-areas: 'sidebar main' 'footer footer';
+    grid-template-rows: calc(100vh - #{$footer-height}) $footer-height;
+}
+
+.footer-layout {
+    display: grid;
+    grid-template-areas: 'main' 'footer';
+    grid-template-rows: calc(100vh - #{$footer-height}) $footer-height;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}

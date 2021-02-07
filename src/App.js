@@ -9,6 +9,7 @@ import WInputPage from "./examples/WInputPage";
 import WGridPage from "./examples/WGridPage";
 import WAccordionPage from "./examples/WAccordionPage";
 import WSidebarPage from "./examples/WSidebarPage";
+import WLayoutPage from "./examples/WLayoutPage";
 import WNavbar from "./components/wnavbar/WNavbar";
 import WRow from "./components/wgrid/WRow";
 import WCol from "./components/wgrid/WCol";
@@ -88,6 +89,12 @@ export default function App() {
                   </NavLink>
                 </WNavItem>
 
+                <WNavItem hoverAnimation="transparent-darken">
+                  <NavLink to="/wlayout" id="wlayout" activeClassName="active-text">
+                    WLayout
+                  </NavLink>
+                </WNavItem>
+
 
 
               </ol>
@@ -103,6 +110,7 @@ export default function App() {
                 <Route path="/wgrid" component={WGridPage} />
                 <Route path="/waccordion" component={WAccordionPage} />
                 <Route path="/wsidebar" component={WSidebarPage} />
+                <Route path="/wlayout" component={WLayoutPage} />
               </Switch>
             </div>
           </WCol>
