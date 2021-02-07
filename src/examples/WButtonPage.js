@@ -16,10 +16,9 @@ export default function WButtonPage() {
       <table>
         <tbody>
           <tr>
-            <td>Default Primary</td>
+            <td>Default</td>
             <td>
               <WButton
-                color="primary"
                 onClick={myFunction}
                 id="hello"
                 name="wolfie"
@@ -34,7 +33,6 @@ export default function WButtonPage() {
             <td>
               <WButton
                 wType="ghost"
-                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -47,7 +45,6 @@ export default function WButtonPage() {
             <td>
               <WButton
                 wType="texted"
-                color="primary"
                 onClick={myFunction}
               >
                 Button
@@ -399,35 +396,6 @@ export default function WButtonPage() {
           </tr>
         </tbody>
       </table>
-      <div className="fancy-buttons">
-        <WButton
-          size="small"
-          wType="ghost"
-          color="danger"
-          shape="rounded"
-          hoverAnimation="fill"
-          clickAnimation="ripple-light"
-        >
-          Small
-        </WButton>
-        <WButton
-          shape="rounded"
-          color="colored"
-          hoverAnimation="lighten"
-          clickAnimation="ripple-light"
-        >
-          Medium
-        </WButton>
-        <WButton
-          size="large"
-          color="accent"
-          shape="rounded"
-          hoverAnimation="darken"
-          clickAnimation="ripple-light"
-        >
-          Large
-        </WButton>
-      </div>
 
       <h2>Icons</h2>
       <table>
@@ -578,6 +546,15 @@ export default function WButtonPage() {
                 >
                   Button
                 </WButton>
+
+                <WButton
+                  wType="texted"
+                  color="primary"
+                  hoverAnimation="darken"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
               </div>
             </td>
           </tr>
@@ -585,13 +562,33 @@ export default function WButtonPage() {
           <tr>
             <td>Hover-lighten</td>
             <td>
-              <WButton
-                color="primary"
-                hoverAnimation="lighten"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
+              <div className="stacked">
+                <WButton
+                  color="primary"
+                  hoverAnimation="lighten"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+
+                <WButton
+                  wType="ghost"
+                  color="primary"
+                  hoverAnimation="lighten"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+
+                <WButton
+                  wType="texted"
+                  color="primary"
+                  hoverAnimation="lighten"
+                  onClick={myFunction}
+                >
+                  Button
+                </WButton>
+              </div>
             </td>
           </tr>
 
@@ -606,63 +603,35 @@ export default function WButtonPage() {
                 Button
               </WButton>
             </td>
-            <td>
-              <WButton
-                color="primary"
-                hoverAnimation="fill"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Hover-transparent-darken</td>
-            <td>
-              <WButton
-                color="primary"
-                wType="texted"
-                hoverAnimation="transparent-darken"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Hover-transparent-lighten</td>
-            <td>
-              <WButton
-                color="primary"
-                wType="texted"
-                hoverAnimation="transparent-lighten"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
-            </td>
           </tr>
 
           <tr>
             <td>Hover-transparent-colored</td>
             <td>
-              <WButton
-                color="primary"
-                wType="texted"
-                hoverAnimation="transparent-colored"
-                onClick={myFunction}
-              >
-                Button
+              <div className="stacked">
+                <WButton
+                  color="primary"
+                  wType="ghost"
+                  hoverAnimation="transparent-colored"
+                  onClick={myFunction}
+                >
+                  Button
               </WButton>
+                <WButton
+                  color="primary"
+                  wType="texted"
+                  hoverAnimation="transparent-colored"
+                  onClick={myFunction}
+                >
+                  Button
+              </WButton>
+              </div>
             </td>
           </tr>
+
         </tbody>
       </table>
-      <div className="fancy-buttons">
-
-      </div>
+      
       <h3>Click</h3>
       <table>
         <tbody>
@@ -691,573 +660,9 @@ export default function WButtonPage() {
           </tr>
         </tbody>
       </table>
-      <div className="fancy-buttons">
 
-      </div>
+      <br></br>
 
-      <br></br><br></br><br></br>
-
-      <br /><br />
-
-      <h2>Examples</h2>
-      <table>
-        <tbody>
-
-          <tr>
-            <td>Primary Small Hover-darken</td>
-            <td>
-              <WButton
-                color="primary"
-                size="small"
-                hoverAnimation="darken"
-                onClick={myFunction}
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Primary Raised Hover-lighten</td>
-            <td>
-              <WButton
-                shadow="raised"
-                color="primary"
-                hoverAnimation="lighten"
-              >
-                Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Accent Raised Hover-darken</td>
-            <td>
-              <WButton
-                shadow="raised"
-                size="large"
-                color="accent"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Danger Raised</td>
-            <td>
-              <WButton
-                shadow="raised"
-                size="large"
-                color="danger"
-              >
-                Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Success Raised Hover-lighten</td>
-            <td>
-              <WButton
-                shadow="raised"
-                size="large"
-                color="success"
-                hoverAnimation="lighten"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Warning Raised</td>
-            <td>
-              <WButton
-                shadow="raised"
-                size="large"
-                color="warning"
-              >
-                Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Colored Raised</td>
-            <td>
-              <WButton
-                shadow="raised"
-                size="large"
-                color="colored"
-              >Button</WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Disabled Texted</td>
-            <td>
-              <WButton
-                color="accent"
-                wType="texted"
-                hoverAnimation="darken"
-                disabled
-              >
-                <i className="material-icons">favorite</i>
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Ghost Primary Rounded Hover-darken Ripple-light</td>
-            <td>
-              <WButton
-                wType="ghost"
-                color="primary"
-                shape="rounded"
-                hoverAnimation="darken"
-                clickAnimation="ripple-light"
-              >
-                <i className="material-icons medium left">thumb_up</i>
-                Like
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Ghost Danger Rounded Hover-darken Ripple-dark</td>
-            <td>
-              <WButton
-                wType="ghost"
-                color="danger"
-                shape="rounded"
-                hoverAnimation="darken"
-                clickAnimation="ripple-dark"
-              >
-                <i className="material-icons medium left">favorite</i>
-                Button
-                <i className="material-icons medium right">favorite</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Success Pill Hover-lighten Ripple-light</td>
-            <td>
-              <WButton
-                color="success"
-                shape="pill"
-                hoverAnimation="lighten"
-                clickAnimation="ripple-light"
-              >
-                <i className="material-icons small">check</i>
-                <i className="material-icons large">shopping_cart</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Small Icon Circle Accent Hover-darken</td>
-            <td>
-              <WButton
-                color="accent"
-                shape="circle"
-                hoverAnimation="darken"
-              >
-                <i className="material-icons small">favorite</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Medium Icon Circle Hover-lighten</td>
-            <td>
-              <WButton
-                color="accent"
-                shape="circle"
-                hoverAnimation="lighten"
-              >
-                <i className="material-icons medium">favorite</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Raised Icon Circle Hover-darken</td>
-            <td>
-              <WButton
-                color="accent"
-                shadow="raised"
-                shape="circle"
-                hoverAnimation="darken"
-              >
-                <i className="material-icons large">verified</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Small Icon Raised Square Primary</td>
-            <td>
-              <WButton
-                color="primary"
-                shape="square"
-                shadow="raised"
-              >
-                <i className="material-icons small">verified</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Medium Icon Square Primary Hover-lighten</td>
-            <td>
-              <WButton
-                color="primary"
-                shape="square"
-                hoverAnimation="lighten"
-              >
-                <i className="material-icons medium">verified</i>
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Icon Square Hover-darken</td>
-            <td>
-              <WButton
-                color="primary"
-                shape="square"
-                hoverAnimation="darken"
-              >
-                <i className="material-icons large">verified</i>
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Medium Pill Colored</td>
-            <td>
-              <WButton
-                color="colored"
-                shape="pill"
-                size="medium"
-              >
-                Button</WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Large Ghost Colored Hover-lighten</td>
-            <td>
-              <WButton
-                size="large"
-                wType="ghost"
-                color="colored"
-                hoverAnimation="lighten"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Ghost Colored Hover-darken</td>
-            <td>
-              <WButton
-                size="large"
-                wType="ghost"
-                color="colored"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Primary Ghost Hover-fill</td>
-            <td>
-              <WButton
-                size="large"
-                wType="ghost"
-                color="primary"
-                hoverAnimation="fill"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Ghost Warning Hover-transparent-darken</td>
-            <td>
-              <WButton
-                size="large"
-                wType="ghost"
-                color="warning"
-                hoverAnimation="transparent-darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Large Ghost Warning Hover-darken</td>
-            <td>
-              <WButton
-                size="large"
-                wType="ghost"
-                color="warning"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Accent Ghost Hover-lighten</td>
-            <td>
-              <WButton
-                wType="ghost"
-                color="accent"
-                hoverAnimation="lighten"
-              >
-                Button</WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Medium Rounded Ghost Success Hover-darken</td>
-            <td>
-              <WButton
-                size="medium"
-                shape="rounded"
-                wType="ghost"
-                color="success"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Small Rounded Danger Ghost Hover-fill</td>
-            <td>
-              <WButton
-                size="small"
-                shape="rounded"
-                wType="ghost"
-                color="danger"
-                hoverAnimation="fill"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Disabled Ghost</td>
-            <td>
-              <WButton
-                size="medium"
-                wType="ghost"
-                color="accent"
-                disabled
-              >
-                Button</WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Transparent Pill Hover-darken</td>
-            <td>
-              <WButton
-                size="medium"
-                wType="transparent"
-                shape="pill"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Transparent Pill Hover-lighten</td>
-            <td>
-              <WButton
-                size="medium"
-                wType="transparent"
-                shape="pill"
-                hoverAnimation="lighten"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Disabled Transparent Pilln</td>
-            <td>
-              <WButton
-                size="medium"
-                wType="transparent"
-                shape="pill"
-                hoverAnimation="darken"
-                disabled
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Texted Colored Hover-darken</td>
-            <td>
-              <WButton
-                color="colored"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Primary Hover-darken</td>
-            <td>
-              <WButton
-                color="primary"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Accent Hover-darken</td>
-            <td>
-              <WButton
-                color="accent"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Danger Hover-darken</td>
-            <td>
-              <WButton
-                color="danger"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Warning Hover-lighten </td>
-            <td>
-              <WButton
-                color="warning"
-                size="medium"
-                wType="texted"
-                hoverAnimation="lighten"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Warning Hover-transparent-lighten </td>
-            <td>
-              <WButton
-                color="warning"
-                size="medium"
-                wType="texted"
-                hoverAnimation="transparent-lighten"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Warning Hover-darken </td>
-            <td>
-              <WButton
-                color="warning"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Success Hover-darken</td>
-            <td>
-              <WButton
-                color="success"
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-          <tr>
-            <td>Texted Disabled</td>
-            <td>
-              <WButton
-                size="medium"
-                wType="texted"
-                hoverAnimation="darken"
-                disabled
-              >
-                Button
-              </WButton>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Custom Colors</td>
-            <td>
-              <WButton
-                style={{ backgroundColor: "violet" }}
-                size="small"
-                shape="pill"
-                clickAnimation="ripple-light"
-              >
-                B1
-              </WButton>
-              <WButton
-                size="small"
-                shape="pill"
-                color="red-green"
-                clickAnimation="ripple-light"
-              >
-                B2
-              </WButton>
-              <WButton
-                size="small"
-                shape="pill"
-                clickAnimation="ripple-dark"
-                style={{ color: "violet" }}
-              >
-                B3
-              </WButton>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <WButton
-        size="large"
-        color="warning"
-        shape="pill"
-        clickAnimation="ripple-dark"
-        span
-      >
-        Large Pill Span Button
-        <i className="material-icons right">anchor</i>
-      </WButton>
-      <WButton
-        wType="ghost"
-        color="accent"
-        shape="rounded"
-        hoverAnimation="fill"
-        clickAnimation="ripple-light"
-      >
-        Button Text
-</WButton>
     </div>
   );
 }

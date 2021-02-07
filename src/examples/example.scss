@@ -7,8 +7,11 @@ body {
 .WButtonPage,
 .WNavbarPage,
 .WGridPage,
-.WAccordionPage {
-  text-align: center;
+.WAccordionPage,
+.WSidebarPage,
+.WInputPage,
+.WNavbarPage {
+  text-align: left;
 }
 
 .WGridPage {
@@ -51,8 +54,8 @@ td {
 
 .container {
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -62,8 +65,8 @@ td {
   color: palegreen;
 }
 .custom-color {
-  background-color: plum;
-  color: indianred;
+  background-color: plum !important;
+  color: indianred !important;
 }
 
 .logo {
@@ -106,4 +109,8 @@ td {
 .logo-text {
   font-weight: bold;
   letter-spacing: 1.2px;
+}
+
+.definition {
+  font-size: 24px;
 }

@@ -57,35 +57,38 @@ export default function App() {
             <WSidebar color="clear">
               <ol>
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/waccordion" id="waccordion" activeClassName="transparent">
+                  <NavLink to="/waccordion" id="waccordion" activeClassName="active-text">
                     WAccordion
                   </NavLink>
                 </WNavItem>
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/wbutton" id="wbutton" activeClassName="transparent">
+                  <NavLink to="/wbutton" id="wbutton" activeClassName="active-text">
                     WButton
                   </NavLink>
                 </WNavItem>
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/wgrid" id="winput" activeClassName="transparent">
+                  <NavLink to="/wgrid" id="winput" activeClassName="active-text">
                     WGrid
                   </NavLink>
                 </WNavItem>
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/winput" id="winput" activeClassName="transparent">
+                  <NavLink to="/winput" id="winput" activeClassName="active-text">
                     WInput
                   </NavLink>
                 </WNavItem>
+                
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/wnavbar" id="wnavbar" activeClassName="transparent">
+                  <NavLink to="/wnavbar" id="wnavbar" activeClassName="active-text">
                     WNavbar
                   </NavLink>
                 </WNavItem>
                 <WNavItem hoverAnimation="transparent-darken">
-                  <NavLink to="/wsidebar" id="wsidebar" activeClassName="transparent">
+                  <NavLink to="/wsidebar" id="wsidebar" activeClassName="active-text">
                     WSidebar
                   </NavLink>
                 </WNavItem>
+
+
 
               </ol>
             </WSidebar>

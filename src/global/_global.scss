@@ -99,7 +99,7 @@ $icon-sizes: (
 }
 
 .transparent {
-  background-color: transparentize(black, 0.75);
+  background-color: transparentize(black, 0.90);
   color: white;
   &.hover-darken:hover {
     background-color: transparentize(black, 0.6);

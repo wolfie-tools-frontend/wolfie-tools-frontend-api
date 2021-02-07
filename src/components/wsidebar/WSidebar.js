@@ -12,7 +12,7 @@ function WSidebar({ children, className, onClick, style, color, ...other }) {
   );
 
   return (
-    <div style={{ position: "sticky", top: '0' }}>
+    <div style={{ position: "sticky", top: '0'}}>
       <nav onClick={onClick} className={`wsidebar ${classes}`} style={style} {...other}>
         {children}
       </nav>

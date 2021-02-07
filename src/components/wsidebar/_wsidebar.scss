@@ -1,19 +1,21 @@
 @use "sass:color";
 @use '../../global/wolfie' as *;
 
-$sidebar-element-height: 2rem;
-$sidebar-element-padding: 0rem 0rem 0rem 1rem;
+$sidebar-element-height: 2.5rem;
+$sidebar-element-padding: 0rem 0rem 0rem 2rem;
 $sidebar-background-color: $background-color; //rgb(224, 224, 224);
 $text-color: black;
 $font-size: 14px;
-$letter-spacing: 0px;
+$letter-spacing: 0.5px;
 $sidebar-transparent: $transparent-dark-color;
 
 .wsidebar {
-  height: 100%; // ??
   color: $text-color;
   background-color: $sidebar-background-color;
-  display:table-row;
+  //width: 100%;
+  min-height: 100vh; // change for layouts
+  height: 100vh; // change for layouts
+  overflow-y: auto;
 
   &.primary {
     background-color: $primary-color;
@@ -21,6 +23,16 @@ $sidebar-transparent: $transparent-dark-color;
 
   &.accent {
     background-color: $accent-color;
+  }
+
+  &.warning {
+    background-color: $warning-color;
+  }
+  &.danger {
+    background-color: $danger-color;
+  }
+  &.success {
+    background-color: $success-color;
   }
 
   &.colored {
@@ -34,18 +46,17 @@ $sidebar-transparent: $transparent-dark-color;
 
   &.clear {
     background-color: $background-color;
-    $color: $text-color;
+    color: $text-color;
+    border-right: 1px solid color.scale($background-color, $lightness: -10%);;
   }
 
   a {
     text-decoration: none;
-    height: $sidebar-element-height;
+    line-height: $sidebar-element-height;
     display: inline-block;
-    width: inherit;
-    //text-align: center;
     padding: $sidebar-element-padding;
-    display: table-cell;
-    vertical-align: middle;
+    //display: table-cell; 
+    //vertical-align: middle;
     font-size: $font-size;
     letter-spacing: $letter-spacing;
   }
@@ -63,10 +74,9 @@ $sidebar-transparent: $transparent-dark-color;
   ul,
   ol,
   li {
-    display: inline-block;
-    list-style-type: none;
+    //display: inline-block;
+    //list-style-type: none;
     margin: 0;
-    width: 100%;
   }
   
   /*
@@ -79,4 +89,14 @@ $sidebar-transparent: $transparent-dark-color;
   }
   */
 
+}
+
+.active-text {
+  color: $primary-color !important;
+  font-weight: bold;
+}
+
+.active-color {
+  background-color: color.scale($primary-color, $lightness: 90%);
+  color: $primary-color !important;
 }

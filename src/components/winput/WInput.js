@@ -81,7 +81,7 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 
   else { // default
 
-    if(barAnimation) {
+    if (barAnimation) {
       return (
         <div className={`winput outlined ${classes}`} disabled={disabled} {...other}>
           {input}

@@ -26,6 +26,16 @@ $navbar-background-color: $primary-color;
     background-color: $accent-color;
   }
 
+  &.warning {
+    background-color: $warning-color;
+  }
+  &.danger {
+    background-color: $danger-color;
+  }
+  &.success {
+    background-color: $success-color;
+  }
+
   &.colored {
     background-color: $navbar-background-color;
     color: $navbar-text-color;
