@@ -12,6 +12,7 @@ export default function WSidebarPage() {
       <div className="definition">Side navigation used to redirect</div>
       <p>WSidebar is a vertical WNavbar. It also uses WNavItems as its children.
       It stays on the left side of your screen as you scroll through the webpage.</p>
+
     </div>
   );
 }

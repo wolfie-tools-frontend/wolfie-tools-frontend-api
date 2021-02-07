@@ -10,6 +10,9 @@ export default function WNavbarPage() {
   return (
     <div className="WNavbarPage">
       <h1>WNavbar</h1>
+      <div className="definition">Horizontal navigation used to redirect</div>
+      <p>Utilizes React Router. Uses React Router’s Router and NavLink.</p>
+
       <h2>Without WNavItem</h2>
       <WNavbar color="accent">
         <ul>

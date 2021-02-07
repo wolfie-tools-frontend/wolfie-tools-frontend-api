@@ -7,6 +7,9 @@ export default function WInputPage() {
   return (
     <div className="WInputPage">
       <h1>WInput</h1>
+      <div className="definition">Allows user input.</div>
+      <p>WInput provides stylizing to the HTML input tag.</p>
+
       <h2>Default</h2>
       <WInput></WInput>
 

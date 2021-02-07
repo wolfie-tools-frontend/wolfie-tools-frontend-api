@@ -11,6 +11,9 @@ export default function WButtonPage() {
   return (
     <div className="WButtonPage">
       <h1>WButton</h1>
+      <div className="definition">Performs an action when clicked.</div>
+      <p>On click functionality.</p>
+
       <h2>Types</h2>
       <table>
         <tbody>

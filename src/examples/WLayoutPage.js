@@ -10,8 +10,9 @@ export default function WLayoutPage() {
   return (
     <div>
       <h1>WLayout</h1>
-      <div className="definition">Web Layouts of commonly used templates</div>
-      <p>WLayout --.</p>
+      <div className="definition">Web Layouts of commonly used templates.</div>
+      <p>Divides the view into sections.</p>
+
     </div>
   );
 }
