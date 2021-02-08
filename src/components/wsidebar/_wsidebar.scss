@@ -10,13 +10,6 @@
   top: 0;
   overflow-y: auto;
 
-  @include hover-text-transparent();
-  @include hover-text-primary();
-  @include hover-text-accent();
-  @include hover-text-danger();
-  @include hover-text-success();
-  @include hover-text-warning();
-
   &.primary {
     background-color: $primary-color;
   }
@@ -47,7 +40,7 @@
   &.clear {
     background-color: $background-color;
     color: $text-color;
-    border-right: 1px solid color.scale($background-color, $lightness: -10%);;
+    border-right: 1px solid color.scale($background-color, $lightness: -10%);
   }
 
   a {
@@ -55,8 +48,6 @@
     line-height: $sidebar-element-height;
     display: inline-block;
     padding: $sidebar-element-padding;
-    //display: table-cell; 
-    //vertical-align: middle;
     font-size: $font-size;
     letter-spacing: $letter-spacing;
   }
@@ -65,38 +56,15 @@
   a:visited {
     color: inherit;
   }
-  
+
   ul,
   ol {
     padding: 0;
   }
-  
+
   ul,
   ol,
   li {
-    //display: inline-block;
-    //list-style-type: none;
     margin: 0;
   }
-  
-  /*
-  .left {
-  
-  }
-  
-  .right {
-    
-  }
-  */
-
-}
-
-.active-text {
-  color: $primary-color !important;
-  font-weight: bold;
-}
-
-.active-color {
-  background-color: color.scale($primary-color, $lightness: 90%);
-  color: $primary-color !important;
 }

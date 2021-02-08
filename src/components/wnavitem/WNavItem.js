@@ -27,7 +27,3 @@ function WNavItem({ children, className, onClick, style, color, hoverAnimation, 
 };
 
 export default WNavItem;
-
-//color: (default), primary, accent, colored, success, danger, warning
-//hoverAnimation: (none as default), darken, lighten, fill, transparent-darken, transparent-lighten, transparent-colored
-//clickAnimation: (none as default), ripple-dark, ripple-light

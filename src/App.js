@@ -71,47 +71,47 @@ export default function App() {
           <WSidebar color="clear">
             <ol>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/waccordion" id="waccordion" activeClassName="active-text">
+                <NavLink to="/waccordion" id="waccordion" activeClassName="active-text-primary">
                   WAccordion
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wbutton" id="wbutton" activeClassName="active-text">
+                <NavLink to="/wbutton" id="wbutton" activeClassName="active-text-primary">
                   WButton
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wcard" id="wcard" activeClassName="active-text">
+                <NavLink to="/wcard" id="wcard" activeClassName="active-text-primary">
                   WCard
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wgrid" id="wgrid" activeClassName="active-text">
+                <NavLink to="/wgrid" id="wgrid" activeClassName="active-text-primary">
                   WGrid
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/winput" id="winput" activeClassName="active-text">
+                <NavLink to="/winput" id="winput" activeClassName="active-text-primary">
                   WInput
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wlayout" id="wlayout" activeClassName="active-text">
+                <NavLink to="/wlayout" id="wlayout" activeClassName="active-text-primary">
                   WLayout
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wmodal" id="wmodal" activeClassName="active-text">
+                <NavLink to="/wmodal" id="wmodal" activeClassName="active-text-primary">
                   WModal
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wnavbar" id="wnavbar" activeClassName="active-text">
+                <NavLink to="/wnavbar" id="wnavbar" activeClassName="active-text-primary">
                   WNavbar
                   </NavLink>
               </WNavItem>
               <WNavItem hoverAnimation="darken">
-                <NavLink to="/wsidebar" id="wsidebar" activeClassName="active-text">
+                <NavLink to="/wsidebar" id="wsidebar" activeClassName="active-text-primary">
                   WSidebar
                   </NavLink>
               </WNavItem>

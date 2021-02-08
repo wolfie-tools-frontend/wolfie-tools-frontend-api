@@ -7,17 +7,31 @@ import "../main.scss";
 
 export default function WModalPage() {
     const [modal1, setModal1] = useState(false);
+    const [modal2, setModal2] = useState(false);
 
     return (
         <div className="WModalPage">
             <h1>WModal</h1>
+            <p> Without Overlay</p>
             <WButton onClick={()=>setModal1(true)}>
                 Show
             </WButton>
             <WModal visible={modal1}>
-                testwowowowo
+                <p className="wmodal-header">Test</p>
                 <br/> 
-                <WButton onClick ={()=>(setModal1(false))}>
+                <WButton className="wmodal-footer" onClick ={()=>(setModal1(false))}>
+                    Close
+                </WButton>
+            </WModal>
+
+            <p> With Overlay</p>
+            <WButton onClick={()=>setModal2(true)}>
+                Show
+            </WButton>
+            <WModal cover={true} visible={modal2}>
+                Test
+                <br/> 
+                <WButton onClick ={()=>(setModal2(false))}>
                     Close
                 </WButton>
             </WModal>

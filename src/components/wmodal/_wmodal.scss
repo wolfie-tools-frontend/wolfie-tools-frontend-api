@@ -4,20 +4,39 @@
 .wmodal {
     z-index: 2;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+
+    left: 50%; //
+    top: 50%; //
+    transform: translate(-50%, -50%); //
 
     padding: 1rem;
-    width: 30%;
     min-width: fit-content;
     max-width: 100%;
     max-height: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: white; //
+    border: 1px solid #ccc; //
     opacity: 1;
-    visibility: visible;
+    display: none;
+    &.visible{
+        display: grid;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-template-rows: 20% 60% 20%;
+    }
+    
 }
+
+.wmodal-header {
+    grid-area: header;
+}
+
+.wmodal-main {
+    grid-area: main;
+}
+
+.wmodal-footer{
+    grid-area: footer;
+}
+
 
 .wmodal-overlay {
     z-index: 1;
@@ -27,5 +46,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: color.scale(black, $alpha: $transparent-value);
+    &.cover{
+        background-color: color.scale(black, $alpha: $transparent-value);
+    }
+
+    display: none;
+    &.visible{
+        display: initial;
+    }
+   
 }

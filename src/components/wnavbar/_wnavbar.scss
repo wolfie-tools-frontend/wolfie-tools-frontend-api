@@ -11,12 +11,6 @@
   //margin-bottom: 10px;
   color: $navbar-text-color;
   background-color: rgb(224, 224, 224);
-  @include hover-text-transparent();
-  @include hover-text-primary();
-  @include hover-text-accent();
-  @include hover-text-danger();
-  @include hover-text-success();
-  @include hover-text-warning();
 
   &.primary {
     background-color: $primary-color;

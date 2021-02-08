@@ -19,12 +19,3 @@ function WSidebar({ children, className, onClick, style, color, ...other }) {
 };
 
 export default WSidebar;
-
-// wsidebar wrapper
-// will contain wnavitems
-// li a
-// ul class
-// li
-// li a (link)
-
-// color: (default), primary, accent, colored, success, danger, warning

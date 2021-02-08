@@ -35,7 +35,7 @@
 }
 
 @mixin hover-transparent-darken($t-value: "") {
-  &.hover-transparent-darken:hover {
+  .hover-transparent-darken:hover {
     @if $t-value == "" {
       background-color: color.scale(black, $alpha: $transparent-value-dark);
     } @else {
@@ -45,7 +45,7 @@
 }
 
 @mixin hover-transparent-lighten($t-value: "") {
-  &.hover-transparent-lighten:hover {
+  .hover-transparent-lighten:hover {
     @if $t-value == "" {
       background-color: color.scale(white, $alpha: $transparent-value-light);
     } @else {
@@ -65,7 +65,7 @@
 }
 
 @mixin hover-border-darken($border-color, $t-value: "") {
-  &.hover-border-darken {
+  .hover-border-darken {
     border-color: color.scale($border-color, $lightness: (-$transparent-value)); // value before lightened
     &:hover {
       @if $t-value == "" {
@@ -78,7 +78,7 @@
 }
 
 @mixin hover-ghost-darken($background-color, $t-value: "") {
-  &.hover-ghost-darken {
+  .hover-ghost-darken {
     border-color: color.scale($background-color, $alpha: -33%);
     &:hover {
       border-color: $background-color;
@@ -92,7 +92,7 @@
 }
 
 @mixin hover-text-lighten($text-color, $t-value: "") {
-  &.hover-text-lighten:hover {
+  .hover-text-lighten:hover {
     @if $t-value == "" {
       color: color.scale($text-color, $lightness: $transparent-value);
     } @else {
@@ -102,7 +102,7 @@
 }
 
 @mixin hover-text-darken($text-color, $t-value: "") {
-  &.hover-text-darken:hover {
+  .hover-text-darken:hover {
     @if $t-value == "" {
       color: color.scale($text-color, $lightness: (-$transparent-value));
     } @else {
@@ -118,37 +118,37 @@
 }
 
 @mixin hover-text-transparent() {
-  &.hover-text-transparent{
+  .hover-text-transparent{
     @include hover-text-color($background-color);
   }
 }
 
 @mixin hover-text-primary() {
-  &.hover-text-primary {
+  .hover-text-primary {
     @include hover-text-color($primary-color);
   }
 }
 
 @mixin hover-text-accent() {
-  &.hover-text-accent {
+  .hover-text-accent {
     @include hover-text-color($accent-color);
   }
 }
 
 @mixin hover-text-danger() {
-  &.hover-text-danger {
+  .hover-text-danger {
     @include hover-text-color($danger-color);
   }
 }
 
 @mixin hover-text-success() {
-  &.hover-text-success {
+  .hover-text-success {
     @include hover-text-color($success-color);
   }
 }
 
 @mixin hover-text-warning() {
-  &.hover-text-warning {
+  .hover-text-warning {
     @include hover-text-color($warning-color);
   }
 }
@@ -184,37 +184,135 @@
 }
 
 @mixin click-ripple-light() {
-  &.click-ripple-light {
+  .click-ripple-light {
     @include ripple(white);
   }
 }
 
 @mixin click-ripple-dark() {
-  &.click-ripple-dark {
+  .click-ripple-dark {
     @include ripple(black);
   }
 }
 
+/* active styles*/
+@mixin active-text-color($text-color) {
+  color: $text-color !important;
+  font-weight: bold;
+}
+
+@mixin active-text-transparent() {
+  .active-text-transparent{
+    @include active-text-color($background-color);
+  }
+}
+
+@mixin active-text-primary() {
+  .active-text-primary {
+    @include active-text-color($primary-color);
+  }
+}
+
+@mixin active-text-accent() {
+  .active-text-accent {
+    @include active-text-color($accent-color);
+  }
+}
+
+@mixin active-text-danger() {
+  .active-text-danger {
+    @include active-text-color($danger-color);
+  }
+}
+
+@mixin active-text-success() {
+  .active-text-success {
+    @include active-text-color($success-color);
+  }
+}
+
+@mixin active-text-warning() {
+  .active-text-warning {
+    @include active-text-color($warning-color);
+  }
+}
+
+@mixin active-color($color) {
+  background-color: color.scale($color, $lightness: 90%);
+  color: $color !important;
+}
+
+@mixin active-primary() {
+  .active-primary {
+    @include active-color($primary-color);
+  }
+}
+
+@mixin active-accent() {
+  .active-accent {
+    @include active-color($accent-color);
+  }
+}
+
+@mixin active-danger() {
+  .active-danger {
+    @include active-color($danger-color);
+  }
+}
+
+@mixin active-success() {
+  .active-success {
+    @include active-color($success-color);
+  }
+}
+
+@mixin active-warning() {
+  .active-warning {
+    @include active-color($warning-color);
+  }
+}
 
 
 /* Allow animations to be called by any element */
+
+/*
 * {
-  @include hover-darken($primary-color);
-  @include hover-lighten($primary-color);
-  @include hover-fill($primary-color, $text-color);
-  @include hover-transparent-darken();
-  @include hover-transparent-lighten();
-  @include hover-transparent-colored($primary-color);
-  @include hover-border-darken($primary-color);
-  @include hover-ghost-darken($primary-color);
-  @include click-ripple-light();
-  @include click-ripple-dark();
-  @include hover-text-lighten($text-color);
-  @include hover-text-darken($text-color);
+  @include hover-darken($primary-color); // button
+  @include hover-lighten($primary-color); // button
+  
+  @include hover-fill($primary-color, $text-color); //ghost button
+  @include hover-transparent-colored($primary-color); // ghost button, texted button
+  //@include hover-ghost-darken($primary-color); //ghost button - not used
+
+  @include click-ripple-light(); // button, navitem
+  @include click-ripple-dark(); // button, navitem
+  @include hover-transparent-darken(); // button, navitem
+  @include hover-transparent-lighten(); // button, navitem
+  
+  //@include hover-border-darken($primary-color); // not used
+  
+  //@include hover-text-lighten($text-color); // not used
+  //@include hover-text-darken($text-color); // not used
+
+  //navitem
   @include hover-text-transparent();
   @include hover-text-primary();
   @include hover-text-accent();
   @include hover-text-danger();
   @include hover-text-success();
   @include hover-text-warning();
+  @include active-text-transparent();
+  @include active-text-primary();
+  @include active-text-accent();
+  @include active-text-danger();
+  @include active-text-success();
+  @include active-text-warning();
+  @include active-primary();
+  @include active-accent();
+  @include active-danger();
+  @include active-success();
+  @include active-warning();
+  //
+
 }
+*/

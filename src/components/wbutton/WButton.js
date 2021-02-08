@@ -52,4 +52,4 @@ export default WButton;
 // hoverAnimation: (none as default), darken, lighten, fill, transparent-darken, transparent-lighten, transparent-colored
 // clickAnimation: (none as default), ripple-dark, ripple-light
 // disabled: (default true), true/false
-// shadow: raised, ?
+// raised: (default true), true/false

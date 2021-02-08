@@ -105,7 +105,7 @@ function WInput({ children, className, style, inputType, wType, labelText, place
 };
 
 // props
-// inputType: text,password,number
+// inputType: text, password, number
 // wType: outlined, lined, filled
 
 export default WInput;

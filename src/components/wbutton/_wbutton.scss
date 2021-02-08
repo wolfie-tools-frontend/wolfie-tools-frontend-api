@@ -19,9 +19,12 @@ are called from the animations.scss mixins*/
   align-items: center;
   background-color: $primary-color;
   color: $text-color-light;
+  @include hover-darken($primary-color);
+  @include hover-lighten($primary-color);
+
   @include click-ripple-light;
   @include click-ripple-dark;
-
+  
   i {
     &.left {
       margin-left: -0.25rem;

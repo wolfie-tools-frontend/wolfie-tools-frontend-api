@@ -1,27 +1,20 @@
 import React from "react";
 import clsx from "clsx";
 
-function WModal({children, className, visible, ...other}){
+function WModal({ children, className, visible, cover, ...other }) {
     let classes = clsx(
-        className
+        className,
+        {"visible":visible}
     );
 
     return (<>
-    {visible 
-            ?
-            <>
-                <div className={`wmodal ${classes}`} {...other}>
-                    {children}
-                    
-                </div>
-                <div className="wmodal-overlay"/> 
-            </>
-            :
-            <></>
-        }
+        <div className={`wmodal ${classes}`} {...other}>
+            {children}
+        </div>
+        <div className={"wmodal-overlay"  +(cover ? " cover" : "") + (visible ? " visible" : "")} />
     </>)
-        
-    
+
+
 
 }
 
