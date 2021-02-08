@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-function WCard({ children, className, style, color, wLayout, hoverAnimation, raised, ...other }) {
+function WCard({ children, className, color, wLayout, hoverAnimation, raised, ...other }) {
     let classes = clsx(
         className,
         { [wLayout + "-layout"]: wLayout },
@@ -11,7 +11,7 @@ function WCard({ children, className, style, color, wLayout, hoverAnimation, rai
     );
 
     let layout = (
-        <div className={`wcard ${classes}`} style={style} {...other}>
+        <div className={`wcard ${classes}`} {...other}>
             {children}
         </div>
     );

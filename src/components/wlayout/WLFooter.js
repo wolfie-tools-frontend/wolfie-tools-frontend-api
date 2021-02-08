@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-function WLFooter({ children, className, style, ...other }) {
+function WLFooter({ children, className, ...other }) {
     let classes = clsx(
         className
     );

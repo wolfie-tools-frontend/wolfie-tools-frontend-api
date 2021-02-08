@@ -59,7 +59,6 @@
     grid-template-columns: $lside-width calc(100% - #{$lside-width} - #{$rside-width}) $rside-width;
 }
 
-
 .header-footer-layout {
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';

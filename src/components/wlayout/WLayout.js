@@ -1,14 +1,14 @@
 import React from "react";
 import clsx from "clsx";
 
-function WLayout({ children, className, style, wLayout, ...other }) {
+function WLayout({ children, className, wLayout, ...other }) {
     let classes = clsx(
         className,
         { [wLayout + "-layout"]: wLayout }
     );
 
     let layout = (
-        <div className={`wlayout ${classes}`} style={style} {...other}>
+        <div className={`wlayout ${classes}`} {...other}>
             {children}
         </div>
     );

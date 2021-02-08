@@ -13,28 +13,34 @@ export default function WModalPage() {
         <div className="WModalPage">
             <h1>WModal</h1>
             <p> Without Overlay</p>
-            <WButton onClick={()=>setModal1(true)}>
+            <WButton onClick={() => setModal1(true)}>
                 Show
             </WButton>
             <WModal visible={modal1}>
                 <p className="wmodal-header">Test</p>
                 <p className="wmodal-main">Here is the content</p>
-                <WButton className="wmodal-footer" onClick ={()=>(setModal1(false))}>
-                    Close
-                </WButton>
+                <div className="wmodal-footer">
+                    <WButton onClick={() => (setModal1(false))}>
+                        Close
+                    </WButton>
+                </div>
             </WModal>
 
             <p> With Overlay</p>
-            <WButton onClick={()=>setModal2(true)}>
+            <WButton onClick={() => setModal2(true)}>
                 Show
             </WButton>
             <WModal cover={true} visible={modal2}>
-                Test
-                <br/> 
-                <WButton onClick ={()=>(setModal2(false))}>
-                    Close
-                </WButton>
+                <p className="wmodal-header">Test</p>
+                <p className="wmodal-main">Here is the content</p>
+                <div className="wmodal-footer">
+                    <WButton onClick={() => (setModal2(false))}>
+                        Close
+                    </WButton>
+                </div>
+
             </WModal>
+
         </div>
     )
 }
