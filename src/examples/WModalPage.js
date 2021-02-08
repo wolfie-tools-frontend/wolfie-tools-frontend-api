@@ -18,7 +18,7 @@ export default function WModalPage() {
             </WButton>
             <WModal visible={modal1}>
                 <p className="wmodal-header">Test</p>
-                <br/> 
+                <p className="wmodal-main">Here is the content</p>
                 <WButton className="wmodal-footer" onClick ={()=>(setModal1(false))}>
                     Close
                 </WButton>
