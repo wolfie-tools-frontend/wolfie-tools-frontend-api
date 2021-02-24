@@ -26,6 +26,9 @@ $primary-color-light: color.scale($primary-color, $lightness: $lighten-value) !d
 $accent-color-dark: color.scale($accent-color, $lightness: $darken-value) !default;
 $accent-color-light: color.scale($accent-color, $lightness: $lighten-value) !default;
 
+/* Animation */
+$transition-time: 0.5s;
+
 /* Button */
 $rounded-radius: 0.25rem !default;
 $button-background-color: #354856 !default;

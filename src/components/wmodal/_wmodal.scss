@@ -35,10 +35,10 @@
     @include slide-fade(translate(-50%, 0%), translate(-50%, -50%));
 }
 .slide-fade-left{
-    @include slide-fade(translate(0%, -50%), translate(-50%, -50%));
+    @include slide-fade(translate(-100%, -50%), translate(-50%, -50%));
 }
 .slide-fade-right{
-    @include slide-fade(translate(-100%, -50%), translate(-50%, -50%));
+    @include slide-fade(translate(0%, -50%), translate(-50%, -50%));
 }
 
 

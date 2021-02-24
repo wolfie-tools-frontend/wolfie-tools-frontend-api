@@ -195,7 +195,7 @@
   }
 }
 
-@mixin fade-in($time: 1s) {
+@mixin fade-in($time: $transition-time) {
   @keyframes fade-in{
     0%{
       opacity: 0;
@@ -209,8 +209,9 @@
   }  
 }
 
-@mixin slide($start, $end, $time: 1s){
-  @keyframes slide{
+@mixin slide($start, $end, $time: $transition-time){
+  $animation-name: unique-id() !global;
+  @keyframes #{$animation-name}{
     0%{
         transform: $start;
     }
@@ -218,11 +219,12 @@
         transform: $end;
     }
   }
-  animation: slide $time;
+  animation: $animation-name $time;
 }
 
-@mixin slide-fade($start, $end, $time: 1s){
-  @keyframes slide-fade{
+@mixin slide-fade($start, $end, $time: $transition-time){
+  $animation-name: unique-id() !global;
+  @keyframes #{$animation-name}{
     0%{
         opacity: 0;
         transform: $start;
@@ -232,7 +234,7 @@
         transform: $end;
     }
   }
-  animation: slide-fade $time;
+  animation: $animation-name $time;
 }
 
 /* active styles*/

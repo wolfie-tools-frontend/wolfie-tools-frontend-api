@@ -19,7 +19,7 @@ export default function WModalPage() {
             <WButton onClick={() => setModal1(true)}>
                 Show
             </WButton>
-            <WModal visible={modal1} animation="slide-fade-left">
+            <WModal visible={modal1} animation="slide-fade-right">
                 <WMHeader>Test</WMHeader>
                 <WMMain>Here is the content</WMMain>
                 <WMFooter>
@@ -33,7 +33,7 @@ export default function WModalPage() {
             <WButton onClick={() => setModal2(true)}>
                 Show
             </WButton>
-            <WModal cover={true} visible={modal2}>
+            <WModal cover={true} visible={modal2} animation="slide-fade-top">
             <WMHeader>Test</WMHeader>
                 <WMMain>Here is the content</WMMain>
                 <WMFooter>
