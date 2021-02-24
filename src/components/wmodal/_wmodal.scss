@@ -1,16 +1,6 @@
 @use '../../global/wolfie' as *;
 @use 'sass:color';
 
-$modal-top: 50%;
-$modal-left: 50%;
-$modal-transform: translate(-50%, -50%);
-$modal-padding: 1rem;
-$modal-width: 500px;
-$modal-height: auto;
-$modal-background: white;
-$modal-border: 1px solid #ccc;
-$modal-section-padding: 15px;
-
 .wmodal {
     z-index: 2;
     position: fixed;
@@ -35,6 +25,22 @@ $modal-section-padding: 15px;
     }
     
 }
+
+//animations
+@include fade-in;
+.slide-fade-top{
+    @include slide-fade(translate(-50%, -100%), translate(-50%, -50%));
+}
+.slide-fade-bottom{
+    @include slide-fade(translate(-50%, 0%), translate(-50%, -50%));
+}
+.slide-fade-left{
+    @include slide-fade(translate(0%, -50%), translate(-50%, -50%));
+}
+.slide-fade-right{
+    @include slide-fade(translate(-100%, -50%), translate(-50%, -50%));
+}
+
 
 .wMheader {
     grid-area: header;
@@ -74,80 +80,4 @@ $modal-section-padding: 15px;
         display: initial;
     }
    
-}
-
-//animations
-//from top, bottom, left, right
-
-@keyframes fade-in{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.fade-in{
-    animation: fade-in 1s;
-}
-
-@keyframes from-top{
-    0%{
-        opacity: 0;
-        transform: translate(-50%, -100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.from-top{
-    animation: from-top 1s;
-}
-
-@keyframes from-bottom{
-    0%{
-        opacity: 0;
-        transform: translate(-50%, 0%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.from-bottom{
-    animation: from-bottom 1s;
-}
-
-@keyframes from-left{
-    0%{
-        opacity: 0;
-        transform: translate(-100%, -50%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.from-left{
-    animation: from-left 1s;
-}
-
-@keyframes from-right{
-    0%{
-        opacity: 0;
-        transform: translate(0%, -50%);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.from-right{
-    animation: from-right 1s;
 }

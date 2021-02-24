@@ -19,7 +19,7 @@ export default function WModalPage() {
             <WButton onClick={() => setModal1(true)}>
                 Show
             </WButton>
-            <WModal visible={modal1}>
+            <WModal visible={modal1} animation="slide-fade-left">
                 <WMHeader>Test</WMHeader>
                 <WMMain>Here is the content</WMMain>
                 <WMFooter>

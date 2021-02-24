@@ -195,6 +195,46 @@
   }
 }
 
+@mixin fade-in($time: 1s) {
+  @keyframes fade-in{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  .fade-in{
+    animation: fade-in $time;
+  }  
+}
+
+@mixin slide($start, $end, $time: 1s){
+  @keyframes slide{
+    0%{
+        transform: $start;
+    }
+    100%{
+        transform: $end;
+    }
+  }
+  animation: slide $time;
+}
+
+@mixin slide-fade($start, $end, $time: 1s){
+  @keyframes slide-fade{
+    0%{
+        opacity: 0;
+        transform: $start;
+    }
+    100%{
+        opacity: 1;
+        transform: $end;
+    }
+  }
+  animation: slide-fade $time;
+}
+
 /* active styles*/
 @mixin active-text-color($text-color) {
   color: $text-color !important;
