@@ -53,7 +53,7 @@ export default function App() {
                 <a>vAlpha</a>
               </WNavItem>
               <WNavItem hoverAnimation="darken" clickAnimation="ripple-light">
-                <NavLink to="/about" id="about" activeClassName="transparent">
+                <NavLink to="/about" id="about" activeClassName="accent">
                   About
               </NavLink>
               </WNavItem>

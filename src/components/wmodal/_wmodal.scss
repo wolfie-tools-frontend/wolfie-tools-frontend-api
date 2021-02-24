@@ -1,21 +1,32 @@
 @use '../../global/wolfie' as *;
 @use 'sass:color';
 
+$modal-top: 50%;
+$modal-left: 50%;
+$modal-transform: translate(-50%, -50%);
+$modal-padding: 1rem;
+$modal-width: 500px;
+$modal-height: auto;
+$modal-background: white;
+$modal-border: 1px solid #ccc;
+$modal-section-padding: 5px;
+
 .wmodal {
     z-index: 2;
     position: fixed;
 
-    left: 50%; //
-    top: 50%; //
-    transform: translate(-50%, -50%); //
+    left: $modal-left;
+    top: $modal-top;
+    transform: $modal-transform;
 
-    padding: 1rem; //
+    padding: $modal-padding;
     min-width: fit-content;
-    width: 500px; //
+    width: $modal-width; 
+    height: $modal-height;
     max-width: 100%;
     max-height: 100%;
-    background: white; //
-    border: 1px solid #ccc; //
+    background: $modal-background;
+    border: $modal-border;
     opacity: 1;
     display: none;
     &.visible{
@@ -29,8 +40,8 @@
 .wmodal-header {
     grid-area: header;
     margin: 0;
-    border-bottom: 1px solid #e6e6e6; //
-    padding-bottom: 5px; //
+    border-bottom: $modal-border;
+    padding-bottom: $modal-section-padding;
 }
 
 .wmodal-main {
@@ -39,8 +50,8 @@
 
 .wmodal-footer{
     grid-area: footer;
-    padding-top: 5px; //
-    border-top: 1px solid #e6e6e6; //
+    padding-top: $modal-section-padding;
+    border-top: $modal-border;
 }
 
 
@@ -62,3 +73,6 @@
     }
    
 }
+
+//animations
+//from top, bottom, left, right
