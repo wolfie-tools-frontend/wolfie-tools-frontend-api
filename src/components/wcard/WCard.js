@@ -1,11 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 
-function WCard({ children, className, color, wLayout, hoverAnimation, raised, ...other }) {
+function WCard({ children, className, wLayout, hoverAnimation, raised, ...other }) {
     let classes = clsx(
         className,
         { [wLayout + "-layout"]: wLayout },
-        color,
         { ["hover-" + hoverAnimation]: hoverAnimation },
         { "raised": raised }
     );
