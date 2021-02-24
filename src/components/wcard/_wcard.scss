@@ -1,16 +1,5 @@
 @use '../../global/wolfie' as *;
 
-$card-color: white;
-$card-height: 350px;
-$card-width: 350px;
-$card-border-radius: 4px;
-
-$card-header-height: 64px;
-$card-media-height: 12rem;
-$card-footer-height: 46px;
-//for media on side
-$card-media-width: 10rem;
-
 .wcard {
     background-color: $card-color;
     width: $card-width;

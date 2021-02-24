@@ -46,8 +46,20 @@ $button-sizes: (
 $transparent-value: -80% !default;
 $transparent-value-dark: -90% !default;
 $transparent-value-light: $transparent-value-dark !default;
-//$darken-value: -4%;//-10%;
-//$lighten-value: 3%;
+//$darken-value: -4% !default;//-10%;
+//$lighten-value: 3% !default;
+
+/* Card */
+$card-color: white !default;
+$card-height: 350px !default;
+$card-width: 350px !default;
+$card-border-radius: 4px !default;
+
+$card-header-height: 64px !default;
+$card-media-height: 12rem !default;
+$card-footer-height: 46px !default;
+//for media on side
+$card-media-width: 10rem !default;
 
 /* Grid */
 $col-gutter-size: 0rem !default;
