@@ -12,7 +12,7 @@ function WModal({ children, className, visible, cover, animation, ...other }) {
         <div className={`wmodal ${classes}`} {...other}>
             {children}
         </div>
-        <div className={"wmodal-overlay"  +(cover ? " cover" : "") + (visible ? " visible" : "")} />
+        <div className={"wMoverlay"  +(cover ? " cover" : "") + (visible ? " visible" : "")} />
     </>)
 
 

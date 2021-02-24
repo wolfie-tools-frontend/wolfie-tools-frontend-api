@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import WButton from "../components/wbutton/WButton";
 import WModal from "../components/wmodal/WModal";
+import WMHeader from "../components/wmodal/WMHeader";
+import WMFooter from "../components/wmodal/WMFooter";
+import WMMain from "../components/wmodal/WMMain";
 
 import "./example.scss";
 import "../main.scss";
@@ -16,14 +19,14 @@ export default function WModalPage() {
             <WButton onClick={() => setModal1(true)}>
                 Show
             </WButton>
-            <WModal visible={modal1} animation="from-top">
-                <p className="wmodal-header">Test</p>
-                <p className="wmodal-main">Here is the content</p>
-                <div className="wmodal-footer">
+            <WModal visible={modal1}>
+                <WMHeader>Test</WMHeader>
+                <WMMain>Here is the content</WMMain>
+                <WMFooter>
                     <WButton onClick={() => (setModal1(false))}>
                         Close
                     </WButton>
-                </div>
+                </WMFooter>
             </WModal>
 
             <p> With Overlay</p>
@@ -31,14 +34,13 @@ export default function WModalPage() {
                 Show
             </WButton>
             <WModal cover={true} visible={modal2}>
-                <p className="wmodal-header">Test</p>
-                <p className="wmodal-main">Here is the content</p>
-                <div className="wmodal-footer">
+            <WMHeader>Test</WMHeader>
+                <WMMain>Here is the content</WMMain>
+                <WMFooter>
                     <WButton onClick={() => (setModal2(false))}>
                         Close
                     </WButton>
-                </div>
-
+                </WMFooter>
             </WModal>
 
         </div>
