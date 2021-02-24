@@ -9,7 +9,7 @@ $modal-width: 500px;
 $modal-height: auto;
 $modal-background: white;
 $modal-border: 1px solid #ccc;
-$modal-section-padding: 5px;
+$modal-section-padding: 15px;
 
 .wmodal {
     z-index: 2;
@@ -18,14 +18,13 @@ $modal-section-padding: 5px;
     left: $modal-left;
     top: $modal-top;
     transform: $modal-transform;
-
     padding: $modal-padding;
     min-width: fit-content;
     width: $modal-width; 
     height: $modal-height;
     max-width: 100%;
     max-height: 100%;
-    background: $modal-background;
+    background-color: $modal-background;
     border: $modal-border;
     opacity: 1;
     display: none;
@@ -37,25 +36,28 @@ $modal-section-padding: 5px;
     
 }
 
-.wmodal-header {
+.wMheader {
     grid-area: header;
     margin: 0;
     border-bottom: $modal-border;
     padding-bottom: $modal-section-padding;
 }
 
-.wmodal-main {
+.wMmain {
     grid-area: main;
+    padding-top: $modal-section-padding;
+    padding-bottom: $modal-section-padding;
 }
 
-.wmodal-footer{
+.wMfooter{
     grid-area: footer;
     padding-top: $modal-section-padding;
+    padding-bottom: $modal-section-padding;
     border-top: $modal-border;
 }
 
 
-.wmodal-overlay {
+.wMoverlay {
     z-index: 1;
 
     position: fixed;
@@ -103,4 +105,49 @@ $modal-section-padding: 5px;
 
 .from-top{
     animation: from-top 1s;
+}
+
+@keyframes from-bottom{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.from-bottom{
+    animation: from-bottom 1s;
+}
+
+@keyframes from-left{
+    0%{
+        opacity: 0;
+        transform: translate(-100%, -50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.from-left{
+    animation: from-left 1s;
+}
+
+@keyframes from-right{
+    0%{
+        opacity: 0;
+        transform: translate(0%, -50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.from-right{
+    animation: from-right 1s;
 }

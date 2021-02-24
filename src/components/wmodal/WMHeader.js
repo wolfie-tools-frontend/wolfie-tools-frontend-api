@@ -1,16 +1,17 @@
 import React from "react";
 import clsx from "clsx";
 
-function WCHeader({ children, className, ...other }) {
+function WMHeader({ children }, className, ...other) {
     let classes = clsx(
         className
     );
 
+
     return (
-        <div className={`wCheader ${classes}`} {...other}>
+        <div className={`wMheader ${classes}`} {...other}>
             {children}
         </div>
     );
 }
 
-export default WCHeader;
+export default WMHeader;
