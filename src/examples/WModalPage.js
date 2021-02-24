@@ -16,7 +16,7 @@ export default function WModalPage() {
             <WButton onClick={() => setModal1(true)}>
                 Show
             </WButton>
-            <WModal visible={modal1}>
+            <WModal visible={modal1} animation="fade-in">
                 <p className="wmodal-header">Test</p>
                 <p className="wmodal-main">Here is the content</p>
                 <div className="wmodal-footer">

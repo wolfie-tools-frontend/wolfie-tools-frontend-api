@@ -1,10 +1,11 @@
 import React from "react";
 import clsx from "clsx";
 
-function WModal({ children, className, visible, cover, ...other }) {
+function WModal({ children, className, visible, cover, animation, ...other }) {
     let classes = clsx(
         className,
-        {"visible":visible}
+        {["visible"]:visible},
+        {[animation]:visible&&animation}
     );
 
     return (<>
