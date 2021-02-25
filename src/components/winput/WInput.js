@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 //import "./winput.scss";
 
-function WInput({ children, className, inputType, wType, labelText, placeholderText, hoverAnimation, labelAnimation, barAnimation, required, disabled, ...other }) {
+function WInput({ children, className, inputType, wType, labelText, placeholderText, hoverAnimation, labelAnimation, barAnimation, required, disabled, inputClass, labelClass, barClass, ...other }) {
   let classes = clsx(
     className,
     // inputType, // inside input div
@@ -23,35 +23,35 @@ function WInput({ children, className, inputType, wType, labelText, placeholderT
   if (labelText && labelAnimation) {
     if (labelAnimation === "shrink" || labelAnimation === "up") {
       if (wType === "outlined") { // feildset has hover and bar animation
-        input = (<input type={inputType} required className="input-label" placeholder={placeholderText} disabled={disabled} {...other} />);
+        input = (<input type={inputType} required className={"input-label "+inputClass} placeholder={placeholderText} disabled={disabled} {...other} />);
       } else { // filled & lined (lined does not need to have input label)
         if (disabled) {
-          input = (<input type={inputType} required className={" input-label"} placeholder={placeholderText} disabled={disabled} {...other} />);
+          input = (<input type={inputType} required className={"input-label "+inputClass} placeholder={placeholderText} disabled={disabled} {...other} />);
         } else {
-          input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} {...other} />);
+          input = (<input type={inputType} required className={["hover-" + hoverAnimation] + " input-label "+inputClass} placeholder={placeholderText} {...other} />);
         }
       }
     } else { // fixed label animations - do not need required
       if (disabled) {
-        input = (<input type={inputType} required={required} className={" input-label"} placeholder={placeholderText} disabled={disabled} {...other} />);
+        input = (<input type={inputType} required={required} className={"input-label "+inputClass} placeholder={placeholderText} disabled={disabled} {...other} />);
       } else {
-        input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation] + " input-label"} placeholder={placeholderText} {...other} />);
+        input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation] + " input-label "+inputClass} placeholder={placeholderText} {...other} />);
       }
     }
   } else { // no label
     if (disabled) {
-      input = (<input type={inputType} required={required} /*className={}*/ placeholder={placeholderText} disabled={disabled} {...other} />);
+      input = (<input type={inputType} required={required} className={inputClass} placeholder={placeholderText} disabled={disabled} {...other} />);
     } else {
-      input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]} placeholder={placeholderText} {...other} />);
+      input = (<input type={inputType} required={required} className={["hover-" + hoverAnimation]+" "+inputClass} placeholder={placeholderText} {...other} />);
     }
   }
 
   let span = (
-    <span className={["bar-" + barAnimation]} ></span>
+    <span className={["bar-" + barAnimation]+" "+barClass} ></span>
   );
 
   let label = (
-    <label className={["label-" + labelAnimation]}>{labelText}</label>
+    <label className={["label-" + labelAnimation]+" "+labelClass}>{labelText}</label>
   );
 
   if (wType === "lined" || wType === "filled") {
