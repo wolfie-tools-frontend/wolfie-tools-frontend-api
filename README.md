@@ -4,7 +4,9 @@
 
 2. Then type `npm install wt-frontend`
 
-3. Change your .css files to .scss and put the following code at the top of the .scss file:
+3. Make sure you have the peer dependencies installed. If you don’t have these packages installed already, do the following: `npm install sass` and/or `npm install react-router-dom`
+
+4. Change your .css files to .scss and put the following code at the top of the .scss file:
 
   ```css
   @use 'node_modules/wt-frontend/build/global/wolfie';

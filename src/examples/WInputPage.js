@@ -25,6 +25,16 @@ export default function WInputPage() {
         inputType="text"
       >
       </WInput>
+      <h3>Disabled</h3>
+      <WInput wType="lined"
+        barAnimation="center-out"
+        labelText="Lined"
+        labelAnimation="shrink"
+        hoverAnimation="solid"
+        inputType="text"
+        disabled
+      >
+      </WInput>
       <h3>barAnimation</h3>
       <WInput wType="lined"
         barAnimation="center-out"
@@ -88,6 +98,15 @@ export default function WInputPage() {
         hoverAnimation="solid"
         labelText="Filled"
         labelAnimation="shrink"
+      >
+      </WInput>
+      <h3>Disabled</h3>
+      <WInput wType="filled"
+        barAnimation="center-out"
+        hoverAnimation="solid"
+        labelText="Filled"
+        labelAnimation="shrink"
+        disabled
       >
       </WInput>
       <h3>barAnimation</h3>
@@ -167,7 +186,22 @@ export default function WInputPage() {
         hoverAnimation="solid"
       >
       </WInput>
-
+      <h3>Disabled</h3>
+      <WInput wType="outlined"
+        labelText="Outlined"
+        labelAnimation="shrink"
+        barAnimation="solid"
+        hoverAnimation="solid"
+        disabled
+      >
+      </WInput>
+      <WInput wType="outlined"
+        placeholderText="Outlined"
+        barAnimation="border-highlight"
+        hoverAnimation="solid"
+        disabled
+      >
+      </WInput>
       <h3>barAnimation</h3>
       <WInput wType="outlined"
         labelText="barAnimation: solid"
