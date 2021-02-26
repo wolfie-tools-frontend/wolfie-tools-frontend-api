@@ -38,8 +38,6 @@ $button-font-weight: null !default;
 /// @type Number
 $button-padding: 0.6em 1.2em !default;
 /// @type Number
-$button-margin: 0px 0px 5px 0px !default;
-/// @type Number
 $button-radius: $rounded-radius !default;
 $button-sizes: (
   "small": 0.8rem,
@@ -102,7 +100,7 @@ $modal-padding: 1rem !default;
 $modal-width: 500px !default;
 $modal-height: auto !default;
 $modal-background: white !default;
-$modal-border: 1px solid #ccc !default;
+$modal-border: 1px solid #ddd !default;
 $modal-section-padding: 15px !default;
 
 /* Navbar */

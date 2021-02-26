@@ -8,12 +8,9 @@
     left: $modal-left;
     top: $modal-top;
     transform: $modal-transform;
-    padding: $modal-padding;
     min-width: fit-content;
     width: $modal-width; 
     height: $modal-height;
-    max-width: 100%;
-    max-height: 100%;
     background-color: $modal-background;
     border: $modal-border;
     opacity: 1;
@@ -21,7 +18,7 @@
     &.visible{
         display: grid;
         grid-template-areas: 'header' 'main' 'footer';
-        grid-template-rows: 20% 50% 30%;
+        grid-template-rows: auto;
     }
     
 }
@@ -46,19 +43,18 @@
     grid-area: header;
     margin: 0;
     border-bottom: $modal-border;
-    padding-bottom: $modal-section-padding;
+    padding: $modal-section-padding;
 }
 
 .wMmain {
     grid-area: main;
-    padding-top: $modal-section-padding;
-    padding-bottom: $modal-section-padding;
+    padding: $modal-section-padding;
 }
 
 .wMfooter{
     grid-area: footer;
-    padding-top: $modal-section-padding;
-    padding-bottom: $modal-section-padding;
+    padding: $modal-section-padding;
+    height: fit-content;
     border-top: $modal-border;
 }
 
