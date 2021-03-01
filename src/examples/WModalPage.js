@@ -20,10 +20,10 @@ export default function WModalPage() {
                 Show
             </WButton>
             <WModal visible={modal1} animation="slide-fade-right">
-                <WMHeader>Test</WMHeader>
+                <WMHeader onClose={() => setModal1(false)} hoverAnimation="lighten">Test</WMHeader>
                 <WMMain>Here is the content</WMMain>
-                <WMFooter>
-                    <WButton onClick={() => (setModal1(false))}>
+                <WMFooter float="right">
+                    <WButton onClick={() => setModal1(false)}>
                         Close
                     </WButton>
                 </WMFooter>

@@ -57,6 +57,15 @@
     padding: $modal-section-padding;
     height: fit-content;
     border-top: $modal-border;
+    &.wmf-right{
+        text-align:right;
+    }
+    &.wmf-left{
+        text-align:left;
+    }
+    &.wmf-center{
+        text-align:center;
+    }
 }
 
 
@@ -77,4 +86,9 @@
         display: initial;
     }
    
+}
+
+.modal-header-button{
+    float: right;
+    padding: 0 !important;
 }

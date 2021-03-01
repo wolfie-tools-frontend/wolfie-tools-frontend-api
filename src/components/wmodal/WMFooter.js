@@ -1,9 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 
-function WMFooter({ children }, className, ...other) {
+function WMFooter({ children , className, float, ...other}) {
     let classes = clsx(
-        className
+        className,
+        {["wmf-"+float]:float}
     );
 
 

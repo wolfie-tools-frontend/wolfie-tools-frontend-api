@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-function WMMain({ children }, className, ...other) {
+function WMMain({ children , className, ...other}) {
     let classes = clsx(
         className
     );
