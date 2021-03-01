@@ -17,7 +17,7 @@ function WButton({ children, className, onClick, wType, shape, color, size, span
     { "raised": raised }
   );
 
-  if ((wType === "ghost" || wType ==="texted") && (hoverAnimation === "lighten" || hoverAnimation === "darken" || hoverAnimation === "colored")) {
+  if ((wType === "ghost") && (hoverAnimation === "lighten" || hoverAnimation === "darken" || hoverAnimation === "colored")) {
     classes = clsx(
       className,
       wType,
@@ -26,6 +26,21 @@ function WButton({ children, className, onClick, wType, shape, color, size, span
       size,
       { "span": span },
       { ["hover-transparent-" + hoverAnimation]: hoverAnimation },
+      { ["click-" + clickAnimation]: clickAnimation },
+      { "disabled": disabled },
+      { "raised": raised }
+    );
+  }
+
+  if ((wType ==="texted") && (hoverAnimation === "lighten" || hoverAnimation === "darken" || hoverAnimation === "colored")) {
+    classes = clsx(
+      className,
+      wType,
+      color,
+      shape,
+      size,
+      { "span": span },
+      { ["hover-text-" + hoverAnimation]: hoverAnimation },
       { ["click-" + clickAnimation]: clickAnimation },
       { "disabled": disabled },
       { "raised": raised }

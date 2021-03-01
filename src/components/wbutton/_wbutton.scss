@@ -153,16 +153,16 @@ are called from the animations.scss mixins*/
     background-color: transparent;
     color: $primary-color;
     border-style: none;
-    @include hover-transparent-darken($transparent-value-light);
-    @include hover-transparent-lighten($transparent-value-dark);
-    @include hover-transparent-colored($primary-color);
+    @include hover-text-darken($primary-color, $transparent-value-light / 3);
+    @include hover-text-lighten($primary-color, $transparent-value-dark / 3);
+    //@include hover-text-color($primary-color);
 
     @mixin texted-color($color) {
-      background-color: transparent;
+      //background-color: transparent;
       color: $color;
-      @include hover-transparent-darken($transparent-value-light);
-      @include hover-transparent-lighten($transparent-value-dark);
-      @include hover-transparent-colored($color);
+      @include hover-text-darken($color, $transparent-value-light / 3);
+      @include hover-text-lighten($color, $transparent-value-dark / 3);
+      //@include hover-text-color($color);
     }
     /* Button Colors */
     &.primary {
