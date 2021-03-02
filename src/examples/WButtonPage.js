@@ -22,6 +22,7 @@ export default function WButtonPage() {
             <td>
               <WButton
                 onClick={myFunction}
+                color="primary"
                 id="hello"
                 name="wolfie"
               >
@@ -35,6 +36,7 @@ export default function WButtonPage() {
               <WButton
                 wType="ghost"
                 onClick={myFunction}
+                color="primary"
               >
                 Button
               </WButton>
@@ -46,6 +48,7 @@ export default function WButtonPage() {
               <WButton
                 wType="texted"
                 onClick={myFunction}
+                color="primary"
               >
                 Button
               </WButton>
@@ -74,18 +77,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -105,6 +111,7 @@ export default function WButtonPage() {
                 <WButton
                   shape="rounded"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -112,6 +119,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   shape="rounded"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -119,6 +127,7 @@ export default function WButtonPage() {
                   wType="texted"
                   shape="rounded"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -139,6 +148,7 @@ export default function WButtonPage() {
                 <WButton
                   shape="pill"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -146,6 +156,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   shape="pill"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -153,6 +164,7 @@ export default function WButtonPage() {
                   wType="texted"
                   shape="pill"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -173,6 +185,7 @@ export default function WButtonPage() {
                 <WButton
                   shape="circle"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -180,6 +193,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   shape="circle"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -187,6 +201,7 @@ export default function WButtonPage() {
                   wType="texted"
                   shape="circle"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -207,6 +222,7 @@ export default function WButtonPage() {
                 <WButton
                   shape="square"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -214,6 +230,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   shape="square"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -221,6 +238,7 @@ export default function WButtonPage() {
                   wType="texted"
                   shape="square"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -472,18 +490,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -503,6 +524,7 @@ export default function WButtonPage() {
                 <WButton
                   size="small"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -510,6 +532,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   size="small"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -517,6 +540,7 @@ export default function WButtonPage() {
                   wType="texted"
                   size="small"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -537,6 +561,7 @@ export default function WButtonPage() {
                 <WButton
                   size="medium"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -544,6 +569,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   size="medium"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -551,6 +577,7 @@ export default function WButtonPage() {
                   wType="texted"
                   size="medium"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -571,6 +598,7 @@ export default function WButtonPage() {
                 <WButton
                   size="large"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -578,6 +606,7 @@ export default function WButtonPage() {
                   wType="ghost"
                   size="large"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -585,6 +614,7 @@ export default function WButtonPage() {
                   wType="texted"
                   size="large"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -610,18 +640,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons">notifications</i>
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons">notifications</i>
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons">notifications</i>
                 </WButton>
@@ -640,18 +673,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons small">notifications</i>
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons small">notifications</i>
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons small">notifications</i>
                 </WButton>
@@ -670,18 +706,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons medium">notifications</i>
                 </WButton>
@@ -700,18 +739,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons large">notifications</i>
                 </WButton>
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons large">notifications</i>
                 </WButton>
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons large">notifications</i>
                 </WButton>
@@ -730,6 +772,7 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons left">notifications</i>
                   Button
@@ -737,6 +780,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons left">notifications</i>
                   Button
@@ -744,6 +788,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   <i className="material-icons left">notifications</i>
                   Button
@@ -764,6 +809,7 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   R
                   <i className="material-icons center">notifications</i>
@@ -772,6 +818,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   R
                   <i className="material-icons center">notifications</i>
@@ -780,6 +827,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   R
                   <i className="material-icons center">notifications</i>
@@ -802,6 +850,7 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                   <i className="material-icons right">notifications</i>
@@ -809,6 +858,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="ghost"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                   <i className="material-icons right">notifications</i>
@@ -816,6 +866,7 @@ export default function WButtonPage() {
                 <WButton
                   wType="texted"
                   onClick={myFunction}
+                  color="primary"
                 >
                   Button
                   <i className="material-icons right">notifications</i>
@@ -843,18 +894,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   hoverAnimation="darken"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   hoverAnimation="darken"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   hoverAnimation="darken"
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -873,18 +927,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   hoverAnimation="lighten"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   hoverAnimation="lighten"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   hoverAnimation="lighten"
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -903,6 +960,7 @@ export default function WButtonPage() {
               <WButton
                 wType="ghost"
                 hoverAnimation="fill"
+                color="primary"
               >
                 Button
               </WButton>
@@ -915,12 +973,14 @@ export default function WButtonPage() {
                 <WButton
                   wType="ghost"
                   hoverAnimation="colored"
+                  color="primary"
                 >
                   Button
               </WButton>
                 <WButton
                   wType="texted"
                   hoverAnimation="colored"
+                  color="primary"
                 >
                   Button
               </WButton>
@@ -940,18 +1000,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   clickAnimation="ripple-dark"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   clickAnimation="ripple-dark"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   clickAnimation="ripple-dark"
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -971,18 +1034,21 @@ export default function WButtonPage() {
               <div className="side-by-side">
                 <WButton
                   clickAnimation="ripple-light"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="ghost"
                   clickAnimation="ripple-light"
+                  color="primary"
                 >
                   Button
                 </WButton>
                 <WButton
                   wType="texted"
                   clickAnimation="ripple-light"
+                  color="primary"
                 >
                   Button
                 </WButton>
@@ -1032,18 +1098,21 @@ export default function WButtonPage() {
         <div className="side-by-side">
           <WButton
             raised
+            color="primary"
           >
             Button
                 </WButton>
           <WButton
             wType="ghost"
             raised
+            color="primary"
           >
             Button
                 </WButton>
           <WButton
             wType="texted"
             raised
+            color="primary"
           >
             Button
                 </WButton>

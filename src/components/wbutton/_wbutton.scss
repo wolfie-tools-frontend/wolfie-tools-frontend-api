@@ -16,8 +16,8 @@ are called from the animations.scss mixins*/
   text-align: center;
   display: inline-flex; // center (icons)
   align-items: center;
-  background-color: $primary-color;
-  color: $text-color-light;
+  //background-color: $primary-color;
+  //color: $text-color-light;
   @include hover-darken($primary-color);
   @include hover-lighten($primary-color);
 
@@ -105,8 +105,8 @@ are called from the animations.scss mixins*/
   /* Button Types */
   &.ghost {
     background-color: transparent;
-    color: $primary-color;
-    border-color: $primary-color;
+    //color: $primary-color;
+    //border-color: $primary-color;
     border-style: solid;
     border-width: 1px;
     @include hover-fill($primary-color, $background-color);
@@ -151,7 +151,7 @@ are called from the animations.scss mixins*/
 
   &.texted {
     background-color: transparent;
-    color: $primary-color;
+    //color: $primary-color;
     border-style: none;
     @include hover-text-darken($primary-color, $transparent-value-light / 3);
     @include hover-text-lighten($primary-color, $transparent-value-dark / 3);
