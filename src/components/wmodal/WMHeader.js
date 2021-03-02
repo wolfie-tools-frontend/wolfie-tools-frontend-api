@@ -11,11 +11,11 @@ function WMHeader({ children , className, onClose, ...other}) {
 
     return (
         <div className={`wMheader ${classes}`} {...other}>
-            {children}
             {onClose ? <WButton className="modal-header-button" onClick={onClose} wType="texted">
                             <i className="material-icons medium">close</i>
                        </WButton> 
                      : <></>}
+            {children}
         </div>
     );
 }

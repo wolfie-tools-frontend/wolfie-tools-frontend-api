@@ -3,7 +3,7 @@
 .winput {
   font-family: inherit;
   position: relative;
-  width: $width;
+  width: fit-content;
 
   input {
     font-size: $input-font-size;
@@ -309,6 +309,7 @@
 
     > fieldset {
       position: relative;
+      width: $width;
       margin: 0;
       border: $border-thickness solid $inactive-color;
       border-radius: $border-radius;
