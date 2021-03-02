@@ -96,14 +96,13 @@ $rside-width: $lside-width !default;
 $modal-top: 50% !default;
 $modal-left: 50% !default;
 $modal-transform: translate(-50%, -50%) !default;
-$modal-padding: 1rem !default;
 $modal-width: 500px !default;
 $modal-height: auto !default;
 $modal-background: white !default;
 $modal-border: 1px solid #ddd !default;
 $modal-radius: 0 !default;
 $modal-section-padding: 15px !default;
-
+$modal-button-color: lightgrey !default;
 $modal-cover-color: color.scale(black, $alpha: $transparent-value) !default;
 
 /* Navbar */

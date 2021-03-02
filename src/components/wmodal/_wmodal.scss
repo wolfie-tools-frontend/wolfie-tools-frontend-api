@@ -91,4 +91,8 @@
 .modal-header-button{
     float: right;
     padding: 0 !important;
+    color: $modal-button-color;
+    :hover{
+        color: color.scale($modal-button-color, $lightness: $transparent-value-dark / 3);
+    }
 }

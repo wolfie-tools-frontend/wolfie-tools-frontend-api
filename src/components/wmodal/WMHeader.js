@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import WButton from "../wbutton/WButton";
 
-function WMHeader({ children , className, onClose, hoverAnimation, clickAnimation,  ...other}) {
+function WMHeader({ children , className, onClose, ...other}) {
     let classes = clsx(
         className
     );
@@ -12,8 +12,8 @@ function WMHeader({ children , className, onClose, hoverAnimation, clickAnimatio
     return (
         <div className={`wMheader ${classes}`} {...other}>
             {children}
-            {onClose ? <WButton className="modal-header-button" onClick={onClose} hoverAnimation={hoverAnimation} clickAnimation={clickAnimation} wType="texted" color="colored">
-                            <i className="material-icons small">close</i>
+            {onClose ? <WButton className="modal-header-button" onClick={onClose} wType="texted">
+                            <i className="material-icons medium">close</i>
                        </WButton> 
                      : <></>}
         </div>
