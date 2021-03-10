@@ -70,7 +70,7 @@ $row-gutter-size: 0rem !default;
 $inactive-color: gray !default;
 $text-color: black !default;
 $highlight-color: $primary-color !default;
-$width: 320px !default;
+$width: 100% !default;
 $transition-time: 300ms !default;
 
 $input-height: 2.4rem !default;
@@ -103,6 +103,7 @@ $modal-border: 1px solid #ddd !default;
 $modal-radius: 0 !default;
 $modal-section-padding: 15px !default;
 $modal-button-color: lightgrey !default;
+$modal-button-hover: color.scale($modal-button-color, $lightness: $transparent-value-dark / 3) !default;
 $modal-cover-color: color.scale(black, $alpha: $transparent-value) !default;
 
 /* Navbar */

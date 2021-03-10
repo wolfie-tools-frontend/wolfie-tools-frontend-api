@@ -93,6 +93,6 @@
     padding: 0 !important;
     color: $modal-button-color;
     :hover{
-        color: color.scale($modal-button-color, $lightness: $transparent-value-dark / 3);
+        color: $modal-button-hover;
     }
 }
