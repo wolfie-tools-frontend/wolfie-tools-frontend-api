@@ -80,19 +80,19 @@ are called from the animations.scss mixins*/
   }
   /* Button Colors */
   &.primary {
-    @include wbutton-color($primary-color, $text-color-light);
+    @include wbutton-color($primary-color, $button-text-color);
   }
   &.accent {
-    @include wbutton-color($accent-color, $text-color-light);
+    @include wbutton-color($accent-color, $button-text-color);
   }
   &.success {
-    @include wbutton-color($success-color, $text-color-light);
+    @include wbutton-color($success-color, $button-text-color);
   }
   &.danger {
-    @include wbutton-color($danger-color, $text-color-light);
+    @include wbutton-color($danger-color, $button-text-color);
   }
   &.warning {
-    @include wbutton-color($warning-color, $text-color-light);
+    @include wbutton-color($warning-color, $button-text-color);
   }
   &.disabled {
     background-color: $disabled-background-color;
