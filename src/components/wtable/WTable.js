@@ -6,6 +6,8 @@ function WTable({children, className, ...other}){
         className
     );
 
+    //color, bg type, hovers, clicks
+
     return(
 
         <table className={`wtable ${classes}`} {...other}>

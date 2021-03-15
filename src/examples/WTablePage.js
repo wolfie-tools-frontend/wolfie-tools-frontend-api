@@ -8,7 +8,7 @@ export default function WTablePage() {
         <div className="WTablePage">
             <h1>WTable</h1>
             
-            <WTable className="">
+            <WTable className="primary alt-bg-white">
                 <tr>
                     <th className="hover-darken">hi</th>
                     <th>bye</th>
