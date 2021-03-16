@@ -33,12 +33,11 @@
       height: $input-height;
 
       border-bottom: $border-thickness solid $inactive-color;
-      $time: 0.5s;
-      -webkit-transition: $time ease;
-      -moz-transition: $time ease;
-      -o-transition: $time ease;
-      -ms-transition: $time ease;
-      transition: $time ease;
+      -webkit-transition: $input-transition-time ease;
+      -moz-transition: $input-transition-time ease;
+      -o-transition: $input-transition-time ease;
+      -ms-transition: $input-transition-time ease;
+      transition: $input-transition-time ease;
 
       &.hover-solid {
         &:hover {
@@ -190,16 +189,16 @@
         transition: all $input-transition-time ease; //0.3s
       }
 
-      &:focus ~ .label-shrink,
-      &:valid ~ .label-shrink {
-        // active state
-        transform: translate3d(0, -0.6em, 0) scale(0.75);
-      }
-
       &:focus ~ .label-up,
       &:valid ~ .label-up {
         // active state
-        transform: translate3d(0, -0.7em, 0);
+        top: 0.45em;
+      }
+
+      &:focus ~ .label-shrink,
+      &:valid ~ .label-shrink {
+        top: 0.8em;
+        font-size: $shrink-label-font-size;
       }
     }
   }
@@ -299,18 +298,20 @@
         color: $highlight-color;
       }
 
-      &:focus ~ .label-fixed,
-      &:valid ~ .label-fixed,
       &:focus ~ .label-up,
-      &:valid ~ .label-up {
-        transform: translate3d(0, -1.4em, 0);
+      &:valid ~ .label-up,
+      &:focus ~ .label-fixed,
+      &:valid ~ .label-fixed {
+        // active state
+        top: -0.45em;
       }
 
-      &:focus ~ .label-fixed-shrink,
-      &:valid ~ .label-fixed-shrink,
       &:focus ~ .label-shrink,
-      &:valid ~ .label-shrink {
-        transform: translate3d(0, -1.4em, 0) scale(0.75);
+      &:valid ~ .label-shrink,
+      &:focus ~ .label-fixed-shrink,
+      &:valid ~ .label-fixed-shrink {
+        top: -0.45em;
+        font-size: $shrink-label-font-size;
       }
     }
 

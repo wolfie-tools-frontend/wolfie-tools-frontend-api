@@ -86,8 +86,10 @@ $hover-color: rgba($border-color, 0.9) !default;
 $border-highlight-thickness: 3px !default;
 $border-thickness: 1px !default;
 
-//needs tweaking, changing animation time based on height 
-$input-transition-time: calc(#{string.slice(#{$label-input-height},1,-3)} * 100ms) !default;
+$input-transition-time: 0.5s !default;
+
+//changing animation time based on height 
+//calc(#{string.slice(#{$label-input-height},1,-3)} * 100ms) !default;
 
 /* Layout */
 $header-height: 64px !default;
