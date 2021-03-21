@@ -21,7 +21,9 @@ Note: If you want to look at our example pages, copy in our entire directory. Op
 
 ---
 
-Documentation: https://tinyurl.com/wt-frontend-docs
+Documentation: https://wolfie-tools-frontend.github.io/#/
+
+Documentation for developers on the team (private): https://tinyurl.com/wt-frontend-docs
 
 Email: wolfietools.frontend@gmail.com
 
