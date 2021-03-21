@@ -21,6 +21,8 @@ Note: If you want to look at our example pages, copy in our entire directory. Op
 
 ---
 
+npm Package: https://www.npmjs.com/package/wt-frontend
+
 Documentation: https://wolfie-tools-frontend.github.io/#/
 
 Documentation for developers on the team (private): https://tinyurl.com/wt-frontend-docs
