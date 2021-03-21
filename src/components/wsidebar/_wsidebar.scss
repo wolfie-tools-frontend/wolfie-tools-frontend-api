@@ -2,7 +2,7 @@
 @use '../../global/wolfie' as *;
 
 .wsidebar {
-  color: $text-color;
+  color: $sidebar-text-color;
   background-color: $sidebar-background-color;
   max-height: 100vh;
   height: 100%;
@@ -48,8 +48,8 @@
     line-height: $sidebar-element-height;
     display: inline-block;
     padding: $sidebar-element-padding;
-    font-size: $font-size;
-    letter-spacing: $letter-spacing;
+    font-size: $sidebar-font-size;
+    letter-spacing: $sidebar-letter-spacing;
     width: 100%;
   }
 

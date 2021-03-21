@@ -32,12 +32,12 @@
 
   &.colored {
     background-color: $navbar-background-color;
-    color: $navbar-text-color;
+    //color: $navbar-text-color;
   }
 
   &.transparent {
     background-color: $transparent-dark-color;
-    color: $text-color;
+    //color: $navbar-text-color;
   }
 
   nav * {

@@ -65,7 +65,7 @@
 }
 
 @mixin hover-border-darken($border-color, $t-value: "") {
-  .hover-border-darken {
+  &.hover-border-darken {
     border-color: color.scale($border-color, $lightness: (-$transparent-value)); // value before lightened
     &:hover {
       @if $t-value == "" {
@@ -78,7 +78,7 @@
 }
 
 @mixin hover-ghost-darken($background-color, $t-value: "") {
-  .hover-ghost-darken {
+  &.hover-ghost-darken {
     border-color: color.scale($background-color, $alpha: -33%);
     &:hover {
       border-color: $background-color;
@@ -92,21 +92,21 @@
 }
 
 @mixin hover-text-lighten($text-color, $t-value: "") {
-  .hover-text-lighten:hover {
+  &.hover-text-lighten:hover {
     @if $t-value == "" {
-      color: color.scale($text-color, $lightness: $transparent-value);
+      color: color.scale($text-color, $lightness: -$texted-transparent-value);
     } @else {
-      color: color.scale($text-color, $lightness: $t-value);
+      color: color.scale($text-color, $lightness: -$t-value);
     }
   }
 }
 
 @mixin hover-text-darken($text-color, $t-value: "") {
-  .hover-text-darken:hover {
+  &.hover-text-darken:hover {
     @if $t-value == "" {
-      color: color.scale($text-color, $lightness: (-$transparent-value));
+      color: color.scale($text-color, $lightness: ($texted-transparent-value));
     } @else {
-      color: color.scale($text-color, $lightness: (-$t-value));
+      color: color.scale($text-color, $lightness: ($t-value));
     }
   }
 }

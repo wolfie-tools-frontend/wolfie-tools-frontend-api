@@ -3,7 +3,7 @@
 .winput {
   font-family: inherit;
   position: relative;
-  width: $width;
+  width: fit-content;
 
   input {
     font-size: $input-font-size;
@@ -20,19 +20,24 @@
   }
 
   &.lined {
+    .input-label {
+      padding: 18px 12px 0 0;
+      height: $label-input-height;
+    }
+
     input {
       background: none;
       padding: 8px 5px 6px 0px;
       display: block;
       border: none;
+      height: $input-height;
 
       border-bottom: $border-thickness solid $inactive-color;
-      $time: 0.5s;
-      -webkit-transition: $time ease;
-      -moz-transition: $time ease;
-      -o-transition: $time ease;
-      -ms-transition: $time ease;
-      transition: $time ease;
+      -webkit-transition: $input-transition-time ease;
+      -moz-transition: $input-transition-time ease;
+      -o-transition: $input-transition-time ease;
+      -ms-transition: $input-transition-time ease;
+      transition: $input-transition-time ease;
 
       &.hover-solid {
         &:hover {
@@ -62,7 +67,7 @@
       // label
       ~ .label-fixed,
       ~ .label-fixed-shrink {
-        top: -1em;
+        top: -1rem;
       }
 
       ~ .label-fixed-shrink {
@@ -79,9 +84,9 @@
 
       ~ .label-shrink,
       ~ .label-up {
-        transition: $transition-time ease all; // label return animation
+        transition: $input-transition-time ease all; // label return animation
         left: 0px;
-        top: 10px;
+        top: calc(#{$label-input-height/2} - 9px);
       }
 
       &:focus ~ .label-shrink,
@@ -116,7 +121,7 @@
       border-top-right-radius: $border-radius;
       box-shadow: inset 0 -#{$border-thickness} 0 rgba($filled-color, 0.3);
       height: $input-height;
-      transition: all $transition-time ease; //.15
+      transition: all $input-transition-time ease; //.15
       -webkit-appearance: none;
       appearance: none;
 
@@ -178,22 +183,22 @@
 
       ~ .label-shrink,
       ~ .label-up {
-        top: 1.15em;
+        top: calc(#{$label-input-height/2} - 9px);
         transform-origin: 0 0;
         transform: translate3d(0, 0, 0);
-        transition: all $transition-time ease; //0.3s
-      }
-
-      &:focus ~ .label-shrink,
-      &:valid ~ .label-shrink {
-        // active state
-        transform: translate3d(0, -0.6em, 0) scale(0.75);
+        transition: all $input-transition-time ease; //0.3s
       }
 
       &:focus ~ .label-up,
       &:valid ~ .label-up {
         // active state
-        transform: translate3d(0, -0.7em, 0);
+        top: 0.45em;
+      }
+
+      &:focus ~ .label-shrink,
+      &:valid ~ .label-shrink {
+        top: 0.8em;
+        font-size: $shrink-label-font-size;
       }
     }
   }
@@ -243,10 +248,10 @@
       ~ .label-shrink,
       ~ .label-up {
         left: 12px;
-        top: 1.1em;
+        top: calc(#{$label-input-height/2} - 9px);
         transform-origin: 0 0;
         transform: translate3d(0, 0, 0);
-        transition: all $transition-time ease; //0.3s
+        transition: all $input-transition-time ease; //0.3s
       }
 
       // label animation
@@ -262,7 +267,7 @@
           max-width: calc(#{$width} - 16px);
           padding-left: 0.3rem;
           padding-right: 0.3rem;
-          transition: all $transition-time ease;
+          transition: all $input-transition-time ease;
         }
       }
 
@@ -280,6 +285,7 @@
       &:valid ~ .label-fixed-shrink,
       &:focus ~ .label-shrink,
       &:valid ~ .label-shrink {
+        top: 0.9rem;
         ~ legend {
           font-size: $label-font-size * 0.75;
         }
@@ -292,23 +298,26 @@
         color: $highlight-color;
       }
 
-      &:focus ~ .label-fixed,
-      &:valid ~ .label-fixed,
       &:focus ~ .label-up,
-      &:valid ~ .label-up {
-        transform: translate3d(0, -1.4em, 0);
+      &:valid ~ .label-up,
+      &:focus ~ .label-fixed,
+      &:valid ~ .label-fixed {
+        // active state
+        top: -0.45em;
       }
 
-      &:focus ~ .label-fixed-shrink,
-      &:valid ~ .label-fixed-shrink,
       &:focus ~ .label-shrink,
-      &:valid ~ .label-shrink {
-        transform: translate3d(0, -1.4em, 0) scale(0.75);
+      &:valid ~ .label-shrink,
+      &:focus ~ .label-fixed-shrink,
+      &:valid ~ .label-fixed-shrink {
+        top: -0.45em;
+        font-size: $shrink-label-font-size;
       }
     }
 
     > fieldset {
       position: relative;
+      width: $width;
       margin: 0;
       border: $border-thickness solid $inactive-color;
       border-radius: $border-radius;
@@ -387,7 +396,7 @@
     bottom: 0px; // 0
     position: absolute;
     background: $highlight-color;
-    transition: $transition-time ease all;
+    transition: $input-transition-time ease all;
     left: 0%;
   }
 }
