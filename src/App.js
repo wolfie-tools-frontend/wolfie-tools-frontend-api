@@ -16,6 +16,7 @@ import WLayoutPage from "./examples/WLayoutPage";
 import WCardPage from "./examples/WCardPage";
 import WModalPage from "./examples/WModalPage";
 import WTablePage from './examples/WTablePage';
+import WSwitchPage from './examples/WSwitchPage';
 
 import WNavbar from "./components/wnavbar/WNavbar";
 import WSidebar from "./components/wsidebar/WSidebar";
@@ -121,6 +122,11 @@ export default function App() {
                   WTable
                   </NavLink>
               </WNavItem>
+              <WNavItem hoverAnimation="darken">
+                <NavLink to="/wswitch" id="wswitch" activeClassName="active-text-primary">
+                  WSwitch
+                  </NavLink>
+              </WNavItem>
 
 
 
@@ -142,6 +148,7 @@ export default function App() {
             <Route path="/wcard" component={WCardPage} />
             <Route path="/wmodal" component={WModalPage} />
             <Route path="/wtable" component={WTablePage} />
+            <Route path="/wswitch" component={WSwitchPage} />
           </Switch>
         </WLMain>
 

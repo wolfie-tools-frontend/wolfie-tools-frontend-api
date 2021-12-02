@@ -51,6 +51,11 @@ $transparent-value-light: $transparent-value-dark !default;
 //$darken-value: -4% !default;//-10%;
 //$lighten-value: 3% !default;
 
+/* Button */
+$rounded-switch-radius: 34px !default;
+$switch-radius: $rounded-switch-radius !default;
+
+
 /* Card */
 $card-color: white !default;
 $card-height: 350px !default;

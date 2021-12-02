@@ -21,4 +21,6 @@ export { default as WMFooter } from './components/wmodal/WMFooter';
 export { default as WNavbar } from './components/wnavbar/WNavbar';
 export { default as WNavItem } from './components/wnavitem/WNavItem';
 export { default as WSidebar } from './components/wsidebar/WSidebar';
+export { default as WSwitch } from './components/wswitch/WSwitch';
+
 
