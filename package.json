@@ -1,6 +1,6 @@
 {
   "name": "wt-frontend",
-  "version": "1.2.15",
+  "version": "1.3.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
